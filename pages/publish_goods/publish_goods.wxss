@@ -1,0 +1,147 @@
+.container {
+  background: #ede8ef;
+}
+.w100P{width:100%;}
+.cRed{
+  color:#ec5958;
+  display:inline-block;
+  width:10px;
+}
+.publish-Head{
+  width:100%;
+  height:30px;
+  line-height:30px;
+  text-align: center;
+  background:#ec5958;
+  color:#fff;
+  font-size: 14px;
+}
+.gzkCommonStyle_h50,.highlyFree{
+  display: flex;
+  flex-direction:row;
+  /*padding:3px 0;*/
+}
+.gzkCommonStyle_h50 .gzk_ContentTitle,.highlyFree .gzk_ContentTitle{width:285rpx;}
+.gzkCommonStyle_h50 .gzk_Content{vertical-align: middle;}
+.gzkCommonStyle_h50 .gzk_Content{
+  width:405rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height:50px;
+}
+.gzkCommonStyle_h50 .gzk_Content input{height:50px;}
+
+.sRight_Arrow{line-height:50px;}
+.sRight_Arrow image{
+  width:40rpx;
+  height:40rpx;
+  line-height:40px;
+  vertical-align: text-bottom;
+}
+.highlyFree .gzk_ContentTitle,.highlyFree .sRight_Arrow,.highlyFree .gzk_Content textarea{
+  padding:15px 0;}
+.highlyFree .gzk_Content,.highlyFree .gzk_Content textarea{width:405rpx;}
+.highlyFree .gzk_Content textarea{z-index:1;}
+.highlyFree .sRight_Arrow{line-height:0rpx;margin-top:3px;}
+
+.publish-Btn{
+  width:100%;
+  height:60px;
+  background:#fff;
+  z-index: 1000;
+}
+.publish-Btn button{
+  background:#ec5958;
+  color:#fff;
+  margin:10px;
+  height:40px;
+  line-height:40px;
+}
+
+.drawer_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+}
+/*content*/
+.drawer_box {
+  width: 750rpx;
+  overflow: hidden;
+  position: fixed;
+  bottom:0;
+  left: 0;
+  z-index: 1001;
+  background: #FAFAFA;
+}
+
+.drawer_title{}
+.drawer_title{
+  height:50px;
+  line-height:50px;
+  background:#ec5958;
+  color:#FFFFFF;
+}
+.drawer_title view{
+  display: inline-block;
+  line-height:50px;
+  margin:0 20rpx;
+}
+
+.drawer_content{
+  height: 360px;
+  overflow: auto; /*超出父盒子高度可滚动*/
+}
+
+.btn_ok{
+  padding: 7px 0;
+  font: 20px "microsoft yahei";
+  text-align: center;
+  background:#ec5958;
+  color:#FFFFFF;
+  border-radius: 5px;
+  margin:5px 20rpx;
+}
+.conductor>view{
+    display: inline-block;
+    width:164.5rpx;
+    margin-left:20rpx;
+    height: 30px;
+    line-height:30px;
+    text-align: center;
+    background:#dcdcdc;
+    border-radius:5px;
+    margin-top:5px;
+    overflow: hidden;
+}
+.hot_Region_Title,.select_Area_Title{font-size:16px;margin:10px 0}
+.hot_Region_Title span{background:#ec5958;}
+.select_Area_Title span{background:#46b19d;}
+.hot_Region_Title span,.select_Area_Title span{
+  display: inline-block;
+  height:16px;
+  width:5px;
+  margin-left:10px;
+  margin-right:10px;
+  margin-bottom:-2px;
+
+}
+.conductor .is_checked{
+  color:#fff;
+  background:#ec5958;
+}
+.conductor .normal{
+  background: #dcdcdc;
+}
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+<view class="container">
+    <view id="gzk_KeFu" hidden="{{hide}}">
+        <view class="over-A" style="height:{{height}}px;">
+            <view class="divHelpTitle divHelpTitleImg">
+                <image src="{{imageURL}}/kefu_bg.jpg"></image>
+            </view>
+            <view class="divKfTextCon mal20R mar20R mat20">
+                <view class="mab10">
+                    <span class="spanBtnDesc">车货人工匹配</span>
+                </view>
+                <view class="divkfHelpText">车货人工匹配——在您急需货源/车源的时候，拨打果真快客服热线可以人工为您匹配货源/车源，为您缩短找车/找货的时间</view>
+                <view class="bottom_img"><image src="/images/kefu_hr.png"></image></view>
+            </view>
+            <view class="divKfTextCon mal20R mar20R mat20">
+                <view class="mab10">
+                    <span class="spanBtnDesc">代发车源/货源</span>
+                </view>
+                <view class="divkfHelpText">代发车源/货源——当您不方便使用果真快APP的时候，只要您拨打果真快客服热线，与客服人员进行沟通即可人工代发您的车源/货源信息，操作方便快捷</view>
+                <view class="bottom_img"><image src="/images/kefu_hr.png"></image></view>
+            </view>
+            <view class="divKfTextCon mal20R mar20R mat20">
+                <view class="mab10">
+                    <span class="spanBtnDesc">操作提示</span>
+                </view>
+                <view class="divkfHelpText">操作提示——当您在使用果真快APP时如遇到不明情况时，您可以拨打果真快客服热线将您遇到的问题转告客服人员，我们的客服人员将争取在最短的时间内为您解决问题
+                </view>
+                <view class="bottom_img"><image src="/images/kefu_hr.png"></image></view>
+            </view>
+        </view>
+        <view class="divDial_KeFu" bindtap="onMakePhoneCall">点击拨打400热线</view>
+    </view>
+</view>

@@ -1,0 +1,84 @@
+page{height: 100%}
+.container {background:#ede8ef;}
+@import "../../style/my_publish.wxss";
+
+.selected_Time{
+    text-align: center;
+    width:270rpx;
+    height:40px;
+    line-height:40px;
+}
+.view_Search{width:370rpx;}
+.view_Search input{
+    height:40px;
+    line-height:40px;
+    padding:0 5px;
+}
+.search_Btn{
+    width:106rpx;
+    text-align: center;
+    height:40px;
+    line-height:40px;
+}
+.bor_LH30{
+    height:20px;
+    border-left:2px solid #888;
+}
+.bor_RH30{
+    height:20px;
+    border-right:2px solid #888;
+}
+.describe{width:690rpx;}
+.cEC5958{color:#ec5958;}
+.spanDesc{
+    float:left;
+    width:670rpx;
+    height:25px;
+}
+.mat50{margin-top:50px;}
+.mat60{margin-top:60px;}
+.fixed_T{
+    position: fixed;
+    top:0;
+    left:0;
+}
+.fixed_B{
+    position: fixed;
+    bottom:0;
+    left:0;
+}
+
+.footer_Btn{
+    width:750rpx;
+    height:60px;
+    margin:0;
+    position: fixed;
+    bottom:0;
+    left:0;
+    background:#fff;
+}
+.footer_Btn .wBtnOne,.wBtnTwo{
+    width:710rpx;
+    height:40px;
+    line-height:40px;
+    margin: 10px auto;
+    text-align: center;
+    color:#FFFFFF;
+}
+.wBtnOne{background:#EC5958;}
+.wBtnTwo view{
+    width:345rpx;
+    background:#EC5958;
+    border-radius: 5px;
+}
+.footer_Btn .btn{
+    width:100%;
+    background:#ec5958;
+    border:none;
+    height:40px;
+    line-height:40px;
+    color: #FFFFFF;
+    font-size:16px;
+    padding:0;
+}
+/*my_publish.wxss*/

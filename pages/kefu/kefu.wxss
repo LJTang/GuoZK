@@ -1,0 +1,29 @@
+#gzk_KeFu{height:100%;}
+.divHelpTitleImg image{
+  width:750rpx;
+  height: 150px;
+}
+.spanBtnDesc{
+  display:inline-block;
+  padding:2px;
+  background-color:#ec5958;
+  color: #ffffff;
+}
+.bottom_img{margin-top:10px;}
+.bottom_img image{
+  width:710rpx;
+  height:20px;
+}
+.divkfHelpText{
+  font-size: 14px;
+  text-align: left
+}
+.divDial_KeFu{
+  height: 40px;
+  line-height:40px;
+  font-size:16px;
+  color: #ffffff;
+  background-color:#ec5958;
+  text-align: center;
+  margin:10px 5px;
+}

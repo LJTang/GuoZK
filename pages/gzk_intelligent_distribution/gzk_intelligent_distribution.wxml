@@ -1,0 +1,67 @@
+<view class="container">
+    <view hidden="{{hide}}">
+    <!--<view>-->
+        <view class="mPrompt_Title"><span></span>配货条件</view>
+        <view class="bgFFF w100P bor_B">
+            <view class="gzkCommonStyle_h50 mal20R" bindtap="powerDrawer2" data-statu="open">
+            <!--<view class="gzkCommonStyle_h50 mal20R" data-statu="open">-->
+                <view class="gzk_ContentTitle line-h50">车辆参数</view>
+                <view class="gzk_Content"><input type="text" placeholder="点击选择" value="{{vehicle_Parameters}}"  disabled/></view>
+                <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+            </view>
+        </view>
+        <view class="bgFFF w100P">
+            <view class="gzkCommonStyle_h50 mal20R" bindtap="openLoginPannel" data-region="0">
+                <view class="gzk_ContentTitle line-h50">当前地区</view>
+                <view class="gzk_Content"><input type="text" placeholder="点击选择" value="{{cityText}}" disabled/></view>
+                <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+            </view>
+        </view>
+        <view class="mPrompt_Title"><span></span>智能推荐</view>
+        <scroll-view class="mat10" scroll-y style="height:{{height}}px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-top="{{scrollTop}}">
+            <view class="list_Information cross-T bgFFF bor_B" wx:for-items="{{GoodsArr}}" wx:key="{{index}}" bindtap="findInformation" data-statu="{{item.strInfoSysID}}" data-type="{{item.intInfoType}}" data-history="{{item.intStatus}}">
+                <view class="display-In v-align_T" style="width:700rpx;">
+                    <view class="vertical-Block text-ellipsis">
+                        <span class="dots area_From mal10R mar20R"></span><span class="area-Of-Shipment">{{item.strFromAreaDesc}}</span><image class="to" src="/images/small_to.png"></image><span class="dots area_To mar20R"></span><span class="area-Of-Shipment">{{item.strToAreaDesc}}</span>
+                    </view>
+                    <view class="horizontal-Piece display-F">
+                        <view class="strCenter f32R h50R text-ellipsis">{{item.strListDesc}}</view>
+                    </view>
+                </view>
+
+                <view class="sRight_Arrow display-In mal10R"><image src="/images/img_s_right.png"></image></view>
+            </view>
+
+            <view class="pab20 pat20" style="height:40px">
+                <view class="noMoreData" hidden="{{noMoreHidden}}">没有更多了</view>
+                <view class="inLoad" hidden="{{inLoadHidden}}"><image src="/images/loading.gif"></image><span>加载中...</span></view>
+                <view class="toLoadMore" hidden="{{loadMoreHidden}}" bindtap="onGetConnect">加载更多</view>
+            </view>
+        </scroll-view>
+
+        <!--<view class="find_Information_Btn three_Btn">-->
+            <!--<view bindtap="previousPage">再发一条</view>-->
+            <!--<view><button class="display-B" bindtap="onShareAppMessage" open-type="share">分享</button></view>-->
+            <!--<view bindtap="onHome">返回首页</view>-->
+        <!--</view>-->
+    </view>
+    <view class="drawer_screen" data-statu="close" wx:if="{{vehicleParameters}}"></view>
+    <view animation="{{animationData}}" class="drawer_box" wx:if="{{vehicleParameters}}">
+        <view class="drawer_title"><view class="">车辆参数</view><view class="fR" data-statu="close" wx:if="{{vehicleParameters}}" bindtap="powerDrawer2">完成</view></view>
+
+        <view class="drawer_content" style="height:{{bounced_Height-50}}px;">
+            <view class="hot_Region_Title"><span></span>车长</view>
+            <view class="conductor">
+                <view wx:for-items="{{conductors}}" data-id="{{index}}" class="{{index==id?'is_checked':'normal'}}" bindtap="select_ChooseConductor" wx:key="{{index}}">{{item.text}}</view>
+            </view>
+
+            <view class="select_Area_Title"><span></span>车型</view>
+            <view class="conductor">
+                <view wx:for-items="{{models}}" data-id="{{index}}" class="{{index==mID?'is_checked':'normal'}}" bindtap="select_Models" wx:key="{{index}}">{{item.text}}</view>
+            </view>
+        </view>
+
+    </view>
+</view>
+<import src="../../components/gzk_dialog_city/city.wxml"/>
+<template is="city" data="{{...city}}"/>

@@ -1,0 +1,601 @@
+<view class="container section">
+    <view class="bor_Rad">
+        <view class="">
+            <view style="height:10px;"></view>
+            <view class="section__title"><span style="width:2px;padding:0px 2px;background:#f53856;margin-right:5px"></span><span>保险</span></view>
+            <view class="flex-wrp pab10" style="margin-top: 30rpx;">
+
+                <!--<view class="flex-item" bindtap='buy_Insurance'>-->
+                    <!--<view class="bor_R1">-->
+                        <!--<p class="display-B"><image class="img_SelectIP" src="/images/ip_fru_veg.png"/></p>-->
+                        <!--<p class="display-B p-Btn f28">水果蔬菜</p>-->
+                    <!--</view>-->
+                <!--</view>-->
+                <view class="flex-item " bindtap="goToIndex" data-statu="3">
+                <!--<view class="flex-item " bindtap="powerDrawer" data-statu="open">-->
+                    <view class="bor_R1">
+                        <p class="display-B"><image class="img_SelectIP" src="/images/ip_rt.png"/></p>
+                        <p class="display-B {{index==3?'selected_InsType':'uncheck_InsType'}}">果蔬冷藏险</p>
+                    </view>
+                </view>
+                <!--<view class="flex-item" bindtap='goToIndex'>-->
+                    <!--<p class="display-B"><image class="img_SelectIP" mode="aspectFit" src="/images/ip_general_goods.png"></image></p>-->
+                    <!--<p class="display-B p-Btn f28">普货基本险</p>-->
+                <!--</view>-->
+
+                <view class="flex-item" bindtap='goToIndex' data-statu="1">
+                    <view class="bor_R1">
+                        <p class="display-B"><image class="img_SelectIP" src="/images/ip_synthesise.png"/></p>
+                        <p class="display-B {{index==1?'selected_InsType':'uncheck_InsType'}}"><view>普货基本险</view></p>
+                    </view>
+                </view>
+                <!--<view class="flex-item" bindtap='goToIndex'>-->
+                    <!--<view class="bor_R1">-->
+                        <!--<p class="display-B"><image class="img_SelectIP" src="/images/ip_jt.png"/></p>-->
+                        <!--<view class="display-B p-Btn f28">-->
+                            <!--<view style="line-height:20px;">火灾爆炸</view><view style="line-height:20px;">交通基本险</view>-->
+                            <!--</view>-->
+                    <!--</view>-->
+                <!--</view>-->
+                <view class="flex-item" bindtap='goToIndex' data-statu="2">
+                    <p class="display-B"><image class="img_SelectIP" src="/images/ip_QuanBao.png"/></p>
+                    <p class="display-B {{index==2?'selected_InsType':'uncheck_InsType'}}">普货综合险</p>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!--<web-view style="height:400px;" src="https://mp.weixin.qq.com/"></web-view>-->
+    <view class="over-A mal20R mar20R f14" style="height:{{height}}px;">
+        <!-- 冷藏 -->
+        <view class="over-A" style="height:{{height}}px;" wx:if="{{insuranceType==3?true:false}}">
+            <view>保险产品：国内陆运冷藏货物果蔬险</view>
+            <view>适用货物：新鲜水果，蔬菜，鲜花，冻品等冷藏货物 </view>
+            <view>承保公司：中国人寿财产保险股份有限公司 </view>
+            <view class="bgC38b40 pat5 pab5 mat10 cF">
+                <view class="mal10R mar10R">单票费率：0.03% ~ 0.04% </view>
+                <view class="mal10R mar10R"><span class="">单票保费最低20元</span></view>
+                <view class="mal10R mar10R">与果真快平台签订购保协议后可享受更多购保优惠</view>
+            </view>
+            <view class="mat10" style="border:2rpx solid #c38b40;">
+                <view class="table1 display-F">
+                    <view class="tab_V1">货物价值</view>
+                    <view class="tab_V2">
+                        <view>保费（元）</view>
+                        <view class="display-F">
+                            <view class="td_V1">普通用户</view>
+                            <view class="td_V2">协议用户</view>
+                            <view class="td_V3">长期用户</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="table2">
+                    <view class="display-F">
+                        <view class="td2_V1 bor_B2">20(万元)</view>
+                        <view class="td2_V2 bor_L2 bor_B2">70</view>
+                        <view class="td2_V3 bor_L2 bor_B2">65</view>
+                        <view class="td2_V3 bor_L2 bor_B2">60</view>
+                    </view>
+                    <view class="display-F">
+                        <view class="td2_V1 bor_B2">30(万元)</view>
+                        <view class="td2_V2 bor_L2 bor_B2">100</view>
+                        <view class="td2_V3 bor_L2 bor_B2">95</view>
+                        <view class="td2_V3 bor_L2 bor_B2">90</view>
+                    </view>
+                    <view class="display-F">
+                        <view class="td2_V1 bor_B2">40(万元)</view>
+                        <view class="td2_V2 bor_L2 bor_B2">130</view>
+                        <view class="td2_V3 bor_L2 bor_B2">125</view>
+                        <view class="td2_V3 bor_L2 bor_B2">120</view>
+                    </view>
+                    <view class="display-F">
+                        <view class="td2_V1">50(万元)</view>
+                        <view class="td2_V2 bor_L2">160</view>
+                        <view class="td2_V3 bor_L2">155</view>
+                        <view class="td2_V3 bor_L2">150</view>
+                    </view>
+                </view>
+            </view>
+            <view class="mat10">协议用户：致电果真快客服<span bindtap="onPhoneCall" data-statu="1" data-phone="4009982860" style="color:#3399ff;">（400-998-2860）</span>联系，并提相关认证资料，签订购保协议。</view>
+            <view class="mat10">长期用户：协议用户并且过去7天内，平均每天在平台出保超过3单，自动升级为长期用户，如不满3单则按协议用户计算保费优惠。</view>
+            <view class="mat10">投保说明：</view>
+            <view class="mat10">1. 投保人需如实填写保单相关货物名称，包装方式，货物价值，起运地，目的地，起运时间，被保人资料，承运司机资料，承运车辆资料</view>
+            <view class="">2. 如在投保，理赔等过程中有任何疑问，请拨打果真快客服热线：<span bindtap="onPhoneCall" data-statu="1" data-phone="4009982860" style="color:#3399ff;">400-998-2860</span> 咨询</view>
+            <view class="">3. 投保成功后，保单内相关人员均会收到相关保单生效短信通知</view>
+            <view class="">4. 保单查询，请拨打果真快客服热线<span bindtap="onPhoneCall" data-statu="1" data-phone="4009982860" style="color:#3399ff;">（4009982860）</span>或 国寿财保客服热线<span bindtap="onPhoneCall" data-statu="2" data-phone="4008695519" style="color:#3399ff;">（4008695519）</span>告知客服保单号即可查询</view>
+
+            <view class="mat10">产品说明：</view>
+            <view class="mat10">1. 本保险产品通过果真快平台与国寿财保险公司网络渠道对接销售。</view>
+            <view class="">2. 本保险产品适用《国内公路货物运输保险条款》、《附加盗抢、抢劫条款》、《附加冷藏货物扩展条款》 。</view>
+            <view class="">3. 本保险产品适用单票货物价值不得超过100万元。</view>
+            <view class="">4. 本保险产品运输方式为国内陆路运输，运输航程为中华人民共境内，但不包括港、澳、台、新疆（乌鲁木齐市除外）、西藏，在保单覆盖地域范围以外地区发生的事故及造成的损失均为本保单除外责任。</view>
+            <view class="">5.	保险责任起讫时间为自签发保险凭证和保险货物运离起运运地的最后一个仓库或储存地点起，至保险凭证上注明目的地的第一个仓库或储存处所时终止。</view>
+            <view class="">6. 本保险产品适用运输工具为检验合格的冷藏车，保温车。</view>
+            <view class="">7. 本保险产品每次事故绝对免赔为RMB1000元或损失金额的10%，两者以高者为准。</view>
+            <view class="">8. 被保险人必须将货物委托给有资质的专业承运人或有合格驾驶证营运证的承运车辆进行运输，货物包装和承运工具必须符合国家关于安全运输的各项规定，否则保险人不负责赔偿造成的任何损失、费用和责任。</view>
+            <view class="">9. 承运人将保险货物与其它禁止配载的危险混合配载而导致货物产生损失，保险人不负赔偿责任。</view>
+            <view class="">10. 对于食品、药品类货物发生损失，仅负责赔偿受损货物及包装的直接损失（如外包装破损，但内包装完好或者标的本身并未发生渗漏、被污损等，本保单仅就受损的外包装承担赔偿责任；如部分货物受损，本保单只负责受损货物的直接损失），不承担由此产生的整箱货物被拒收或无法销售带来的损失以及其它间接损失。</view>
+            <view class="">11. 承运水果、蔬菜时不负责以下事故的损失： </view>
+            <view class="">（A）在保险责任开始前，果蔬货物已存在品质不良或数量短少所形成的损失</view>
+            <view class="">（B）市价跌落所造成的损失</view>
+            <view class="">（C）除主险保险责任外其他原因造成的水果、蔬菜腐烂、变质</view>
+            <view class="">（D）发货人责任造成的损失</view>
+            <view class="">12. 附加盗窃、抢劫风险，该类损失必须提供当地警方出具的正本书面的能证明其盗窃、抢劫性质的文件或材料；发生火灾、 爆炸风险，必须提供当地消防部门的事故证明。</view>
+
+            <view class="mat10 font-B center">中国人寿财产保险股份有限公司</view>
+            <view class="font-B center">公路货物运输保险条款</view>
+            <view class="mat10 font-B center">保险标的范围</view>
+            <view class=""><span class="font-B">第一条</span><span>  凡在国内经公路运输的货物均可为本保险之标的。</span></view>
+            <view class=""><span class="font-B">第二条  下列货物非经投保人与保险人特别约定，并在保险单（凭证）上载明，不在保险标的范围以内：金银、珠宝、钻石、玉器、首饰、古币、古玩、古书、古画、邮票、艺术品、稀有金属等珍贵财物。</span></view>
+            <view class=""><span class="font-B">第三条  下列货物不在保险标的范围以内：蔬菜、水果、活牲畜、禽鱼类和其它动物。</span></view>
+            <view class="mat10 font-B center">保险责任</view>
+            <view class=""><span class="font-B">第四条  </span><span>由于下列保险事故造成保险货物的损失和费用，保险人依照本条款约定负责赔</span></view>
+            <view class="">（一）火灾、爆炸、雷电、冰雹、暴风、暴雨、洪水、海啸、地陷、崖崩、突发性滑坡、泥石流；</view>
+            <view class="">（二）由于运输工具发生碰撞、倾覆或隧道、码头坍塌，或在驳运过程中因驳运工具遭受搁浅、触礁、沉没、碰撞；</view>
+            <view class="">（三）在装货、卸货或转载时因意外事故造成的损失；</view>
+            <view class="">（四）因碰撞、挤压而造成货物破碎、弯曲、凹瘪、折断、开裂的损失；</view>
+            <view class="">（五）因包装破裂致使货物散失的损失；</view>
+            <view class="">（六）液体货物因受碰撞或挤压致使所用容器（包括封口)损坏而渗漏的损失，或用液体保藏的货物因液体渗漏而造成该货物腐烂变质的损失；</view>
+            <view class="">（七）符合安全运输规定而遭受雨淋所致的损失；</view>
+            <view class="">（八）在发生上述灾害事故时，因纷乱造成货物的散失以及因施救或保护货物所支付的直接合理的费用。</view>
+            <view class="mat10 font-B center">责任免除</view>
+            <view class="font-B">第五条 由于下列原因造成保险货物的损失，保险人不负赔偿责任：</view>
+            <view class="font-B">（一）战争、敌对行为、军事行动、扣押、罢工、暴动、哄抢；</view>
+            <view class="font-B">（二）地震造成的损失；</view>
+            <view class="font-B">（三）盗窃或整件提货不着的损失；</view>
+            <view class="font-B">（四）在保险责任开始前，保险货物已存在的品质不良或数量短差所造成的损失；</view>
+            <view class="font-B">（五）保险货物的自然损耗、本质缺陷、特性所引起的损失或费用；</view>
+            <view class="font-B">（六）市价跌落、运输延迟所引起的损失；</view>
+            <view class="font-B">（七）属于发货人责任引起的损失；</view>
+            <view class="font-B">（八）投保人、被保险人的故意行为或违法犯罪行为。</view>
+            <view class="font-B">第六条  经国家有关部门认定的违法、非法货物，保险人不负赔偿责任。</view>
+            <view class="font-B">第七条  其他不属于保险责任范围的损失，保险人不负赔偿责任。</view>
+            <view class="font-B center">责任起讫</view>
+            <view class=""><span class="font-B">第八条</span><span>  保险责任自签发保险凭证后，保险货物运离起运地发货人的最后一个仓库或储存处所时起，至该保险凭证上注明的目的地的收货人在当地的第一个仓库或储存处所时终止。但保险货物运抵目的地后，如果收货人未及时提货，则保险责任的终止期最多延长至保险货物卸离运输工具后的十五天为限。</span></view>
+            <view class="font-B center">保险价值和保险金额</view>
+            <view class=""><span class="font-B">第九条  </span><span>保险价值为货物的实际价值，按货物的实际价值或货物的实际价值加运杂费确定。保险金额由投保人参照保险价值自行确定，并在保险合同中载明。保险金额不得超过保险价值。超过保险价值的，超过部分无效，保险人应当退还相应的保险费。</span></view>
+            <view class="font-B center">投保人、被保险人的义务</view>
+            <view class=""><span class="font-B">第十条  </span><span>投保人应当履行如实告知义务，如实回答保险人就保险标的或者被保险人的有关情况提出的询问。</span></view>
+            <view class=""><span>投保人故意或因重大过失未履行前款规定的如实告知义务，足以影响保险人决定是否同意承保或者提高保险费率的，保险人有权解除保险合同。</span></view>
+            <view class=""><span class="font-B">投保人故意不履行如实告知义务的，保险人对于保险合同解除前发生的保险事故，不承担赔偿责任，并不退还保险费。</span></view>
+            <view class=""><span class="font-B">投保人因重大过失未履行如实告知义务，对保险事故的发生有严重影响的，保险人对于保险合同解除前发生的保险事故，不承担赔偿责任，但应当退还保险费。</span></view>
+            <view class=""><span class="font-B">第十一条  </span><span>投保人在保险人或其代理人签发保险单（凭证）的同时，应一次交清应付的保险费。</span><span class="font-B">若投保人未按照约定交付保险费，保险费交付前发生的保险事故，保险人不承担赔偿责任。</span></view>
+            <view class=""><span class="font-B">第十二条  </span><span>投保人和被保险人应当严格遵守国家及交通运输部门关于安全运输的各项规定，维护保险标的的安全。货物运输包装必须符合国家和主管部门规定的标准。</span></view>
+            <view class="">保险人可以对保险标的的安全状况进行检查，向投保人、被保险人提出消除不安全因素和隐患的书面建议，被保险人应该认真付诸实施。</view>
+            <view class=""><span class="font-B">对于因被保险人未遵守上述约定而导致保险事故的，保险人不负赔偿责任；对于因被保险人未遵守上述约定而导致损失扩大的，保险人对扩大的损失不负赔偿责任。</span></view>
+            <view class=""><span class="font-B">第十三条  </span><span>在合同有效期内，保险标的危险程度显著增加的，被保险人按照合同约定应当及时通知保险人，保险人有权要求增加保险费或者解除合同。</span></view>
+            <view class=""><span class="font-B">被保险人未履行前款规定的通知义务的，因保险标的危险程度显著增加而发生的保险事故，保险人不承担赔偿责任。</span></view>
+            <view class=""><span class="font-B">第十四条  </span><span>保险货物如果发生保险责任范围内的损失时，投保人或被保险人获悉后，应迅速采取合理的施救和保护措施并立即通知保险人的当地机构（最迟不超过10天）。</span></view>
+            <view class=""><span class="font-B">故意或者因重大过失未及时通知，致使保险事故的性质、原因、损失程度等难以确定的，保险人对无法确定的部分，不承担赔偿责任，但保险人通过其他途径已经及时知道或者应当及时知道保险事故发生的除外。</span></view>
+
+            <view class="mat10 center"><span class="font-B">赔偿处理</span></view>
+            <view class=""><span class="font-B">第十五条  </span><span>被保险人向保险人申请索赔时，必须提供下列有关单证：</span></view>
+            <view class="">（一）保险单（凭证）、运单（货票）、提货单、发票（货价证明）；</view>
+            <view class="">（二）承运部门签发的事故签证、交接验收记录、鉴定书；</view>
+            <view class="">（三）收货单位的入库记录、检验报告、损失清单及救护保险货物所支付的直接合理的费用单据；</view>
+            <view class="">（四）被保险人所能提供的其他与确认保险事故的性质、原因、损失程度等有关的证明和资料。</view>
+            <view class="">保险人收到被保险人的赔偿请求后，应当及时就是否属于保险责任作出核定，并将核定结果通知被保险人。情形复杂的，保险人在收到被保险人的赔偿请求并提供理赔所需资料后三十日内未能核定保险责任的，保险人与被保险人根据实际情形商议合理期间，保险人在所商定的期间内作出核定结果并通知被保险人。对属于保险责任的，在与被保险人达成有关赔偿金额的协议后十日内，履行赔偿义务。</view>
+            <view class=""><span class="font-B">第十六条  </span><span>保险货物发生保险责任范围内的损失时，保险金额等于或高于保险价值时，保险人应根据实际损失计算赔偿，但最高赔偿金额以保险价值为限；保险金额低于保险价值的，保险人对其损失金额及支付的施救保护费用按保险金额与保险价值的比例计算赔偿。保险人对货物损失的赔偿金额，以及因施救或保护货物所支付的直接合理的费用，应分别计算，并各以不超过保险金额为限。</span></view>
+            <view class="">
+                <span class="font-B">第十七条  </span><span>保险货物发生保险责任范围内的损失，如果根据法律规定或有关约定，应当由承运人或其他第三者负责赔偿部分或全部的，被保险人应首先向承运人或其他第三者提出书面索赔，直至诉讼。</span>
+                <span class="font-B">保险事故发生后，保险人未赔偿保险金之前，被保险人放弃对有关责任方请求赔偿的权利的，保险人不承担赔偿责任；</span><span>如被保险人要求保险人先予赔偿，被保险人应签发权益转让书和应将向承运人或第三者提出索赔的诉讼书及有关材料移交给保险人，并协助保险人向责任方追偿。</span>
+            </view>
+            <view class="">
+                <span class="font-B">由于被保险人的故意或重大过失致使保险人不能行使代位请求赔偿权利的，保险人可以相应扣减保险赔偿金。</span>
+            </view>
+            <view class="">
+                <span class="font-B">第十八条  </span><span>经双方协商同意，保险人可将其享有的保险财产残余部分的权益作价折归被保险人，并可在保险赔偿金中直接扣除。</span>
+            </view>
+            <view class="">
+                <span class="font-B">第十九条  </span><span>被保险人与保险人发生争议时，协商解决，双方不能达成协议时，可以提交仲裁机关或法院处理。</span>
+            </view>
+            <view class="mat10 font-B center">其他事项</view>
+            <view class=""><span class="font-B">第二十条  </span><span>凡经公路与其他运输方式联合运输的保险货物，按相应的运输方式分别适用本条款及《铁路货物运输保险条款》、《水路货物运输保险条款》和《国内航空货物运输保险条款》。</span></view>
+            <view class=""><span class="font-B">第二十一条  </span><span>凡涉及本保险的约定均采用书面形式。</span></view>
+
+            <view class="mat10 font-B center">中国人寿财产保险股份有限公司</view>
+            <view class="font-B center">公路货物运输（定额）保险附加盗窃、抢劫保险条款</view>
+            <view class="mat10 font-B center">第一条 保险责任</view>
+            <view class="">保险人对保险货物在保险期间内由于外来的有明显盗窃、抢劫、哄抢痕迹并经公安部门证明确系盗窃、抢劫、哄抢行为以及全车被他人诈骗所致的直接经济损失承担赔偿责任。</view>
+            <view class="mat10 font-B center">第二条 责任起讫</view>
+            <view class="">在保险合同有效期内，每次运输的保险责任起讫期为保险货物自运离保险凭证（保险单）上载明的起运地时起，至运抵保险凭证（保险单）载明的目的地卸离运输工具时止。但保险货物运抵目的地后，如果收货人未及时卸货，则保险责任的终止期从抵达目的地当日零时起计算最多延长48小时。</view>
+            <view class="mat10 font-B center">第三条 责任免除</view>
+            <view class="font-B">下列原因造成保险货物的损失，保险人不负赔偿责任：</view>
+            <view class="font-B">（一）保险货物被政府有关部门征用、罚没、扣押；</view>
+            <view class="font-B">（二）被保险人或驾驶员与他人发生民事纠纷；</view>
+            <view class="font-B">（三）投保人或被保险人的故意行为、违法犯罪行为；</view>
+            <view class="font-B">（四）其他不属于保险责任范围的原因。</view>
+            <view class="mat10 font-B center">第四条 投保人或被保险人的义务</view>
+            <view class=""><span>（一）投保人或被保险人获知或应当获知保险货物发生保险责任范围内的损失后，应立即向当地公安部门报案，并同时通知保险人。</span><span class="font-B">故意或者因重大过失未及时通知，致使保险事故的性质、原因、损失程度等难以确定的，保险人对无法确定的部分，不承担赔偿责任，但保险人通过其他途径已经及时知道或者应当及时知道保险事故发生的除外。</span></view>
+            <view class="font-B">（二）当货物发生损失时，投保人或被保险人应采取积极有效措施制止货物损失进一步扩大，否则保险人就损失扩大部分不负赔偿责任。</view>
+            <view class="mat10 font-B center">第五条 赔偿处理</view>
+            <view class=""><span>（一）被保险人向保险人索赔时，须提供出险地公安部门出具的证明；全车被骗的，须提供出险地县级以上（含县级）公安刑侦部门出具的证明。</span><span class="font-B">否则，保险人有权对部分或全部经济损失不负赔偿责任。</span></view>
+            <view class="">（二） 本附加险责任范围内的盗窃、抢劫、哄抢所造成的保险货物的直接经济损失，在被保险人报案30天后未能侦破，并由被保险人出具盗窃、抢劫、哄抢事故报告、损失清单、公安部门的证明材料及被保险人所能提供的其他与确认保险事故的性质、原因、损失程度等有关的证明和资料后，保险人给予赔偿。全车被骗所致保险货物的直接经济损失，须经县级以上（含县级）公安刑侦部门立案满三个月未能侦破，被保险人出具公安部门的证明材料及保险人认为必要的其他单证后保险人给予赔偿。</view>
+            <view class="">（三） 经公安部门破案被追回的保险货物，双方应当协商处理。</view>
+            <view class=""><span>（四）保险货物发生保险责任范围内的损失时，赔偿按主险条款赔偿处理的有关规定计算赔偿金额。</span><span class="font-B">被盗、被抢货物的赔偿均实行20%的绝对免赔，全车被骗的赔偿实行30%的绝对免赔。</span></view>
+
+            <view class="mat10 font-B center">第六条 其他事项</view>
+            <view class="">本条款为《公路货物运输保险条款》、《国内货物运输公路定额保险条款》的附加条款。本条款与上述条款相抵触之处，以本条款为准，其他未尽事项以主险条款为准。</view>
+            <view class="mat10 font-B center">中国人寿财产保险股份有限公司</view>
+            <view class="font-B center">公路货物运输（定额）保险附加冷藏货物保险条款</view>
+            <view class="mat10 font-B">扩展类</view>
+            <view class=""><span>兹经保险合同双方同意，本保险合同扩展承保由于发生主险条款约定的保险事故，致使冷藏机器或隔温设备损坏或者车厢内贮存维持低温的物质（包括但不限于冰块、干冰，下同）融化，而造成保险货物解冻融化或腐败、变质的损失。</span><span class="font-B">但保险货物在运输过程中的任何阶段，因未存放在有冷藏设备的仓库或运输工具中，或运输工具没有隔温设备，或未在车厢内贮存足够的维持低温的物质所造成的损失，保险人不承担赔偿责任。</span></view>
+            <view class=""><span>本附加险条款与主险条款不一致之处，以本附加险条款为准；本附加险条款未尽事宜，以主险条款为准。</span></view>
+        </view>
+        <!-- 普货基本险 -->
+        <view class="over-A" style="height:{{height}}px;" wx:if="{{insuranceType==1?true:false}}">
+            <view>保险产品：国内陆运普货基本险</view>
+            <view>适用货物：对运输、装卸、保管无特殊要求的普通货物</view>
+            <view>承保公司：中国人寿财产保险股份有限公司 </view>
+            <view class="bgC38b40 pat5 pab5 mat10 cF">
+                <view class="mal10R mar10R">单票费率：0.015% ~ 0.02%</view>
+                <view class="mal10R mar10R"><span class="">单票保费最低20元</span></view>
+                <view class="mal10R mar10R">与果真快平台签订购保协议后可享受更多购保优惠</view>
+            </view>
+            <view class="mat10" style="border:2rpx solid #c38b40;">
+                <view class="table1 display-F">
+                    <view class="tab_V1">货物价值</view>
+                    <view class="tab_V2">
+                        <view>保费（元）</view>
+                        <view class="display-F">
+                            <view class="td_V1">普通用户</view>
+                            <view class="td_V2">协议用户</view>
+                            <view class="td_V3">长期用户</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="table2">
+                    <view class="display-F">
+                        <view class="td2_V1 bor_B2">20(万元)</view>
+                        <view class="td2_V2 bor_L2 bor_B2">40</view>
+                        <view class="td2_V3 bor_L2 bor_B2">35</view>
+                        <view class="td2_V3 bor_L2 bor_B2">30</view>
+                    </view>
+                    <view class="display-F">
+                        <view class="td2_V1 bor_B2">30(万元)</view>
+                        <view class="td2_V2 bor_L2 bor_B2">55</view>
+                        <view class="td2_V3 bor_L2 bor_B2">50</view>
+                        <view class="td2_V3 bor_L2 bor_B2">45</view>
+                    </view>
+                    <view class="display-F">
+                        <view class="td2_V1 bor_B2">40(万元)</view>
+                        <view class="td2_V2 bor_L2 bor_B2">70</view>
+                        <view class="td2_V3 bor_L2 bor_B2">65</view>
+                        <view class="td2_V3 bor_L2 bor_B2">60</view>
+                    </view>
+                    <view class="display-F">
+                        <view class="td2_V1">50(万元)</view>
+                        <view class="td2_V2 bor_L2">85</view>
+                        <view class="td2_V3 bor_L2">80</view>
+                        <view class="td2_V3 bor_L2">75</view>
+                    </view>
+                </view>
+            </view>
+            <view class="mat10">协议用户：致电果真快客服<span bindtap="onPhoneCall" data-statu="1" data-phone="4009982860" style="color:#3399ff;">（400-998-2860）</span>联系，并提相关认证资料，签订购保协议。</view>
+            <view class="mat10">长期用户：协议用户并且过去7天内，平均每天在平台出保超过3单，自动升级为长期用户，如不满3单则按协议用户计算保费优惠。</view>
+            <view class="mat10">投保说明：</view>
+            <view class="mat10">1. 投保人需如实填写保单相关货物名称，包装方式，货物价值，起运地，目的地，起运时间，被保人资料，承运司机资料，承运车辆资料</view>
+            <view class="">2. 如在投保，理赔等过程中有任何疑问，请拨打果真快客服热线：<span bindtap="onPhoneCall" data-statu="1" data-phone="4009982860" style="color:#3399ff;">400-998-2860</span> 咨询</view>
+            <view class="">3. 投保成功后，保单内相关人员均会收到相关保单生效短信通知</view>
+            <view class="">4. 保单查询，请拨打果真快客服热线<span bindtap="onPhoneCall" data-statu="1" data-phone="4009982860" style="color:#3399ff;">（4009982860）</span>或 国寿财保客服热线<span bindtap="onPhoneCall" data-statu="2" data-phone="4008695519" style="color:#3399ff;">（4008695519）</span>告知客服保单号即可查询</view>
+
+            <view class="mat10">产品说明：</view>
+            <view class="mat10">1. 本保险产品通过果真快平台与国寿财保险公司网络渠道对接销售。</view>
+            <view class="">2. 本保险产品适用《国内公路货物运输保险条款》。</view>
+            <view class="">3. 本保险产品适用单票货物价值不得超过100万元。</view>
+            <view class="">4. 本保险产品运输方式为国内陆路运输，运输航程为中华人民共境内，但不包括港、澳、台、新疆（乌鲁木齐市除外）、西藏，在保单覆盖地域范围以外地区发生的事故及造成的损失均为本保单除外责任。</view>
+            <view class="">5. 保险责任起讫时间为自签发保险凭证和保险货物运离起运运地的最后一个仓库或储存地点起，至保险凭证上注明目的地的第一个仓库或储存处所时终止。</view>
+            <view class="">6. 本保险产品适用运输工具为检验合格的货车、冷藏车、全封闭车辆、集装箱、半封闭、平板挂车等。</view>
+            <view class="">7. 本保险产品每次事故绝对免赔为RMB1000元或损失金额的10%，两者以高者为准。</view>
+            <view class="">8.	任何情况下，因驾驶人员不符合安全驾驶规定或要求、驾驶员失踪、承运车辆失踪、货物遭遇哄抢、承运车辆或货物遭遇恶意破坏、承运车辆无法满足货物安全运输要求、实际承运人或被保险人员工道德风险、因非保单责任事故原因造成的货物被滞留或处置、承运车辆或货物无人看管、无法解释的情况造成的货物损失等原因造成的，或在其过程中或期间发生的损失，均不属于本保险覆盖的范围。</view>
+            <view class="">9.	承运车辆必须符合道路/桥梁/隧道/立交桥/限宽门（桩）等各类道路设施的通行规定或要求，因未符合上述规定或要求而造成的任何损失，本保单的赔偿责任仅限于扣除该次事故免赔后剩余损失金额的50%，且无论如何，该次事故的赔偿限额不超过人民币50万元。</view>
+            <view class="">10.	不明原因造成运输货物丢失或损坏不属于保险责任，本保单不负责赔偿。</view>
+            <view class="">11.	保险标的必须有专业承运人进行专业化包装并负责运输。 被保险人不是实际承运人的情况下，被保险人必须将有关业务委托给有资质的专业承运人或有合格驾驶证营运证的承运车辆进行运输，否则保险人不负责赔偿造成的任何损失、费用和责任。</view>
+            <view class="">12.	被保险货物在无人看管情况下发生的损失，保险人不承担保险责任。看管人员包括但不限于运输车辆的司机及随车人员。</view>
+            <view class="">13.	发生火灾、 爆炸风险，必须提供当地消防部门的事故证明。</view>
+            <view class="">14.	对于食品、药品类货物发生损失，仅负责赔偿受损货物及包装的直接损失（如外包装破损，但内包装完好或者标的本身并未发生渗漏、被污损等，本保单仅就受损的外包装承担赔偿责任；如部分货物受损，本保单只负责受损货物的直接损失），不承担由此产生的整箱货物被拒收或无法销售带来的损失以及其它间接损失。</view>
+            <view class="">15.	承运人将保险货物与其它禁止配载的危险混合配载而导致货物损失，保险人不负赔偿责任；</view>
+            <view class="">16.	被保险人必须将货物委托给有资质的专业承运人或有合格驾驶证营运证的承运车辆进行运输，货物包装和承运工具必须符合国家关于安全运输的各项规定，否则保险人不负责赔偿造成的任何损失、费用和责任。</view>
+            <view class="">17.	承运人将保险货物与其它禁止配载的危险混合配载而导致货物产生损失，保险人不负赔偿责任。</view>
+            <view class="">18.	对于食品、药品类货物发生损失，仅负责赔偿受损货物及包装的直接损失（如外包装破损，但内包装完好或者标的本身并未发生渗漏、被污损等，本保单仅就受损的外包装承担赔偿责任；如部分货物受损，本保单只负责受损货物的直接损失），不承担由此产生的整箱货物被拒收或无法销售带来的损失以及其它间接损失。</view>
+
+            <view class="mat10">本保险产品适用货物补充：以下货物不在本合同保险范围之内，保险人不负赔偿责任:</view>
+            <view class="">1、武器弹药、现金、支票、票据、单证、有价证券、护照等；</view>
+            <view class="">2、贵重金属、珠宝、砖石、玉器、古币、古玩、古书、字画、一级艺术品、国家一级文物等高价值物品；</view>
+            <view class="">3、烟花、化工用品等危险货物、家禽、鲜活物品(水果、蔬菜、鲜花除外)、动植物；</view>
+            <view class="">4、大豆、豆粕、植物油鱼粉、花生、菜籽饼、地瓜干、食品罐头等易腐易蛀变质货物；</view>
+            <view class="">5、手机、MP3等小电子设备；</view>
+            <view class="">6、精密设备或仪器，液晶电器；</view>
+            <view class="">7、“李宁”牌服饰,超高超大件,旧器材,旧设备；</view>
+            <view class="">8、汽车、摩托车等机动车，船舶；</view>
+            <view class="">9、各种压缩气体、有电解液的蓄电池、易燃易爆物品（易燃、易爆的危险品详见《危险货物品名表》GB12268中列明的货物。）；</view>
+            <view class="">10、易损品：包括但不限于平板玻璃、纯玻璃制品、仪表、亚克力板（有机玻璃）、含玻璃的家具（玻璃面积超过家具最大面面积30%）、大理石类物品、陶瓷制品、亚克力卫浴制品、显示器、液晶屏等。</view>
+            <view class="">11、二手货物、散装货物、无包装货物；</view>
+            <view class="">12、标本、血液制品、疫苗、未经处理的动物皮毛、原木；</view>
+            <view class="">13、工艺品类（如：各种铁艺物品、铜艺物品、花艺物品、骨雕物品、木雕物品、石雕物品、竹雕物品、炭雕物品、牙雕物品、膏雕物品、树脂、琉璃类工艺品等）</view>
+            <view class="">14、钢琴及其他乐器、古家具、红木家具（用紫檀木，花梨木、香枝木、黑酸枝、红酸枝、乌木、条纹乌木、鸡翅木制成的家具）。</view>
+            <view class="">15、卷烟、烟草（包括叶、梗、末、杆）、烟草制品；</view>
+            <view class="">16、太阳能组件、半导体、硅晶片（ 单硅晶片、 多硅晶片）。</view>
+            <view class="">17、任何违反国家法律法规的货物；</view>
+
+            <view class="mat10 font-B center">中国人寿财产保险股份有限公司</view>
+            <view class="font-B center">公路货物运输保险条款</view>
+            <view class="mat10 font-B center">保险标的范围</view>
+            <view class=""><span class="font-B">第一条</span><span>  凡在国内经公路运输的货物均可为本保险之标的。</span></view>
+            <view class=""><span class="font-B">第二条  下列货物非经投保人与保险人特别约定，并在保险单（凭证）上载明，不在保险标的范围以内：金银、珠宝、钻石、玉器、首饰、古币、古玩、古书、古画、邮票、艺术品、稀有金属等珍贵财物。</span></view>
+            <view class=""><span class="font-B">第三条  下列货物不在保险标的范围以内：蔬菜、水果、活牲畜、禽鱼类和其它动物。</span></view>
+            <view class="mat10 font-B center">保险责任</view>
+            <view class=""><span class="font-B">第四条  </span><span>由于下列保险事故造成保险货物的损失和费用，保险人依照本条款约定负责赔</span></view>
+            <view class="">（一）火灾、爆炸、雷电、冰雹、暴风、暴雨、洪水、海啸、地陷、崖崩、突发性滑坡、泥石流；</view>
+            <view class="">（二）由于运输工具发生碰撞、倾覆或隧道、码头坍塌，或在驳运过程中因驳运工具遭受搁浅、触礁、沉没、碰撞；</view>
+            <view class="">（三）在装货、卸货或转载时因意外事故造成的损失；</view>
+            <view class="">（四）因碰撞、挤压而造成货物破碎、弯曲、凹瘪、折断、开裂的损失；</view>
+            <view class="">（五）因包装破裂致使货物散失的损失；</view>
+            <view class="">（六）液体货物因受碰撞或挤压致使所用容器（包括封口)损坏而渗漏的损失，或用液体保藏的货物因液体渗漏而造成该货物腐烂变质的损失；</view>
+            <view class="">（七）符合安全运输规定而遭受雨淋所致的损失；</view>
+            <view class="">（八）在发生上述灾害事故时，因纷乱造成货物的散失以及因施救或保护货物所支付的直接合理的费用。</view>
+            <view class="mat10 font-B center">责任免除</view>
+            <view class="font-B">第五条 由于下列原因造成保险货物的损失，保险人不负赔偿责任：</view>
+            <view class="font-B">（一）战争、敌对行为、军事行动、扣押、罢工、暴动、哄抢；</view>
+            <view class="font-B">（二）地震造成的损失；</view>
+            <view class="font-B">（三）盗窃或整件提货不着的损失；</view>
+            <view class="font-B">（四）在保险责任开始前，保险货物已存在的品质不良或数量短差所造成的损失；</view>
+            <view class="font-B">（五）保险货物的自然损耗、本质缺陷、特性所引起的损失或费用；</view>
+            <view class="font-B">（六）市价跌落、运输延迟所引起的损失；</view>
+            <view class="font-B">（七）属于发货人责任引起的损失；</view>
+            <view class="font-B">（八）投保人、被保险人的故意行为或违法犯罪行为。</view>
+            <view class="font-B">第六条  经国家有关部门认定的违法、非法货物，保险人不负赔偿责任。</view>
+            <view class="font-B">第七条  其他不属于保险责任范围的损失，保险人不负赔偿责任。</view>
+
+            <view class="mat10 font-B center">责任起讫</view>
+
+            <view class=""><span class="font-B">第八条</span><span>  保险责任自签发保险凭证后，保险货物运离起运地发货人的最后一个仓库或储存处所时起，至该保险凭证上注明的目的地的收货人在当地的第一个仓库或储存处所时终止。但保险货物运抵目的地后，如果收货人未及时提货，则保险责任的终止期最多延长至保险货物卸离运输工具后的十五天为限。</span></view>
+            <view class="mat10 font-B center">保险价值和保险金额</view>
+            <view class=""><span class="font-B">第九条  </span><span>保险价值为货物的实际价值，按货物的实际价值或货物的实际价值加运杂费确定。保险金额由投保人参照保险价值自行确定，并在保险合同中载明。保险金额不得超过保险价值。超过保险价值的，超过部分无效，保险人应当退还相应的保险费。</span></view>
+            <view class="mat10 font-B center">投保人、被保险人的义务</view>
+
+            <view class=""><span class="font-B">第十条  </span><span>投保人应当履行如实告知义务，如实回答保险人就保险标的或者被保险人的有关情况提出的询问。</span></view>
+            <view class=""><span>投保人故意或因重大过失未履行前款规定的如实告知义务，足以影响保险人决定是否同意承保或者提高保险费率的，保险人有权解除保险合同。</span></view>
+            <view class=""><span class="font-B">投保人故意不履行如实告知义务的，保险人对于保险合同解除前发生的保险事故，不承担赔偿责任，并不退还保险费。</span></view>
+            <view class=""><span class="font-B">投保人因重大过失未履行如实告知义务，对保险事故的发生有严重影响的，保险人对于保险合同解除前发生的保险事故，不承担赔偿责任，但应当退还保险费。</span></view>
+            <view class=""><span class="font-B">第十一条  </span><span>投保人在保险人或其代理人签发保险单（凭证）的同时，应一次交清应付的保险费。</span><span class="font-B">若投保人未按照约定交付保险费，保险费交付前发生的保险事故，保险人不承担赔偿责任。</span></view>
+            <view class=""><span class="font-B">第十二条  </span><span>投保人和被保险人应当严格遵守国家及交通运输部门关于安全运输的各项规定，维护保险标的的安全。货物运输包装必须符合国家和主管部门规定的标准。</span></view>
+            <view class="">保险人可以对保险标的的安全状况进行检查，向投保人、被保险人提出消除不安全因素和隐患的书面建议，被保险人应该认真付诸实施。</view>
+            <view class=""><span class="font-B">对于因被保险人未遵守上述约定而导致保险事故的，保险人不负赔偿责任；对于因被保险人未遵守上述约定而导致损失扩大的，保险人对扩大的损失不负赔偿责任。</span></view>
+            <view class=""><span class="font-B">第十三条  </span><span>在合同有效期内，保险标的危险程度显著增加的，被保险人按照合同约定应当及时通知保险人，保险人有权要求增加保险费或者解除合同。</span></view>
+            <view class=""><span class="font-B">被保险人未履行前款规定的通知义务的，因保险标的危险程度显著增加而发生的保险事故，保险人不承担赔偿责任。</span></view>
+            <view class=""><span class="font-B">第十四条  </span><span>保险货物如果发生保险责任范围内的损失时，投保人或被保险人获悉后，应迅速采取合理的施救和保护措施并立即通知保险人的当地机构（最迟不超过10天）。</span></view>
+            <view class=""><span class="font-B">故意或者因重大过失未及时通知，致使保险事故的性质、原因、损失程度等难以确定的，保险人对无法确定的部分，不承担赔偿责任，但保险人通过其他途径已经及时知道或者应当及时知道保险事故发生的除外。</span></view>
+
+            <view class="mat10 center"><span class="font-B">赔偿处理</span></view>
+            <view class=""><span class="font-B">第十五条  </span><span>被保险人向保险人申请索赔时，必须提供下列有关单证：</span></view>
+            <view class="">（一）保险单（凭证）、运单（货票）、提货单、发票（货价证明）；</view>
+            <view class="">（二）承运部门签发的事故签证、交接验收记录、鉴定书；</view>
+            <view class="">（三）收货单位的入库记录、检验报告、损失清单及救护保险货物所支付的直接合理的费用单据；</view>
+            <view class="">（四）被保险人所能提供的其他与确认保险事故的性质、原因、损失程度等有关的证明和资料。</view>
+            <view class="">保险人收到被保险人的赔偿请求后，应当及时就是否属于保险责任作出核定，并将核定结果通知被保险人。情形复杂的，保险人在收到被保险人的赔偿请求并提供理赔所需资料后三十日内未能核定保险责任的，保险人与被保险人根据实际情形商议合理期间，保险人在所商定的期间内作出核定结果并通知被保险人。对属于保险责任的，在与被保险人达成有关赔偿金额的协议后十日内，履行赔偿义务。</view>
+            <view class=""><span class="font-B">第十六条  </span><span>保险货物发生保险责任范围内的损失时，保险金额等于或高于保险价值时，保险人应根据实际损失计算赔偿，但最高赔偿金额以保险价值为限；保险金额低于保险价值的，保险人对其损失金额及支付的施救保护费用按保险金额与保险价值的比例计算赔偿。保险人对货物损失的赔偿金额，以及因施救或保护货物所支付的直接合理的费用，应分别计算，并各以不超过保险金额为限。</span></view>
+            <view class="">
+                <span class="font-B">第十七条  </span><span>保险货物发生保险责任范围内的损失，如果根据法律规定或有关约定，应当由承运人或其他第三者负责赔偿部分或全部的，被保险人应首先向承运人或其他第三者提出书面索赔，直至诉讼。</span>
+                <span class="font-B">保险事故发生后，保险人未赔偿保险金之前，被保险人放弃对有关责任方请求赔偿的权利的，保险人不承担赔偿责任；</span><span>如被保险人要求保险人先予赔偿，被保险人应签发权益转让书和应将向承运人或第三者提出索赔的诉讼书及有关材料移交给保险人，并协助保险人向责任方追偿。</span>
+            </view>
+            <view class="">
+                <span class="font-B">由于被保险人的故意或重大过失致使保险人不能行使代位请求赔偿权利的，保险人可以相应扣减保险赔偿金。</span>
+            </view>
+            <view class="">
+                <span class="font-B">第十八条  </span><span>经双方协商同意，保险人可将其享有的保险财产残余部分的权益作价折归被保险人，并可在保险赔偿金中直接扣除。</span>
+            </view>
+            <view class="">
+                <span class="font-B">第十九条  </span><span>被保险人与保险人发生争议时，协商解决，双方不能达成协议时，可以提交仲裁机关或法院处理。</span>
+            </view>
+            <view class="mat10 font-B center">其他事项</view>
+            <view class=""><span class="font-B">第二十条  </span><span>凡经公路与其他运输方式联合运输的保险货物，按相应的运输方式分别适用本条款及《铁路货物运输保险条款》、《水路货物运输保险条款》和《国内航空货物运输保险条款》。</span></view>
+            <view class=""><span class="font-B">第二十一条  </span><span>凡涉及本保险的约定均采用书面形式。</span></view>
+        </view>
+        <!-- 普货综合险 -->
+        <view class="over-A" style="height:{{height}}px;" wx:if="{{insuranceType==2?true:false}}">
+            <view>保险产品：国内陆运普货综合险</view>
+            <view>适用货物：对运输、装卸、保管无特殊要求的普通货物</view>
+            <view>承保公司：中国人寿财产保险股份有限公司 </view>
+            <view class="bgC38b40 pat5 pab5 mat10 cF">
+                <view class="mal10R mar10R">单票费率：0.025% ~ 0.035%</view>
+                <view class="mal10R mar10R"><span class="">单票保费最低20元</span></view>
+                <view class="mal10R mar10R">与果真快平台签订购保协议后可享受更多购保优惠</view>
+            </view>
+            <view class="mat10" style="border:2rpx solid #c38b40;">
+                <view class="table1 display-F">
+                    <view class="tab_V1">货物价值</view>
+                    <view class="tab_V2">
+                        <view>保费（元）</view>
+                        <view class="display-F">
+                            <view class="td_V1">普通用户</view>
+                            <view class="td_V2">协议用户</view>
+                            <view class="td_V3">长期用户</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="table2">
+                    <view class="display-F">
+                        <view class="td2_V1 bor_B2">20(万元)</view>
+                        <view class="td2_V2 bor_L2 bor_B2">60</view>
+                        <view class="td2_V3 bor_L2 bor_B2">55</view>
+                        <view class="td2_V3 bor_L2 bor_B2">50</view>
+                    </view>
+                    <view class="display-F">
+                        <view class="td2_V1 bor_B2">30(万元)</view>
+                        <view class="td2_V2 bor_L2 bor_B2">85</view>
+                        <view class="td2_V3 bor_L2 bor_B2">80</view>
+                        <view class="td2_V3 bor_L2 bor_B2">75</view>
+                    </view>
+                    <view class="display-F">
+                        <view class="td2_V1 bor_B2">40(万元)</view>
+                        <view class="td2_V2 bor_L2 bor_B2">110</view>
+                        <view class="td2_V3 bor_L2 bor_B2">105</view>
+                        <view class="td2_V3 bor_L2 bor_B2">100</view>
+                    </view>
+                    <view class="display-F">
+                        <view class="td2_V1">50(万元)</view>
+                        <view class="td2_V2 bor_L2">135</view>
+                        <view class="td2_V3 bor_L2">130</view>
+                        <view class="td2_V3 bor_L2">125</view>
+                    </view>
+                </view>
+            </view>
+            <view class="mat10">协议用户：致电果真快客服<span bindtap="onPhoneCall" data-statu="1" data-phone="4009982860" style="color:#3399ff;">（400-998-2860）</span>联系，并提相关认证资料，签订购保协议。</view>
+            <view class="mat10">长期用户：协议用户并且过去7天内，平均每天在平台出保超过3单，自动升级为长期用户，如不满3单则按协议用户计算保费优惠。</view>
+            <view class="mat10">投保说明：</view>
+            <view class="mat10">1. 投保人需如实填写保单相关货物名称，包装方式，货物价值，起运地，目的地，起运时间，被保人资料，承运司机资料，承运车辆资料</view>
+            <view class="">2. 如在投保，理赔等过程中有任何疑问，请拨打果真快客服热线：<span bindtap="onPhoneCall" data-statu="1" data-phone="4009982860" style="color:#3399ff;">400-998-2860</span> 咨询</view>
+            <view class="">3. 投保成功后，保单内相关人员均会收到相关保单生效短信通知</view>
+            <view class="">4. 保单查询，请拨打果真快客服热线<span bindtap="onPhoneCall" data-statu="1" data-phone="4009982860" style="color:#3399ff;">（4009982860）</span>或 国寿财保客服热线<span bindtap="onPhoneCall" data-statu="2" data-phone="4008695519" style="color:#3399ff;">（4008695519）</span>告知客服保单号即可查询</view>
+
+            <view class="mat10">产品说明：</view>
+            <view class="mat10">1. 本保险产品通过果真快平台与国寿财保险公司网络渠道对接销售。</view>
+            <view class="">2. 本保险产品适用《国内公路货物运输保险条款》、《附加盗抢、抢劫条款》。</view>
+            <view class="">3. 本保险产品适用单票货物价值不得超过100万元。</view>
+            <view class="">4. 本保险产品运输方式为国内陆路运输，运输航程为中华人民共境内，但不包括港、澳、台、新疆（乌鲁木齐市除外）、西藏，在保单覆盖地域范围以外地区发生的事故及造成的损失均为本保单除外责任。</view>
+            <view class="">5. 保险责任起讫时间为自签发保险凭证和保险货物运离起运运地的最后一个仓库或储存地点起，至保险凭证上注明目的地的第一个仓库或储存处所时终止。</view>
+            <view class="">6. 本保险产品适用运输工具为检验合格的货车、冷藏车、全封闭车辆、集装箱、半封闭、平板挂车等。</view>
+            <view class="">7. 本保险产品每次事故绝对免赔为RMB1000元或损失金额的10%，两者以高者为准。</view>
+            <view class="">8.	任何情况下，因驾驶人员不符合安全驾驶规定或要求、驾驶员失踪、承运车辆失踪、货物遭遇哄抢、承运车辆或货物遭遇恶意破坏、承运车辆无法满足货物安全运输要求、实际承运人或被保险人员工道德风险、因非保单责任事故原因造成的货物被滞留或处置、承运车辆或货物无人看管、无法解释的情况造成的货物损失等原因造成的，或在其过程中或期间发生的损失，均不属于本保险覆盖的范围。</view>
+            <view class="">9.	承运车辆必须符合道路/桥梁/隧道/立交桥/限宽门（桩）等各类道路设施的通行规定或要求，因未符合上述规定或要求而造成的任何损失，本保单的赔偿责任仅限于扣除该次事故免赔后剩余损失金额的50%，且无论如何，该次事故的赔偿限额不超过人民币50万元。</view>
+            <view class="">10.	不明原因造成运输货物丢失或损坏不属于保险责任，本保单不负责赔偿。</view>
+            <view class="">11.	保险标的必须有专业承运人进行专业化包装并负责运输。 被保险人不是实际承运人的情况下，被保险人必须将有关业务委托给有资质的专业承运人或有合格驾驶证营运证的承运车辆进行运输，否则保险人不负责赔偿造成的任何损失、费用和责任。</view>
+            <view class="">12.	被保险货物在无人看管情况下发生的损失，保险人不承担保险责任。看管人员包括但不限于运输车辆的司机及随车人员。</view>
+            <view class="">13.	发生火灾、 爆炸风险，必须提供当地消防部门的事故证明。</view>
+            <view class="">14.	对于食品、药品类货物发生损失，仅负责赔偿受损货物及包装的直接损失（如外包装破损，但内包装完好或者标的本身并未发生渗漏、被污损等，本保单仅就受损的外包装承担赔偿责任；如部分货物受损，本保单只负责受损货物的直接损失），不承担由此产生的整箱货物被拒收或无法销售带来的损失以及其它间接损失。</view>
+            <view class="">15.	承运人将保险货物与其它禁止配载的危险混合配载而导致货物损失，保险人不负赔偿责任；</view>
+            <view class="">16.	被保险人必须将货物委托给有资质的专业承运人或有合格驾驶证营运证的承运车辆进行运输，货物包装和承运工具必须符合国家关于安全运输的各项规定，否则保险人不负责赔偿造成的任何损失、费用和责任。</view>
+            <view class="">17.	承运人将保险货物与其它禁止配载的危险混合配载而导致货物产生损失，保险人不负赔偿责任。</view>
+            <view class="">18.	对于食品、药品类货物发生损失，仅负责赔偿受损货物及包装的直接损失（如外包装破损，但内包装完好或者标的本身并未发生渗漏、被污损等，本保单仅就受损的外包装承担赔偿责任；如部分货物受损，本保单只负责受损货物的直接损失），不承担由此产生的整箱货物被拒收或无法销售带来的损失以及其它间接损失。</view>
+            <view class="">19. 附加盗窃、抢劫风险，该类损失必须提供当地警方出具的正本书面的能证明其盗窃、抢劫性质的文件或材料。 但整车神秘失踪（指司机、车辆、货物同时失踪）不属于本保单承保责任。</view>
+
+            <view class="mat10">本保险产品适用货物补充：以下货物不在本合同保险范围之内，保险人不负赔偿责任:</view>
+            <view class="">1、武器弹药、现金、支票、票据、单证、有价证券、护照等；</view>
+            <view class="">2、贵重金属、珠宝、砖石、玉器、古币、古玩、古书、字画、一级艺术品、国家一级文物等高价值物品；</view>
+            <view class="">3、烟花、化工用品等危险货物、家禽、鲜活物品(水果、蔬菜、鲜花除外)、动植物；</view>
+            <view class="">4、大豆、豆粕、植物油鱼粉、花生、菜籽饼、地瓜干、食品罐头等易腐易蛀变质货物；</view>
+            <view class="">5、手机、MP3等小电子设备；</view>
+            <view class="">6、精密设备或仪器，液晶电器；</view>
+            <view class="">7、“李宁”牌服饰,超高超大件,旧器材,旧设备；</view>
+            <view class="">8、汽车、摩托车等机动车，船舶；</view>
+            <view class="">9、各种压缩气体、有电解液的蓄电池、易燃易爆物品（易燃、易爆的危险品详见《危险货物品名表》GB12268中列明的货物。）；</view>
+            <view class="">10、易损品：包括但不限于平板玻璃、纯玻璃制品、仪表、亚克力板（有机玻璃）、含玻璃的家具（玻璃面积超过家具最大面面积30%）、大理石类物品、陶瓷制品、亚克力卫浴制品、显示器、液晶屏等。</view>
+            <view class="">11、二手货物、散装货物、无包装货物；</view>
+            <view class="">12、标本、血液制品、疫苗、未经处理的动物皮毛、原木；</view>
+            <view class="">13、工艺品类（如：各种铁艺物品、铜艺物品、花艺物品、骨雕物品、木雕物品、石雕物品、竹雕物品、炭雕物品、牙雕物品、膏雕物品、树脂、琉璃类工艺品等）</view>
+            <view class="">14、钢琴及其他乐器、古家具、红木家具（用紫檀木，花梨木、香枝木、黑酸枝、红酸枝、乌木、条纹乌木、鸡翅木制成的家具）。</view>
+            <view class="">15、卷烟、烟草（包括叶、梗、末、杆）、烟草制品；</view>
+            <view class="">16、太阳能组件、半导体、硅晶片（ 单硅晶片、 多硅晶片）。</view>
+            <view class="">17、任何违反国家法律法规的货物；</view>
+
+            <view class="mat10 font-B center">中国人寿财产保险股份有限公司</view>
+            <view class="font-B center">公路货物运输保险条款</view>
+            <view class="mat10 font-B center">保险标的范围</view>
+            <view class=""><span class="font-B">第一条</span><span>  凡在国内经公路运输的货物均可为本保险之标的。</span></view>
+            <view class=""><span class="font-B">第二条  下列货物非经投保人与保险人特别约定，并在保险单（凭证）上载明，不在保险标的范围以内：金银、珠宝、钻石、玉器、首饰、古币、古玩、古书、古画、邮票、艺术品、稀有金属等珍贵财物。</span></view>
+            <view class=""><span class="font-B">第三条  下列货物不在保险标的范围以内：蔬菜、水果、活牲畜、禽鱼类和其它动物。</span></view>
+            <view class="mat10 font-B center">保险责任</view>
+            <view class=""><span class="font-B">第四条  </span><span>由于下列保险事故造成保险货物的损失和费用，保险人依照本条款约定负责赔</span></view>
+            <view class="">（一）火灾、爆炸、雷电、冰雹、暴风、暴雨、洪水、海啸、地陷、崖崩、突发性滑坡、泥石流；</view>
+            <view class="">（二）由于运输工具发生碰撞、倾覆或隧道、码头坍塌，或在驳运过程中因驳运工具遭受搁浅、触礁、沉没、碰撞；</view>
+            <view class="">（三）在装货、卸货或转载时因意外事故造成的损失；</view>
+            <view class="">（四）因碰撞、挤压而造成货物破碎、弯曲、凹瘪、折断、开裂的损失；</view>
+            <view class="">（五）因包装破裂致使货物散失的损失；</view>
+            <view class="">（六）液体货物因受碰撞或挤压致使所用容器（包括封口)损坏而渗漏的损失，或用液体保藏的货物因液体渗漏而造成该货物腐烂变质的损失；</view>
+            <view class="">（七）符合安全运输规定而遭受雨淋所致的损失；</view>
+            <view class="">（八）在发生上述灾害事故时，因纷乱造成货物的散失以及因施救或保护货物所支付的直接合理的费用。</view>
+            <view class="mat10 font-B center">责任免除</view>
+            <view class="font-B">第五条 由于下列原因造成保险货物的损失，保险人不负赔偿责任：</view>
+            <view class="font-B">（一）战争、敌对行为、军事行动、扣押、罢工、暴动、哄抢；</view>
+            <view class="font-B">（二）地震造成的损失；</view>
+            <view class="font-B">（三）盗窃或整件提货不着的损失；</view>
+            <view class="font-B">（四）在保险责任开始前，保险货物已存在的品质不良或数量短差所造成的损失；</view>
+            <view class="font-B">（五）保险货物的自然损耗、本质缺陷、特性所引起的损失或费用；</view>
+            <view class="font-B">（六）市价跌落、运输延迟所引起的损失；</view>
+            <view class="font-B">（七）属于发货人责任引起的损失；</view>
+            <view class="font-B">（八）投保人、被保险人的故意行为或违法犯罪行为。</view>
+            <view class="font-B">第六条  经国家有关部门认定的违法、非法货物，保险人不负赔偿责任。</view>
+            <view class="font-B">第七条  其他不属于保险责任范围的损失，保险人不负赔偿责任。</view>
+
+            <view class="mat10 font-B center">责任起讫</view>
+
+            <view class=""><span class="font-B">第八条</span><span>  保险责任自签发保险凭证后，保险货物运离起运地发货人的最后一个仓库或储存处所时起，至该保险凭证上注明的目的地的收货人在当地的第一个仓库或储存处所时终止。但保险货物运抵目的地后，如果收货人未及时提货，则保险责任的终止期最多延长至保险货物卸离运输工具后的十五天为限。</span></view>
+
+            <view class="mat10 font-B center">保险价值和保险金额</view>
+
+            <view class=""><span class="font-B">第九条  </span><span>保险价值为货物的实际价值，按货物的实际价值或货物的实际价值加运杂费确定。保险金额由投保人参照保险价值自行确定，并在保险合同中载明。保险金额不得超过保险价值。超过保险价值的，超过部分无效，保险人应当退还相应的保险费。</span></view>
+
+            <view class="mat10 font-B center">投保人、被保险人的义务</view>
+
+            <view class=""><span class="font-B">第十条  </span><span>投保人应当履行如实告知义务，如实回答保险人就保险标的或者被保险人的有关情况提出的询问。</span></view>
+            <view class=""><span>投保人故意或因重大过失未履行前款规定的如实告知义务，足以影响保险人决定是否同意承保或者提高保险费率的，保险人有权解除保险合同。</span></view>
+            <view class=""><span class="font-B">投保人故意不履行如实告知义务的，保险人对于保险合同解除前发生的保险事故，不承担赔偿责任，并不退还保险费。</span></view>
+            <view class=""><span class="font-B">投保人因重大过失未履行如实告知义务，对保险事故的发生有严重影响的，保险人对于保险合同解除前发生的保险事故，不承担赔偿责任，但应当退还保险费。</span></view>
+            <view class=""><span class="font-B">第十一条  </span><span>投保人在保险人或其代理人签发保险单（凭证）的同时，应一次交清应付的保险费。</span><span class="font-B">若投保人未按照约定交付保险费，保险费交付前发生的保险事故，保险人不承担赔偿责任。</span></view>
+            <view class=""><span class="font-B">第十二条  </span><span>投保人和被保险人应当严格遵守国家及交通运输部门关于安全运输的各项规定，维护保险标的的安全。货物运输包装必须符合国家和主管部门规定的标准。</span></view>
+            <view class="">保险人可以对保险标的的安全状况进行检查，向投保人、被保险人提出消除不安全因素和隐患的书面建议，被保险人应该认真付诸实施。</view>
+            <view class=""><span class="font-B">对于因被保险人未遵守上述约定而导致保险事故的，保险人不负赔偿责任；对于因被保险人未遵守上述约定而导致损失扩大的，保险人对扩大的损失不负赔偿责任。</span></view>
+            <view class=""><span class="font-B">第十三条  </span><span>在合同有效期内，保险标的危险程度显著增加的，被保险人按照合同约定应当及时通知保险人，保险人有权要求增加保险费或者解除合同。</span></view>
+            <view class=""><span class="font-B">被保险人未履行前款规定的通知义务的，因保险标的危险程度显著增加而发生的保险事故，保险人不承担赔偿责任。</span></view>
+            <view class=""><span class="font-B">第十四条  </span><span>保险货物如果发生保险责任范围内的损失时，投保人或被保险人获悉后，应迅速采取合理的施救和保护措施并立即通知保险人的当地机构（最迟不超过10天）。</span></view>
+            <view class=""><span class="font-B">故意或者因重大过失未及时通知，致使保险事故的性质、原因、损失程度等难以确定的，保险人对无法确定的部分，不承担赔偿责任，但保险人通过其他途径已经及时知道或者应当及时知道保险事故发生的除外。</span></view>
+
+            <view class="mat10 center"><span class="font-B">赔偿处理</span></view>
+            <view class=""><span class="font-B">第十五条  </span><span>被保险人向保险人申请索赔时，必须提供下列有关单证：</span></view>
+            <view class="">（一）保险单（凭证）、运单（货票）、提货单、发票（货价证明）；</view>
+            <view class="">（二）承运部门签发的事故签证、交接验收记录、鉴定书；</view>
+            <view class="">（三）收货单位的入库记录、检验报告、损失清单及救护保险货物所支付的直接合理的费用单据；</view>
+            <view class="">（四）被保险人所能提供的其他与确认保险事故的性质、原因、损失程度等有关的证明和资料。</view>
+            <view class="">保险人收到被保险人的赔偿请求后，应当及时就是否属于保险责任作出核定，并将核定结果通知被保险人。情形复杂的，保险人在收到被保险人的赔偿请求并提供理赔所需资料后三十日内未能核定保险责任的，保险人与被保险人根据实际情形商议合理期间，保险人在所商定的期间内作出核定结果并通知被保险人。对属于保险责任的，在与被保险人达成有关赔偿金额的协议后十日内，履行赔偿义务。</view>
+            <view class=""><span class="font-B">第十六条  </span><span>保险货物发生保险责任范围内的损失时，保险金额等于或高于保险价值时，保险人应根据实际损失计算赔偿，但最高赔偿金额以保险价值为限；保险金额低于保险价值的，保险人对其损失金额及支付的施救保护费用按保险金额与保险价值的比例计算赔偿。保险人对货物损失的赔偿金额，以及因施救或保护货物所支付的直接合理的费用，应分别计算，并各以不超过保险金额为限。</span></view>
+            <view class="">
+                <span class="font-B">第十七条  </span><span>保险货物发生保险责任范围内的损失，如果根据法律规定或有关约定，应当由承运人或其他第三者负责赔偿部分或全部的，被保险人应首先向承运人或其他第三者提出书面索赔，直至诉讼。</span>
+                <span class="font-B">保险事故发生后，保险人未赔偿保险金之前，被保险人放弃对有关责任方请求赔偿的权利的，保险人不承担赔偿责任；</span><span>如被保险人要求保险人先予赔偿，被保险人应签发权益转让书和应将向承运人或第三者提出索赔的诉讼书及有关材料移交给保险人，并协助保险人向责任方追偿。</span>
+            </view>
+            <view class="">
+                <span class="font-B">由于被保险人的故意或重大过失致使保险人不能行使代位请求赔偿权利的，保险人可以相应扣减保险赔偿金。</span>
+            </view>
+            <view class="">
+                <span class="font-B">第十八条  </span><span>经双方协商同意，保险人可将其享有的保险财产残余部分的权益作价折归被保险人，并可在保险赔偿金中直接扣除。</span>
+            </view>
+            <view class="">
+                <span class="font-B">第十九条  </span><span>被保险人与保险人发生争议时，协商解决，双方不能达成协议时，可以提交仲裁机关或法院处理。</span>
+            </view>
+            <view class="mat10 font-B center">其他事项</view>
+            <view class=""><span class="font-B">第二十条  </span><span>凡经公路与其他运输方式联合运输的保险货物，按相应的运输方式分别适用本条款及《铁路货物运输保险条款》、《水路货物运输保险条款》和《国内航空货物运输保险条款》。</span></view>
+            <view class=""><span class="font-B">第二十一条  </span><span>凡涉及本保险的约定均采用书面形式。</span></view>
+
+            <view class="mat10 font-B center">中国人寿财产保险股份有限公司</view>
+            <view class="font-B center">公路货物运输（定额）保险附加盗窃、抢劫保险条款</view>
+            <view class="mat10 font-B center">第一条 保险责任</view>
+            <view class="">保险人对保险货物在保险期间内由于外来的有明显盗窃、抢劫、哄抢痕迹并经公安部门证明确系盗窃、抢劫、哄抢行为以及全车被他人诈骗所致的直接经济损失承担赔偿责任。</view>
+            <view class="mat10 font-B center">第二条 责任起讫</view>
+            <view class="">在保险合同有效期内，每次运输的保险责任起讫期为保险货物自运离保险凭证（保险单）上载明的起运地时起，至运抵保险凭证（保险单）载明的目的地卸离运输工具时止。但保险货物运抵目的地后，如果收货人未及时卸货，则保险责任的终止期从抵达目的地当日零时起计算最多延长48小时。</view>
+            <view class="mat10 font-B center">第三条 责任免除</view>
+            <view class="font-B">下列原因造成保险货物的损失，保险人不负赔偿责任：</view>
+            <view class="font-B">（一）保险货物被政府有关部门征用、罚没、扣押；</view>
+            <view class="font-B">（二）被保险人或驾驶员与他人发生民事纠纷；</view>
+            <view class="font-B">（三）投保人或被保险人的故意行为、违法犯罪行为；</view>
+            <view class="font-B">（四）其他不属于保险责任范围的原因。</view>
+            <view class="mat10 font-B center">第四条 投保人或被保险人的义务</view>
+            <view class=""><span>（一）投保人或被保险人获知或应当获知保险货物发生保险责任范围内的损失后，应立即向当地公安部门报案，并同时通知保险人。</span><span class="font-B">故意或者因重大过失未及时通知，致使保险事故的性质、原因、损失程度等难以确定的，保险人对无法确定的部分，不承担赔偿责任，但保险人通过其他途径已经及时知道或者应当及时知道保险事故发生的除外。</span></view>
+            <view class="font-B">（二）当货物发生损失时，投保人或被保险人应采取积极有效措施制止货物损失进一步扩大，否则保险人就损失扩大部分不负赔偿责任。</view>
+            <view class="mat10 font-B center">第五条 赔偿处理</view>
+            <view class=""><span>（一）被保险人向保险人索赔时，须提供出险地公安部门出具的证明；全车被骗的，须提供出险地县级以上（含县级）公安刑侦部门出具的证明。</span><span class="font-B">否则，保险人有权对部分或全部经济损失不负赔偿责任。</span></view>
+            <view class="">（二） 本附加险责任范围内的盗窃、抢劫、哄抢所造成的保险货物的直接经济损失，在被保险人报案30天后未能侦破，并由被保险人出具盗窃、抢劫、哄抢事故报告、损失清单、公安部门的证明材料及被保险人所能提供的其他与确认保险事故的性质、原因、损失程度等有关的证明和资料后，保险人给予赔偿。全车被骗所致保险货物的直接经济损失，须经县级以上（含县级）公安刑侦部门立案满三个月未能侦破，被保险人出具公安部门的证明材料及保险人认为必要的其他单证后保险人给予赔偿。</view>
+            <view class="">（三） 经公安部门破案被追回的保险货物，双方应当协商处理。</view>
+            <view class=""><span>（四）保险货物发生保险责任范围内的损失时，赔偿按主险条款赔偿处理的有关规定计算赔偿金额。</span><span class="font-B">被盗、被抢货物的赔偿均实行20%的绝对免赔，全车被骗的赔偿实行30%的绝对免赔。</span></view>
+
+            <view class="mat10 font-B center">第六条 其他事项</view>
+            <view class="">本条款为《公路货物运输保险条款》、《国内货物运输公路定额保险条款》的附加条款。本条款与上述条款相抵触之处，以本条款为准，其他未尽事项以主险条款为准。</view>
+            <view class="mat10 font-B center">中国人寿财产保险股份有限公司</view>
+            <view class="font-B center">公路货物运输（定额）保险附加冷藏货物保险条款</view>
+            <view class="mat10 font-B">扩展类</view>
+            <view class=""><span>兹经保险合同双方同意，本保险合同扩展承保由于发生主险条款约定的保险事故，致使冷藏机器或隔温设备损坏或者车厢内贮存维持低温的物质（包括但不限于冰块、干冰，下同）融化，而造成保险货物解冻融化或腐败、变质的损失。</span><span class="font-B">但保险货物在运输过程中的任何阶段，因未存放在有冷藏设备的仓库或运输工具中，或运输工具没有隔温设备，或未在车厢内贮存足够的维持低温的物质所造成的损失，保险人不承担赔偿责任。</span></view>
+            <view class=""><span>本附加险条款与主险条款不一致之处，以本附加险条款为准；本附加险条款未尽事宜，以主险条款为准。</span></view>
+        </view>
+    </view>
+    <view class="insurance_Footer f16 display-F">
+        <view class="agree_To_Insure" bindtap="buy_Insurance">已阅读和理解上述保险协议,同意投保</view>
+    </view>
+</view>

@@ -1,0 +1,158 @@
+<view class="container section">
+    <view>
+        <view class="mal20R"><view class="mPrompt_Title cF60">产品对比</view></view>
+        <view class="insurance_Statement f12">
+            <view class="display-F">
+                <view>保险责任</view>
+                <view>果蔬冷藏险</view>
+                <view>普货综合险</view>
+                <view>普货基本险</view>
+            </view>
+            <view class="display-F">
+                <view>火灾爆炸雨淋</view>
+                <view><icon style="height:20px;margin-top:5px;" type="success_no_circle" size="20" color="#888888"/></view>
+                <view><icon style="height:20px;margin-top:5px;" type="success_no_circle" size="20" color="#888888"/></view>
+                <view><icon style="height:20px;margin-top:5px;" type="success_no_circle" size="20" color="#888888"/></view>
+            </view>
+            <view class="display-F">
+                <view>交通意外事故</view>
+                <view><icon style="height:20px;margin-top:5px;" type="success_no_circle" size="20" color="#888888"/></view>
+                <view><icon style="height:20px;margin-top:5px;" type="success_no_circle" size="20" color="#888888"/></view>
+                <view><icon style="height:20px;margin-top:5px;" type="success_no_circle" size="20" color="#888888"/></view>
+            </view>
+            <view class="display-F">
+                <view>自然灾害损失</view>
+                <view><icon style="height:20px;margin-top:5px;" type="success_no_circle" size="20" color="#888888"/></view>
+                <view><icon style="height:20px;margin-top:5px;" type="success_no_circle" size="20" color="#888888"/></view>
+                <view><icon style="height:20px;margin-top:5px;" type="success_no_circle" size="20" color="#888888"/></view>
+            </view>
+            <view class="display-F">
+                <view>施救保费费用</view>
+                <view><icon style="height:20px;margin-top:5px;" type="success_no_circle" size="20" color="#888888"/></view>
+                <view><icon style="height:20px;margin-top:5px;" type="success_no_circle" size="20" color="#888888"/></view>
+                <view><icon style="height:20px;margin-top:5px;" type="success_no_circle" size="20" color="#888888"/></view>
+            </view>
+            <view class="display-F">
+                <view>碰撞挤压变形</view>
+                <view><icon style="height:20px;margin-top:5px;" type="success_no_circle" size="20" color="#888888"/></view>
+                <view><icon style="height:20px;margin-top:5px;" type="success_no_circle" size="20" color="#888888"/></view>
+                <view><icon style="height:20px;margin-top:5px;" type="success_no_circle" size="20" color="#888888"/></view>
+            </view>
+            <view class="display-F">
+                <view>包装破损损失</view>
+                <view><icon style="height:20px;margin-top:5px;" type="success_no_circle" size="20" color="#888888"/></view>
+                <view><icon style="height:20px;margin-top:5px;" type="success_no_circle" size="20" color="#888888"/></view>
+                <view><icon style="height:20px;margin-top:5px;" type="success_no_circle" size="20" color="#888888"/></view>
+            </view>
+            <view class="display-F">
+                <view>装货卸货意外</view>
+                <view><icon style="height:20px;margin-top:5px;" type="success_no_circle" size="20" color="#888888"/></view>
+                <view><icon style="height:20px;margin-top:5px;" type="success_no_circle" size="20" color="#888888"/></view>
+                <view><icon style="height:20px;margin-top:5px;" type="success_no_circle" size="20" color="#888888"/></view>
+            </view>
+            <view class="display-F">
+                <view>全车被人诈骗</view>
+                <view><icon style="height:20px;margin-top:5px;" type="success_no_circle" size="20" color="#888888"/></view>
+                <view><icon style="height:20px;margin-top:5px;" type="success_no_circle" size="20" color="#888888"/></view>
+                <view></view>
+            </view>
+            <view class="display-F">
+                <view>盗抢抢劫哄抢</view>
+                <view><icon style="height:20px;margin-top:5px;" type="success_no_circle" size="20" color="#888888"/></view>
+                <view><icon style="height:20px;margin-top:5px;" type="success_no_circle" size="20" color="#888888"/></view>
+                <view></view>
+            </view>
+            <view class="display-F">
+                <view>冷藏货物冻品</view>
+                <view><icon style="height:20px;margin-top:5px;" type="success_no_circle" size="20" color="#888888"/></view>
+                <view></view>
+                <view></view>
+            </view>
+            <view class="display-F">
+                <view>水果蔬菜鲜花</view>
+                <view><icon style="height:20px;margin-top:5px;" type="success_no_circle" size="20" color="#888888"/></view>
+                <view></view>
+                <view></view>
+            </view>
+            <view class="display-F">
+                <view>冷藏设备事故</view>
+                <view><icon style="height:20px;margin-top:5px;" type="success_no_circle" size="20" color="#888888"/></view>
+                <view></view>
+                <view></view>
+            </view>
+        </view>
+        <view class="mal20R mat20"><view class="cF60">填写保单</view></view>
+        <view class="mat20 mab20"><view class="vHow_Title">1.货物资料</view></view>
+        <view class="center"><image class="how_IMG" src="{{imageURL}}/how_ins1.png"></image></view>
+        <view class="mal20R mar20R mat20">
+            <view class="mat10 font-B">货物名称</view>
+            <view class="mat10">请真实填写货物名称，如一车存在多种货物混装，需清晰填写。</view>
+            <view class="mat10">例A: 50%装西瓜， 30%装火龙果， 20%装龙眼。如这种混装情况，可填 "西瓜，火龙果，龙眼"</view>
+            <view class="mat10">例B：99%装西瓜，1%装火龙果。 如这种一种占多数的情况可只填 "西瓜" </view>
+            <view class="mat10">例C：多种混装情况。可填 "多种水果" 或 "水果"</view>
+            <view class="mat10 font-B">货物类型</view>
+            <view class="mat10">根据投保货物选择对应货物分类。</view>
+            <view class="mat10">果蔬冷藏险只能选择生鲜食品、蔬菜、水果类型 或 冷藏冷冻类型。</view>
+            <view class="mat10 font-B">普货险种可以选择</view>
+            <view class="mat10">农产品、土畜产、粮谷类、饲料类、轻工品类、纺织品、五金类、机械设备、木材造纸、家具、普通货物。</view>
+            <view class="mat10 font-B">包装方式</view>
+            <view class="mat10">请根据货物外包装形状选择对应包装方式，可选包装方式包括：箱状包装，袋装包装，托盘包装，捆包状包装，桶装包装，裸装包装，其他形状包装。</view>
+            <view class="mat10 font-B">货物重量</view>
+            <view class="mat10">请真实填写运载货物重量，按吨位单位。</view>
+            <view class="mat10 font-B">货物件数</view>
+            <view class="mat10">如能确认运载数量，请真实填写，如不能确认可不填。如果出现理赔状况，保险公司可以根据件数统计。</view>
+            <view class="mat10 font-B">货物价值</view>
+            <view class="mat10">请真实根据运载货物实际价值填写，保单根据货物价值计算所需保费。</view>
+            <view class="mat10 font-B">保费</view>
+            <view class="mat10">系统根据用户填写货物价值已经用户与果真快平台协议优惠等级，自动计算预算保费。</view>
+        </view>
+        <view class="mat20 bor_B"></view>
+
+        <view class="mat20 mab20"><view class="vHow_Title">2.线路资料</view></view>
+        <view class="center"><image class="how_IMG" src="{{imageURL}}/how_ins2.jpg"></image></view>
+        <view class="mal20R mar20R mat20">
+            <view class="mat10 font-B">起运地</view>
+            <view class="mat10">请选择承运车辆装货的第一个城市，需选择到市级地区。</view>
+            <view class="mat10 font-B">目的地</view>
+            <view class="mat10">请选择承运车辆卸货的最后一个城市，需选择到市级地区。</view>
+            <view class="mat10">起运地与目的地区可选择全国范围，但不包括港、澳、台、西藏、新疆(乌鲁木齐市除外)地区</view>
+            <view class="mat10 font-B">中转地</view>
+            <view class="mat10">如运输行程存在多装多卸的情况，请真实填写途中需要装卸的地区，需填写清晰至市级地区。</view>
+            <view class="mat10">例A：云南,昆明 一装 运输至 广西,南宁、广东,广州 两卸，则应填写如下</view>
+            <view class="mat10">起运地：云南,昆明,</view>
+            <view class="mat10">目的地：	广东,广州</view>
+            <view class="mat10">中转地：广西,南宁</view>
+            <view class="mat10 font-B">起运时间</view>
+            <view class="mat10">请真实根据起运发车时间选择，保险有效期起期等同于起运时间。</view>
+            <view class="mat10 font-B">运费</view>
+            <view class="mat10">保险价值为货物的实际价值，按货物的实际价值或货物的实际价值加运杂费确定。</view>
+            <view class="mat10">如确定运杂费用，请真实填写，如不确定可不填写。</view>
+        </view>
+        <view class="mat20 bor_B"></view>
+
+        <view class="mat20 mab20"><view class="vHow_Title">3.被保人资料</view></view>
+        <view class="mal20R mar20R mat10 font-B">被保人类型</view>
+        <view class="mal20R mar20R mat10">请真实根据货主选择个人或公司。</view>
+        <view class="mal20R mar20R mat10">如被保人为个人，则请真实完整填写被保人姓名，联系电话，身份证号码。</view>
+        <view class="mat20 center"><image class="how_IMG" src="{{imageURL}}/how_ins3.jpg"></image></view>
+        <view class="mat20 mal20R mar20R">如被保人为公司，则请真实完成填写公司全称，营业执照号码，联系人电话。</view>
+        <view class="mat20 center"><image class="how_IMG" src="{{imageURL}}/how_ins4.jpg"></image></view>
+        <view class="mat20 bor_B"></view>
+
+        <view class="mat20 mab20"><view class="vHow_Title">4.承运者以及承运车辆资料</view></view>
+        <view class="mal20R mar20R mat10">请真实填写承运司机联系电话，如已知司机姓名请务必如实填写。</view>
+        <view class="mal20R mar20R mat10">请真实填写承运车辆车牌号码，如有挂车牌请务必如实填写。</view>
+        <view class="mal20R mar20R mat10">保险公司会根据承运司机电话，姓名，承运车辆车牌，挂牌资料通过大数据计算承运风险级别。</view>
+        <view class="mat20 center"><image class="how_IMG" src="{{imageURL}}/how_ins5.jpg"></image></view>
+        <view class="mat20 bor_B"></view>
+
+        <view class="mat20 mab20">
+            <view class="mab20"><view class="vHow_Title">5.装货资料</view></view>
+            <view class="mal20R mar20R font-B">投保人电话</view>
+            <view class="mal20R mar20R">请真实填写投保人联系电话号码，当发生出保，退保，意外时，系统将自动发送短信通知至投保人电话。</view>
+            <view class="mal20R mar20R mat10 font-B">装货人电话</view>
+            <view class="mal20R mar20R mat10">请真实填写装货人联系电话号码，当保单出保成功时，系统将自动发送短信通知至装货人电话。</view>
+            <view class="mat20 center"><image class="how_IMG" src="{{imageURL}}/how_ins6.jpg"></image></view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,205 @@
+/**index.wxss**/
+.bc_green{background:green;}
+.bc_red{background:red;}
+.bc_blue{background:blue;}
+.bc_pink{background:pink;}
+
+.display-B{display:block;}
+.bor_R1{border-right:2rpx solid #ffffff;}
+.bor_R1_DC{border-right:2rpx solid #dcdcdc;}
+
+
+.f28{font-size:28rpx;}
+.bor_Rad{
+  background:#fff;
+  /*width:710rpx;*/
+  margin:0 20rpx;
+}
+.flex-wrp{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  box-sizing:content-box;
+}
+.flex-item{
+  height:90px;
+  width:33.33%;
+  text-align:center;
+}
+.flex-item p:first-child{
+  height:50px;
+}
+.img_SelectIP{
+  height:50px;
+  width:60%;
+}
+.selected_InsType{
+  background:#ff6600;
+  color: #ffffff;
+  height:40px;
+  line-height:40px;
+  font-size:16px;
+}
+.uncheck_InsType{
+  background:#e5e6e8;
+  height:40px;
+  line-height:40px;
+  font-size:16px;
+}
+
+.contact-US{
+  width:138rpx;
+  height:100rpx;
+  display: inline-block;
+}
+.contact-US image{width:138rpx;}
+.contactUS-Text{
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width:540rpx;
+  margin-left:10rpx;
+}
+.contactUS-Text p{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+/****** Footer ******/
+.insurance_Footer{
+  position: fixed;
+  bottom:0;
+  height:60px;
+}
+.insurance_Footer view{
+  height:40px;
+  margin-left:20rpx;
+  border-radius:5px;
+  text-align: center;
+  background:#ec5958;
+  color:#FFFFFF;
+  margin-top: 10px;
+}
+.insurance_Footer .my_InsurancePolicy_Btn{
+  width: 180rpx;
+}
+.insurance_Footer .agree_To_Insure{
+  width: 710rpx;
+  line-height:40px;
+}
+
+/*mask*/
+.drawer_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+/*content*/
+.drawer_box {
+  width: 750rpx;
+  height:65%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1001;
+  background: #FAFAFA;
+  border-radius: 3px;
+}
+
+.drawer_title{
+  padding:15px;
+  font: 20px "microsoft yahei";
+  text-align: center;
+}
+.drawer_content {
+  height:260px;
+  overflow-y: scroll; /*超出父盒子高度可滚动*/
+}
+
+.bgF0{background:#f0f0f0;}
+.bgC38b40{background:#c38b40;}
+
+.premium-Table p{
+  text-align: center;
+  width:242.3rpx;
+  display: inline-block;
+}
+.premium-Table view:first-child p{
+  background:#c38b40;
+  color:#ffffff;
+  border-right:1rpx solid #ffffff;
+}
+.premium-Table view:first-child p:last-child{
+   border-right:none;
+ }
+
+.input_base {
+  border: 2rpx solid #ccc;
+  padding-left: 10rpx;
+  margin-right: 50rpx;
+}
+.input_h30{
+  height: 30px;
+  line-height: 30px;
+}
+.input_h60{
+  height: 60px;
+}
+
+/***********************************/
+.table1{
+  text-align: center;
+  background:#c38b40;
+  color:#fff;
+}
+.table2{
+  text-align: center;
+  line-height:30px;
+}
+.tab_V1{
+  width:176.5rpx;
+  line-height:60px;
+}
+.tab_V2{
+  border-left:2rpx solid #ffffff;
+  width:529.5rpx;
+}
+.tab_V2 view{
+  line-height:30px;
+}
+.tab_V2>view:first-child{
+  line-height:30px;
+  border-bottom:2rpx solid #ffffff;
+}
+.td_V1{width:178.5rpx;}
+.td_V2,.td_V3{
+  border-left:2rpx solid #ffffff;
+  width:176.5rpx;
+}
+
+.td2_V1,.td2_V2,.td2_V3,.td2_V4{
+  width:176.5rpx;
+}
+.bor_L2{border-left:2rpx solid #c38b40;}
+.bor_R2{border-right:2rpx solid #c38b40;}
+.bor_B2{border-bottom:2rpx solid #c38b40;}
+.bgC38b40{background:#c38b40;}
+.font-B{font-weight: bold;}
+
+
+
+
+
+
+

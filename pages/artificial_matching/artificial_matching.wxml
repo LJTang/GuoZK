@@ -1,0 +1,114 @@
+<view class="container">
+    <!--<view><image class="matching_Process-IMG" style="height:{{height}}px;" src="{{imageURL}}/rg_tree.png"></image></view>-->
+    <!--<view class="footer_Btn" bindtap="onCall">-->
+        <!--<view class="display-B" bindtap="">申请人工车货匹配服务</view>-->
+    <!--</view>-->
+<!--
+    <view class="view-Search">
+        <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box display-F">
+                   <view class="selectionState" bindtap="workOrder_Select">
+                       <picker bindchange="bindPickerChange" bindcancel="closePickerChange" value="{{i}}" range="{{workOrder_Array}}">
+                           <text class="picker">{{workOrder_Array[i]}}</text><image class="mal10R {{isXZ}}" style="width:10px;height:10px;" src="/images/triangle.png"></image>
+                       </picker>
+                   </view>
+                    <view class="search_Input">
+                        <input type="search" class="weui-search-bar__input" confirm-type="search" placeholder="输入关键字可快速查找" value="{{input_SearchVal}}" bindinput="inputTyping" bindconfirm="searchBtn"/>
+                        <view class="weui-icon-clear" wx:if="{{input_SearchVal.length > 0}}" bindtap="clearInput">
+                            <icon type="clear" size="14"></icon>
+                        </view>
+                    </view>
+                    <view class="searchBtn" bindtap="onSearch">
+                        <span></span>
+                        <text>查找</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+    </view>
+
+    <scroll-view class="mat10" scroll-y style="height:{{height}}px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-top="{{scrollTop}}">
+        <block wx:for-items="{{listArray}}" wx:key="{{index}}" data-statu="{{item.strInfoSysID}}">
+            <view class="list_Information bgFFF" bindtap="onWorkOrder_Details" data-statu="{{item.strOrderSysID}}">
+                <view class="matchingSingle_Box mal20R mar20R">
+                    <view class="matchingState">
+                        <view class="fL"><span class="span_MatchingState {{item.intStatus==20?'bg22ad38':'bgF5a604'}}">{{item.intStatus==20?'已匹配':'待装货'}}</span></view>
+                        <view class="fR">{{item.strDate}}</view>
+                    </view>
+                    <view class="matchingSingle_Information mat5 display-F">
+                        <view class="mal20R">线路信息</view>
+                        <view class="vMatchingText">{{item.strLineInfo}}</view>
+                    </view>
+                    <view class="matchingSingle_Information display-F">
+                        <view class="mal20R">货物信息</view>
+                        <view class="vMatchingText">{{item.strGoodInfo}}</view>
+                    </view>
+                    <view class="matchingSingle_Information display-F">
+                        <view class="mal20R">所需车型</view>
+                        <view class="vMatchingText">{{item.strCarDesc}}</view>
+                    </view>
+                    <view class="matchingSingle_Information pab10 mab10 display-F">
+                        <view class="mal20R">客服备注</view>
+                        <view class="vMatchingText">{{item.strCustomerRemark}}</view>
+                    </view>
+                </view>
+            </view>
+        </block>
+
+        <view class="pab20" style="height:40px">
+            <view class="noMoreData" hidden="{{noMoreHidden}}">没有更多了</view>
+            <view class="inLoad pat20 pab20" hidden="{{inLoadHidden}}"><image src="/images/loading.gif"></image><span>加载中...</span></view>
+            <view class="toLoadMore" hidden="{{loadMoreHidden}}" bindtap="onGetConnect">加载更多</view>
+        </view>
+    </scroll-view>
+    -->
+
+    <view class="btn_Information_Effective" style="border-bottom:2px solid #d9d9d9;">
+        <view class="historical_Information" bindtap="onMyPublishList" data-statu="0"><view class="{{select_ID==0?'selected':'uncheck'}}">货主调车</view></view>
+        <view class="effective_Information" bindtap="onMyPublishList" data-statu="1"><view class="{{select_ID==1?'selected':'uncheck'}}">车主配货</view></view>
+    </view>
+
+    <scroll-view class="mat10 over-A" scroll-y style="height:{{height}}px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-top="{{scrollTop}}">
+        <view hidden="{{select_ID==0?false:true}}">
+            <view class="pat20 pab20 center bgFFF"><text class="gzk_ShuntTitle">为货主免费加急调车</text></view>
+            <view class="bgFFF pab5">
+                <view class="mal40R mar40R"><text>货主通过400热线或客服微信，提供起运地，目的地，货物资料，所需车型，装货时间，参考运价，即可委托果真快的人工客服协助调车。</text></view>
+            </view>
+
+            <view class="bgFFF mat10">
+                <view class="mal40R mar40R pat5"><text>通过果真快平台调车，作为货主的您还将享受以下免费服务：</text></view>
+                <view class="mal40R mar40R mat10"><text>1.	保证车源真实性，车辆匹配成功后，果真快客服会第一时间将车辆资料，司机资料以及联系方法发送给货主。</text></view>
+                <view class="mal40R mar40R mat10"><text>2.	匹配成功后，果真快客服会定时对运输车辆进行电话跟踪，并报告给货主。</text></view>
+                <view class="mal40R mar40R mat10"><text>3.	如出现运输意外，果真快客服会第一时间响应，并主动协调车货双方解决问题。</text></view>
+                <view class="mal40R mar40R mat10 pab10"><text>4.	通过果真快平台调车，均可享受果真快平台的最低货运保险优惠。</text></view>
+
+            </view>
+        </view>
+        <view hidden="{{select_ID==1?false:true}}">
+            <view class="pat20 pab20 center bgFFF"><text class="gzk_ShuntTitle">海量货源为车主配货
+            </text></view>
+            <view class="bgFFF pab5">
+                <view class="mal40R mar40R"><text>车主通过400热线或客服微信，提供当前所在地区，期望目的地资料，即可在果真快人工客服平台报备空车信息，并且获得平台货源的优先推荐权。</text></view>
+            </view>
+            <view class="bgFFF mat10">
+                <view class="mal40R mar40R mat10 pat5"><text>通过果真快平台配货，我们可以向您保证：</text></view>
+                <view class="mal40R mar40R mat10"><text>1.	货源真实性100%，所有果真快人工客服提供的货源匹配信息均经过平台人工审核。</text></view>
+                <view class="mal40R mar40R mat10"><text>2.	提供各地运价参考，面对起起伏伏的运价再也不用担心。</text></view>
+                <view class="mal40R mar40R mat10"><text>3.	如出现装卸货不及时，路上塞车，卖货太久等问题，只要您和我们的客服沟通，我们都会协助您把情况反映给货主，协调车货双方解决问题。</text></view>
+                <view class="mal40R mar40R mat10 mab10"><image style="width:670rpx;height:300px" mode="widthFix" src="{{imageURL}}/table.png"></image></view>
+                <view class="mal40R mar40R mat10"><text>所有成功匹配车辆，果真快平台收取200元装货押金，装货完成并签好运输协议（合同）后，拍照通知果真快客服，立即退还押金。</text></view>
+                <view class="mal40R mar40R mat10 pab10"><text>果真快人工客服车货匹配业务只负责协调物流过程中产生的事宜，若有争议，果真快平台可作为第三方证人并协调解决问题，不承担任何赔偿责任。</text></view>
+            </view>
+
+        </view>
+
+    </scroll-view>
+
+    <view class="footer_Btn">
+        <!--<view class="display-B" bindtap="doDetails">查看匹配单</view>-->
+        <view class="display-B" bindtap="onCall">申请人工车货匹配服务</view>
+    </view>
+
+</view>

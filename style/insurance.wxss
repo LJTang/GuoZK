@@ -1,0 +1,164 @@
+.insurance .fillInThe_Prompt{
+  width:100%;
+  height:30px;
+  line-height:30px;
+  text-align: center;
+  background:#ec5958;
+  color:#fff;
+  font-size: 14px;
+}
+.insurance .gzkCommonStyle_h50{
+  display: flex;
+  flex-direction:row;
+  padding:2px 0;
+}
+
+.insurance .gzkCommonStyle_h50 .gzk_ContentTitle,.insurance .gzkCommonStyle_h50 .gzk_Content,.sRight_Arrow{
+  vertical-align: middle;
+}
+.insurance .gzkCommonStyle_h50 .gzk_ContentTitle{width:280rpx;}
+.modified_No .gzkCommonStyle_h50 .gzk_ContentTitle{width:200rpx;}
+.insurance .gzkCommonStyle_h50 .gzk_Content{
+  width:390rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height:50px;
+}
+.insurance .modified_No .gzkCommonStyle_h50 .gzk_Content{
+  width:510rpx;
+  text-align: right;
+}
+.insurance .gzkCommonStyle_h50 .gzk_Content input{height:50px;}
+.sRight_Arrow{
+  width:40rpx;
+  line-height:50px;
+  text-align:right;
+}
+.insurance .sRight_Arrow image{
+  width:20px;
+  height:20px;
+  line-height:40px;
+  vertical-align: text-bottom;
+}
+.insurance .img_QuestionMark{
+  height:30rpx;
+  width:30rpx;
+}
+.insurance .goodsName{
+  height:30px;
+  line-height:30px;
+  border-bottom:1px solid #d9d9d9;
+}
+
+.insurance .gzk_UnalignedDisplay{
+  display: flex;
+  flex-direction:row;
+}
+.gzk_UnalignedDisplayTitle{width:280rpx;}
+.gzk_UnalignedDisplayContent{width:430rpx;}
+.icon-Note{
+  display: inline-block;
+  width:20px;
+  margin-right:10rpx;
+  vertical-align:top;
+}
+.img_Note{
+  width:20px;
+  height:20px;
+  vertical-align:top;
+}
+#mh{width:370rpx;}
+.insurance .gzkCommonStyle_h50 .img_Note{
+  width:15px;
+  height:15px;
+  margin-top:-3px;
+  vertical-align:middle;
+}
+.insurance .footer-btn{
+  width:750rpx;
+  height:40px;
+  padding:10px 0px;
+}
+.insurance .v-btn-pay{
+  height:40px;
+  line-height:40px;
+  background: #ec5958;
+  color:#fff;
+  border-radius:5px;
+  text-align:center;
+}
+.insurance .vOne_Btn{
+  height:40px;
+  line-height:40px;
+  text-align:center;
+}
+.insurance .vOne_Btn view{
+  float: left;
+  width:710rpx;
+  height:40px;
+  line-height:40px;
+  background: #ec5958;
+  color:#fff;
+  border-radius:5px;
+  margin-left:20rpx;
+}
+
+/******* 包装方式 货物类型 *******/
+.packingWayBox>view{
+  height:50px;
+  line-height:50px;
+  border-bottom:1px solid #d9d9d9;
+}
+.packingWayBox>view .chooseStyle{
+  margin-left:10px;
+}
+/******* 优惠卷 ********/
+.gzk_Coupons{
+  margin:10px 20rpx;
+  height:100px;
+}
+.gzk_Coupons>view{}
+.gzk_Coupons .offerDescription{
+  width:560rpx;
+  height:98px;
+  border-top:1px solid #ec5958;
+  border-bottom:1px solid #ec5958;
+  border-left:1px solid #ec5958;
+  color:#ec5958;
+}
+.gzk_Coupons .gzk_DiscountAmount{
+  /*width:200rpx;*/
+  margin:0 5px 0 20px;
+  line-height:100px;
+  font-size:60px;
+  font-weight: bold;
+  text-align: center;
+}
+.gzk_Coupons .usedToDescribe{}
+.gzk_Coupons .usedToDescribe>view:first-child{margin-top:27px;font-size:16px;}
+.gzk_Coupons .usedToDescribe>view:last-child{font-size:20px;}
+.gzk_Coupons .gzk_CouponsBtn{
+  width:150rpx;
+  height:100px;
+  background:#ec5958;
+  color: #ffffff;
+  text-align: center;
+  font-size:16px;
+}
+/* 购买保险 */
+.insurance .vTwo_Btn{
+height:40px;
+line-height:40px;
+text-align:center;
+}
+.insurance .vTwo_Btn view{
+float: left;
+width:345rpx;
+height:40px;
+line-height:40px;
+background: #ec5958;
+color:#fff;
+border-radius:5px;
+margin-left:20rpx;
+}

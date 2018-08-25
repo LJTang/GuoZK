@@ -1,0 +1,262 @@
+<view class="container" hidden="{{page_Hide}}">
+    <view class="bgFFF w100P bor_B">
+        <view class="gzkCommonStyle_h50 mal20R">
+            <view class="gzk_ContentTitle line-h50">昵称</view>
+            <view class="gzk_Content"><input type="text" placeholder="点击输入" data-name="userName" bindinput="getInputValue" value="{{strUserName}}" maxlength="10"/></view>
+            <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+        </view>
+    </view>
+    <view class="bgFFF w100P bor_B">
+        <view class="gzkCommonStyle_h50 mal20R">
+            <view class="gzk_ContentTitle line-h50">电话</view>
+            <view class="gzk_Content"><input type="number" value="{{contactPhoneNumber}}" disabled/></view>
+        </view>
+    </view>
+    <view class="bgFFF w100P bor_B">
+        <view class="gzkCommonStyle_h50 mal20R">
+            <view class="gzk_ContentTitle line-h50">注册身份</view>
+            <view class="gzk_Content"><input type="text" value="{{identity}}" disabled/></view>
+        </view>
+    </view>
+    <view class="bgFFF w100P bor_B">
+        <view class="gzkCommonStyle_h50 mal20R">
+            <view class="gzk_ContentTitle line-h50">果宝</view>
+            <view class="gzk_Content"><span>{{gzk_FloatUserCash}}</span> 果宝</view>
+        </view>
+    </view>
+
+    <view class="bgFFF w100P bor_B" hidden="{{car_Hide}}">
+        <view class="gzkCommonStyle_h50 mal20R" bindtap="powerDrawer_CarPlateNumber" data-statu="open">
+            <view class="gzk_ContentTitle line-h50">车牌号码</view>
+            <view class="gzk_Content"><input type="text" placeholder="点击输入" data-name="carPlateNumber" value="{{strCarPlateNumber}}" maxlength="8" disabled/></view>
+            <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+        </view>
+    </view>
+    <view class="bgFFF w100P bor_B" hidden="{{car_Hide}}">
+        <view class="gzkCommonStyle_h50 mal20R" bindtap="powerDrawer2" data-statu="open">
+            <view class="gzk_ContentTitle line-h50">车型</view>
+            <view class="gzk_Content"><input type="text" placeholder="点击选择" value="{{vehicle_Parameters}}"  disabled/></view>
+            <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+        </view>
+    </view>
+
+    <view class="bgFFF w100P bor_B" hidden="{{company_Hide}}">
+        <view class="gzkCommonStyle_h50 mal20R">
+            <view class="gzk_ContentTitle line-h50">公司名称</view>
+            <view class="gzk_Content"><input type="text" placeholder="点击输入" data-name="companyName" bindinput="getInputValue" value="{{strCompanyName}}" maxlength="10"/></view>
+            <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+        </view>
+    </view>
+    <view class="bgFFF w100P" bindtap="doExpense_Calendar">
+        <view class="gzkCommonStyle_h50 mal20R">
+            <view class="gzk_ContentTitle line-h50">消费记录</view>
+            <view class="gzk_Content"></view>
+            <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+        </view>
+    </view>
+
+    <view class="footer_Btn publish-Btn display-B">
+        <button class="display-B" bindtap="onSave">保存</button>
+    </view>
+<!-- 车型 -->
+    <view class="drawer_screen" data-statu="close" wx:if="{{vehicleParameters}}"></view>
+    <view animation="{{animationData}}" class="drawer_box" wx:if="{{vehicleParameters}}">
+        <view class="drawer_title"><view class="">车辆参数</view><view class="fR" data-statu="close" bindtap="powerDrawer2">完成</view></view>
+
+        <view class="drawer_content" style="height:{{bounced_Height-50}}px;">
+            <view class="hot_Region_Title"><span></span>车长</view>
+            <view class="conductor">
+                <view wx:for-items="{{conductors}}" data-id="{{index}}" class="{{index==id?'is_checked':'normal'}}" bindtap="select_ChooseConductor" wx:key="{{index}}">{{item.text}}</view>
+            </view>
+
+            <view class="select_Area_Title"><span></span>车型</view>
+            <view class="conductor">
+                <view wx:for-items="{{models}}" data-id="{{index}}" class="{{index==mID?'is_checked':'normal'}}" bindtap="select_Models" wx:key="{{index}}">{{item.text}}</view>
+            </view>
+        </view>
+
+    </view>
+    <!-- 车牌 -->
+    <view class="drawer_screen" data-statu="close" wx:if="{{carPlateNumber_Bool}}"></view>
+    <view animation="{{animationData}}" class="drawer_box" wx:if="{{carPlateNumber_Bool}}">
+        <view class="drawer_title"><view class="">车牌号码</view><view class="fR" data-statu="close" bindtap="powerDrawerClose_CarPlateNumber">完成</view></view>
+
+        <view class="drawer_content" style="height:{{bounced_Height-50}}px;">
+            <view class="viewDialogCarPlatePad mat20">
+                <view class="carPlatePadValue">
+                    <view class="{{select_ID==0?'selected':''}}" bindtap="onSwitch" data-statu="0">{{text1}}</view>
+                    <view class="{{select_ID==1?'selected':''}}" bindtap="onSwitch" data-statu="1">{{text2}}</view>
+                    <view><span class="carDot">•</span></view>
+                    <view class="{{select_ID==2?'selected':''}}" bindtap="onSwitch" data-statu="2">{{text3}}</view>
+                    <view class="{{select_ID==3?'selected':''}}" bindtap="onSwitch" data-statu="3">{{text4}}</view>
+                    <view class="{{select_ID==4?'selected':''}}" bindtap="onSwitch" data-statu="4">{{text5}}</view>
+                    <view class="{{select_ID==5?'selected':''}}" bindtap="onSwitch" data-statu="5">{{text6}}</view>
+                    <view class="{{select_ID==6?'selected':''}}" bindtap="onSwitch" data-statu="6">{{text7}}</view>
+                </view>
+
+                <view class="carPlatePadKey" style="height:{{bounced_Height-118}}px;">
+                    <view class="carPlatePadKeyArea" wx:if="{{shorthand_Bool}}">
+                        <view class='gzkAreaAQ' hidden="{{am_Hide}}">
+                            <view class='gzkDialogKeyLine maT10'>
+                                <view class="keyInput" bindtap="onClickValue" data-text="琼">琼</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="青">青</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="苏">苏</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="陕">陕</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="皖">皖</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="湘">湘</view>
+                            </view>
+                            <view class='maT10'>
+
+                                <view class="keyInput" bindtap="onClickValue" data-text="新">新</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="粤">粤</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="豫">豫</view>
+                            </view>
+                            <view class='maT10'>
+                                <view class="keyInput" bindtap="onClickValue" data-text="渝">渝</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="云">云</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="浙">浙</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="藏">藏</view>
+                            </view>
+                        </view>
+                        <view class='gzkArea' hidden="{{nz_Hide}}">
+                            <view class="gzkDialogKeyLine">
+                                <view class="keyInput" bindtap="onClickValue" data-text="川">川</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="鄂">鄂</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="赣">赣</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="甘">甘</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="贵">贵</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="桂">桂</view>
+                            </view>
+                            <view class="gzkDialogKeyLine">
+                                <view class="keyInput" bindtap="onClickValue" data-text="沪">沪</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="黑">黑</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="吉">吉</view>
+                                <vieview class="keyInput" bindtap="onClickValue" data-text="冀">冀</vieview>
+                                <view class="keyInput" bindtap="onClickValue" data-text="晋">晋</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="京">京</view>
+                            </view>
+                            <view class="gzkDialogKeyLine">
+                                <view class="keyInput" bindtap="onClickValue" data-text="津">津</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="鲁">鲁</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="辽">辽</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="蒙">蒙</view>
+                                <vieview class="keyInput" bindtap="onClickValue" data-text="闽">闽</vieview>
+                                <view class="keyInput" bindtap="onClickValue" data-text="宁">宁</view>
+                            </view>
+                            <view class="gzkDialogKeyLine">
+                                <view class="keyInput" bindtap="onClickValue" data-text="琼">琼</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="青">青</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="苏">苏</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="陕">陕</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="皖">皖</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="湘">湘</view>
+                            </view>
+                            <view class="gzkDialogKeyLine">
+                                <view class="keyInput" bindtap="onClickValue" data-text="新">新</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="粤">粤</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="豫">豫</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="渝">渝</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="云">云</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="浙">浙</view>
+                            </view>
+                            <view class="gzkDialogKeyLine">
+                                <view class="keyInput" bindtap="onClickValue" data-text="藏">藏</view>
+                            </view>
+                        </view>
+
+                        <!--
+                        <view class='gzkSwitch'>
+                            <view class='gzkSwitchPrompt'><view class='f60' style="font-size:12px;"> 地区名首字母</view>
+                                <view style="font-size:10px;">（点击切换）</view></view>
+                            <view class='gzkSwitchAreaAQ {{az=="am"?"bg8":"bgf60"}}' bindtap="onLettersTo_Switch" data-text="am">A-M</view>
+                            <!--<view class='gzkSwitchAreaAQ {{az=="am"?"bgf60":"bg8"}}' bindtap="onLettersTo_Switch" data-text="am">A-M</view>-->
+                            <!--<view class='gzkSwitchAreaRZ {{az=="nz"?"bgf60":"bg8"}}' bindtap="onLettersTo_Switch" data-text="nz">N-Z</view>-->
+                            <!--<view class='gzkSwitchAreaRZ {{az=="nz"?"bg8":"bgf60"}}' bindtap="onLettersTo_Switch" data-text="nz">N-Z</view>-->
+                        <!--</view>-->
+
+                    </view>
+
+
+                    <view class="carPlatePadKeyLetter" wx:if="{{letter_Bool}}">
+                        <view class='gzkNumberKeyBoard' hidden="{{number_Hide}}">
+                                <view class='mat5'>
+                                    <view class="keyInput" bindtap="onClickValue" data-text="1">1</view>
+                                    <view class="keyInput" bindtap="onClickValue" data-text="2">2</view>
+                                    <view class="keyInput" bindtap="onClickValue" data-text="3">3</view>
+                                </view>
+                                <view class="mat10">
+                                    <view class="keyInput" bindtap="onClickValue" data-text="4">4</view>
+                                    <view class="keyInput" bindtap="onClickValue" data-text="5">5</view>
+                                    <view class="keyInput" bindtap="onClickValue" data-text="6">6</view>
+                                </view>
+                                <view class="mat10">
+                                    <view class="keyInput" bindtap="onClickValue" data-text="7">7</view>
+                                    <view class="keyInput" bindtap="onClickValue" data-text="8">8</view>
+                                    <view class="keyInput" bindtap="onClickValue" data-text="9">9</view>
+                                </view>
+                                <view class="mat10">
+                                    <view class="keyInput gzk_HangingPlate" bindtap="onClickValue" data-text="挂">挂</view>
+                                    <view class="keyInput" bindtap="onClickValue" data-text="0">0</view>
+                                    <view class="gzkSwitchEnglish" bindtap="onAccording_To" data-statu="999">英文</view>
+                                </view>
+                            </view>
+                        <view class="gzkEnglishKeyBoard" hidden="{{letter_Hide}}">
+                            <view class="gzkDialogKeyLine">
+                                <view class="keyInput" bindtap="onClickValue" data-text="A">A</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="B">B</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="C">C</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="D">D</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="E">E</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="F">F</view>
+                            </view>
+                            <view class="mat10">
+                                <view class="keyInput" bindtap="onClickValue" data-text="G">G</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="H">H</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="I">I</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="J">J</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="K">K</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="L">L</view>
+                            </view>
+                            <view class="mat10">
+                                <view class="keyInput" bindtap="onClickValue" data-text="M">M</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="N">N</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="O">O</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="P">P</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="Q">Q</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="R">R</view>
+                            </view>
+                            <view class="mat10">
+                                <view class="keyInput" bindtap="onClickValue" data-text="S">S</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="T">T</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="U">U</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="V">V</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="W">W</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="X">X</view>
+                            </view>
+                            <view class="mat10">
+                                <view class="keyInput" bindtap="onClickValue" data-text="Y">Y</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="Z">Z</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="1">1</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="2">2</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="3">3</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="4">4</view>
+                            </view>
+                            <view class="mat10">
+                                <view class="keyInput" bindtap="onClickValue" data-text="5">5</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="6">6</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="7">7</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="8">8</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="9">9</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="0">0</view>
+                            </view>
+                            <view class="mat10 pab10">
+                                <view class="keyInput gzk_HangingPlate" bindtap="onClickValue" data-text="挂">挂</view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+

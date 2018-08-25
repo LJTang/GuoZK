@@ -1,0 +1,150 @@
+<!--<image class="applet-IMG" src="/images/applet_bg.jpg" style="height:{{imageH}}px;"></image>-->
+<view class="container section" id="page">
+    <view><image class="applet-IMG" src="{{imageURL}}/home_top.png" style="height:60px;"></image></view>
+    <view class="view-Head"><view><image src="{{imageURL}}/gzk_sp.png"></image></view></view>
+    <view class="home-Open-Page-Btn">
+        <!--<view class="finding-Car-Goods">-->
+            <!--<view class="find-Car home-Dashed" bindtap="findCar" data-statu="find_car">-->
+                <!--<image src="/images/find_car.png"></image>-->
+                <!--<view><span>我要找车</span></view>-->
+            <!--</view>-->
+            <!--<view class="find-Goods home-Dashed" bindtap="findGoods" data-statu="find_goods">-->
+                <!--<image src="/images/find_goods.png"></image>-->
+                <!--<view><span>我要找货</span></view>-->
+            <!--</view>-->
+            <!--<view class="find-Goods home-Dashed" bindtap="findGoods" data-statu="find_goods">-->
+                <!--<image src="/images/find_goods.png"></image>-->
+                <!--<view><span>我要找货</span></view>-->
+            <!--</view>-->
+        <!--</view>-->
+        <!--<view class="release-Source-Vehicle">-->
+            <!--<view class="published-Sources home-Dashed mar20R" bindtap="onDetermineNumber" data-statu="publish_goods">-->
+                <!--<image src="/images/publish_goods.png"></image>-->
+                <!--<view><span>发布货源</span></view>-->
+            <!--</view>-->
+            <!--<view class="release-Options home-Dashed" bindtap="onDetermineNumber" data-statu="publish_car">-->
+                <!--<image src="/images/publish_car.png"></image>-->
+                <!--<view><span>发布车源</span></view>-->
+            <!--</view>-->
+        <!--</view>-->
+        <!--<view class="artificial-Release">-->
+            <!--<view class="artificial-Matching home-Dashed" bindtap="onArtificialHotline">-->
+                <!--<image src="/images/artificial.png"></image>-->
+                <!--<view><span>人工匹配</span></view>-->
+            <!--</view>-->
+            <!--&lt;!&ndash;<view class="release home-Dashed" bindtap="log">&ndash;&gt;-->
+            <!--<view class="release home-Dashed" bindtap="onDetermineNumber" data-statu="my_publish">-->
+                <!--<image src="/images/my_publish.png"></image>-->
+                <!--<view><span>我的发布</span></view>-->
+            <!--</view>-->
+        <!--</view>-->
+
+        <view class="homePrompt_Title"><span></span>我是货主</view>
+
+        <view class="gzk_Shipper">
+            <view class="find_Car home-Dashed mal20R" bindtap="findCar" data-statu="find_car">
+                <image src="{{imageURL}}/find_car.png"></image>
+                <view><span>我要找车</span></view>
+            </view>
+            <view class="find_Goods home-Dashed mal20R" bindtap="onDetermineNumber" data-statu="publish_goods">
+                <image src="{{imageURL}}/publish_goods.png"></image>
+                <view><span>发布货源</span></view>
+            </view>
+            <view class="myGoods home-Dashed mal20R" bindtap="onDetermineNumber" data-statu="my_publish_goods">
+                <image src="{{imageURL}}/my_goods.png"></image>
+                <view><span>我的货源</span></view>
+            </view>
+        </view>
+
+        <view class="homePrompt_Title"><span></span>我是车主</view>
+        <view class="gzk_Owner">
+            <view class="find_Car home-Dashed mal20R" bindtap="findGoods" data-statu="find_goods">
+                <image src="{{imageURL}}/find_goods.png"></image>
+                <view><span>我要找货</span></view>
+            </view>
+            <view class="find_Goods home-Dashed mal20R" bindtap="onDetermineNumber" data-statu="publish_car">
+                <image src="{{imageURL}}/publish_car.png"></image>
+                <view><span>发布车源</span></view>
+            </view>
+            <view class="myGoods home-Dashed mal20R" bindtap="onDetermineNumber" data-statu="my_publish_car">
+                <image src="{{imageURL}}/my_car.png"></image>
+                <view><span>我的车源</span></view>
+            </view>
+        </view>
+
+        <view class="homePrompt_Title" hidden="{{intsPolicySwitchStatus==0?false:true}}"><span></span>货运保险</view>
+        <view class="gzk_Owner" hidden="{{intsPolicySwitchStatus==0?false:true}}">
+            <view class="find_Car home-Dashed mal20R" bindtap="onInsurance">
+                <image src="{{imageURL}}/buy_insurance.png"></image>
+                <view><span>购买保险</span></view>
+            </view>
+            <view class="find_Goods home-Dashed mal20R" bindtap="onDetermineNumber" data-statu="my_policy">
+                <image src="{{imageURL}}/my_insurance.png"></image>
+                <view><span>我的保单</span></view>
+            </view>
+            <view class="myGoods home-Dashed mal20R" bindtap="onHow_Insurance">
+                <image src="{{imageURL}}/how_insurance.png"></image>
+                <view><span>如何投保</span></view>
+            </view>
+        </view>
+
+        <view class="homePrompt_Title"><span></span>更多功能</view>
+
+        <view class="gzk_More bor_B">
+            <view class="artificial_Matching home-Dashed mal20R" bindtap="onArtificialHotline">
+                <image src="{{imageURL}}/artificial.png"></image>
+                <view><span>人工匹配</span></view>
+            </view>
+            <view class="find_Goods home-Dashed mal20R" bindtap="onIntelligent_Distribution">
+                <image src="{{imageURL}}/smart.png"></image>
+                <view><span>智能配货</span></view>
+            </view>
+            <view class="myGoods home-Dashed mal20R" bindtap="onHistoryFreight" data-statu="history_freight">
+                <image src="{{imageURL}}/h_freight.png"></image>
+                <view><span>历史运价</span></view>
+            </view>
+        </view>
+
+        <view class="gzk_More mat10" style="border:none;padding-bottom:0;">
+            <view class="artificial_Matching home-Dashed mal20R" bindtap="onDetermineNumber" data-statu="center">
+                <image src="{{imageURL}}/center.png"></image>
+                <view class=""><span>个人中心</span></view>
+            </view>
+            <view class="home-Dashed mal20R">
+            <!--<view class="home-Dashed mal20R" bindtap="onInsurance">-->
+                <!--<button class="homeShare_Btn">-->
+                <button class="homeShare_Btn" open-type="share" bindtap="onShareAppMessage">
+                    <image src="{{imageURL}}/home_share.png"></image>
+                    <view><span>分享小程序</span></view>
+                </button>
+
+            </view>
+            <view class="home-Dashed mal20R" bindtap="onCustomerService">
+                <image src="{{imageURL}}/kefu.png"></image>
+                <view class=""><span>客服热线</span></view>
+            </view>
+        </view>
+
+        <!--<view class="gzk_More_To">-->
+            <!--<view class="artificial_Matching home-Dashed mal20R" bindtap="onPersonal_Center" data-statu="center">-->
+            <!--<view class="artificial_Matching home-Dashed mal20R" bindtap="onDetermineNumber" data-statu="center">-->
+                <!--<image src="/images/center.png"></image>-->
+                <!--<view class=""><span>个人中心</span></view>-->
+            <!--</view>-->
+            <!--<view class="find_Goods home-Dashed mal20R" bindtap="onCustomerService" data-statu="">-->
+                <!--<image src="/images/kefu.png"></image>-->
+                <!--<view class=""><span>客服热线</span></view>-->
+            <!--</view>-->
+        <!--</view>-->
+
+    </view>
+    <view style="height:40px;">
+        <image class="applet-IMG" src="{{imageURL}}/home_footer.png" style="height:40px;margin-bottom:-5px;"></image>
+    </view>
+
+
+    <view>
+  <live-pusher url="https://domain/push_stream" mode="RTC" autopush bindstatechange="statechange" style="width: 300px; height: 225px;" />
+    </view>
+
+</view>

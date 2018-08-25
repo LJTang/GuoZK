@@ -1,0 +1,56 @@
+page{height:100%;}
+.container {
+  background: #ede8ef;
+  overflow: auto;
+}
+.publish-Head{
+  width:100%;
+  height:30px;
+  line-height:30px;
+  text-align: center;
+  background:#ec5958;
+  color:#fff;
+  font-size: 14px;
+}
+/******************/
+
+/** btn **/
+.find_Information_Btn{
+  width:750rpx;
+  display: flex;
+  flex-direction: row;
+  height:60px;
+  position:fixed;
+  z-index:1;
+  bottom: 0;
+  left: 0;
+  background: #FFFFFF;
+  color: #FFFFFF;
+  text-align: center;
+}
+.describe{
+  width:640rpx;
+  margin-left:60rpx;
+  height:30px;
+}
+/********************/
+.three_Btn view{
+  width:223.33rpx;
+  height:40px;
+  line-height: 40px;
+  background:#ec5958;
+  margin-left: 20rpx;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+.three_Btn view button{
+  font-size:16px;
+  background:#ec5958;
+  height:40px;
+  line-height: 40px;
+  border:none;
+  color: #FFFFFF;
+  width:100%;
+}
+
+@import "../../style/common_style.wxss";

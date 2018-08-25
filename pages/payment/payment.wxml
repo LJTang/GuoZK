@@ -1,0 +1,52 @@
+<view class="container section">
+    <!--<view wx:if="{{pay_Results==true}}">-->
+    <view hidden="{{pay_Bool}}">
+        <view class="bgFFF w100P">
+            <view class="gzkCommonStyle_h50 mal20R mar20R" bindtap="openLoginPannel" data-region="0">
+                <view class="gzk_ContentTitle line-h50"><span style="color:#ec5958;">支付</span></view>
+                <view class="gzk_Content line-h50">{{strFloatMoneyPay}}</view>
+            </view>
+        </view>
+        <view class="bgFFF w100P mat10 pat5 pab5"><span class="mal20R">请选择您的支付方式</span></view>
+        <view class="bgFFF w100P pat20 pab10">
+            <view class="gzkCommonStyle_h50 mal20R mar20R" bindtap="select_Method_Of_Payment" data-statu="1">
+                <view class="gzk_ContentTitle line-h50"><image src="/images/sunshine_box.png"></image></view>
+                <view class="gzk_Content">
+                    <view class="f18">果宝箱</view>
+                    <view class="f32R">本次可用<span>{{gzk_AvailableSunshine}}</span>果宝</view>
+                </view>
+                <view class="sRight_Arrow"><icon type="success" size="22" color="{{intUsePayType==1?'#ec5958':'#d9d9d9'}}"/></view>
+            </view>
+        </view>
+        <view class="bgFFF w100P mat5 pat10 pab10">
+            <view class="gzkCommonStyle_h50 mal20R mar20R" bindtap="select_Method_Of_Payment" data-statu="2">
+                <view class="gzk_ContentTitle line-h50"><image src="/images/wechat_pay.png"></image></view>
+                <view class="gzk_Content">
+                    <view class="f18"><span>微信支付</span></view>
+                    <view class="f32R"><span>使用微信支付，安全便捷</span></view>
+                </view>
+                <view class="sRight_Arrow"><icon type="success" size="22" color="{{intUsePayType==2?'#ec5958':'#d9d9d9'}}"/></view>
+            </view>
+        </view>
+        <view class="footer_Btn">
+            <view class="wBtnOne" bindtap="insurance_Pay">支付</view>
+        </view>
+    </view>
+
+    <!--<view class="bgFFF" style="height:{{height}}px;" wx:else>-->
+    <view class="bgFFF" style="height:{{height}}px;"  hidden="{{results_Bool}}">
+        <view class="center pat80"><icon type="{{sucs_warn}}" size="80"/></view>
+        <view class="center f40R font-W mat20 spacing_2">{{pay_Text}}</view>
+        <view class="center mat20 f34R c8">{{pay_TextDescribe}}</view>
+        <view class="paymentResult_Btn f38R">
+            <!--<view hidden="{{jump_Bool}}" bindtap="doDetails">查看保单</view>-->
+            <view class="{{bgColor}}" hidden="{{jump_Bool}}" bindtap="{{doClick}}">{{btnText}}</view>
+            <!--<view bindtap="pageBack">返回</view>-->
+            <view hidden="{{ren_Bool}}" bindtap="pageBack">返回</view>
+        </view>
+    </view>
+</view>
+
+
+
+

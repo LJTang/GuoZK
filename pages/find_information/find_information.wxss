@@ -1,0 +1,189 @@
+page{height:100%;}
+.container {
+  background: #ede8ef;
+  overflow: auto;
+}
+.vehicle-Information{padding:10px 0;height:40px;line-height:40px;}
+.vehicle-Information .find-Information-IMG{
+  line-height:40px;
+  margin:0 20rpx;
+}
+.vehicle-Information .find-Information-IMG image{margin-top:0rpx;}
+
+.find-Information-IMG image{
+  width:25px;
+  height:25px;
+  vertical-align: middle;
+}
+.information-Title{
+  width:180rpx;
+}
+.information-Center{
+  width:485rpx;
+  height:40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.information-Remark{width:485rpx;}
+.highlyFree{
+  padding:15px 0;
+}
+.highlyFree .find-Information-IMG{width:60rpx;}
+/******************/
+/***********/
+.vertical-Block{
+  height:40px;
+  line-height:40px;
+  margin:0 15rpx;
+}
+.vertical-Block image{
+  width:50rpx;
+  height:10px;
+  vertical-align: top;
+  margin-top:15px;
+  margin-left:20rpx;
+  margin-right:20rpx;
+}
+.dots{
+  display: inline-block;
+  width:22rpx;
+  height:22rpx;
+  border-radius:50%;
+  margin-top:14px;
+  vertical-align:top;
+}
+.area_From{background:#32b16c;}
+.area_To{background:#f53856;}
+.area-Of-Shipment{
+  display: inline-block;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height:40px;
+  min-width:200rpx;
+  max-width:300rpx;
+
+}
+.vertical-Block .fR{
+  width:150rpx;
+  font-size:26rpx;
+}
+
+/** btn **/
+.find_Information_Btn,.twoLine_TwoBtn{
+  width:750rpx;
+  height:60px;
+  position:fixed;
+  z-index:1;
+  bottom: 0;
+  left: 0;
+  background: #FFFFFF;
+  color: #FFFFFF;
+  text-align: center;
+}
+/*.twoLine_TwoBtn{height:110px;}*/
+.find_Information_Btn button,.twoLine_TwoBtn button{
+  background:#ec5958;
+  border:none;
+  height:40px;
+  line-height:40px;
+  color: #FFFFFF;
+  font-size:16px;
+}
+
+.find_Information_Oneself view{
+  height:40px;
+  line-height:40px;
+  background:#ec5958;
+  width:223.333rpx;
+  margin-left:20rpx;
+  margin-top:10px;
+  border-radius:5px;
+}
+
+.find_Information_Other view,.resend_Goods{
+  height:40px;
+  line-height: 40px;
+  background: #ec5958;
+  width:710rpx;
+  margin-left: 20rpx;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+.wBtnThree view{width:223.333rpx;}
+.wBtnFour view{width:150rpx;}
+.wBtnFour view:first-child{width:200rpx;}
+/*****************/
+.mPrompt_Title span{background:#32b16c;}
+.vertical-Block{
+  height:40px;
+  line-height:40px;
+  margin:0 15rpx;
+}
+.vertical-Block image{}
+.to{
+  width:50rpx;
+  height:10px;
+  vertical-align: top;
+  margin-top:15px;
+  margin-left:30rpx;
+  margin-right:30rpx;
+}
+
+.vertical-Block .dots{
+  display: inline-block;
+  width:20rpx;
+  height:20rpx;
+  border-radius:50%;
+  margin-top:15px;
+  vertical-align:top;
+}
+.area_From{background:#32b16c;}
+.area_To{background:#f53856;}
+.area-Of-Shipment{
+  display: inline-block;
+  max-width:215rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+
+}
+.vertical-Block .fR{
+  width:150rpx;
+  font-size:26rpx;
+}
+.describe{
+  width:550rpx;
+  margin-left:60rpx;
+  height:30px;
+}
+
+.list_Information .sRight_Arrow{
+  width:30rpx;
+  height:70px;
+  line-height:70px;
+}
+.list_Information .sRight_Arrow image {
+  width: 12px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.makePhoneCall{
+  width:175rpx;
+  background:#ec5958;
+  color: #FFFFFF;
+  border-radius:5px;
+  text-align: center;
+}
+.twoBtn view{
+  width: 345rpx;
+  height:40px;
+  line-height:40px;
+  background:#ec5958;
+  margin-left:20rpx;
+  border-radius:5px;
+  text-align: center;
+  color:#FFFFFF;
+}

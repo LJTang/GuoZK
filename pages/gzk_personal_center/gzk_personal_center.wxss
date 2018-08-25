@@ -1,0 +1,297 @@
+page{height:100%;}
+.container{
+  background: #ede8ef;
+}
+.w100P{width:100%;}
+.publish-Head{
+  width:100%;
+  height:30px;
+  line-height:30px;
+  text-align: center;
+  background:#e4393c;
+  color:#fff;
+  font-size: 14px;
+}
+.gzkCommonStyle_h50,.highlyFree{
+  display: flex;
+  flex-direction:row;
+  /*padding:3px 0;*/
+}
+.gzkCommonStyle_h50 .gzk_ContentTitle,.highlyFree .gzk_ContentTitle{width:250rpx;}
+.gzkCommonStyle_h50 .gzk_Content{vertical-align: middle;}
+.gzkCommonStyle_h50 .gzk_Content{
+  width:430rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height:50px;
+}
+.gzkCommonStyle_h50 .gzk_Content input{height:50px;}
+
+.sRight_Arrow{line-height:50px;}
+.sRight_Arrow image{
+  width:40rpx;
+  height:40rpx;
+  line-height:40px;
+  vertical-align: text-bottom;
+}
+.highlyFree .gzk_ContentTitle,.highlyFree .sRight_Arrow,.highlyFree .gzk_Content textarea{padding:15px 0;}
+.highlyFree .gzk_Content,.highlyFree .gzk_Content textarea{width:430rpx;}
+.highlyFree .gzk_Content textarea{}
+.highlyFree .sRight_Arrow{line-height:0rpx;margin-top:3px;}
+
+.publish-Btn{
+  width:100%;
+  height:60px;
+  background:#fff;
+  z-index: 1000;
+}
+.publish-Btn button{
+  background:#ec5958;
+  color:#fff;
+  margin:10px;
+  height:40px;
+  line-height:40px;
+}
+
+.drawer_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+}
+.drawer_box {
+  width: 750rpx;
+  overflow: hidden;
+  position: fixed;
+  bottom:0;
+  left: 0;
+  z-index: 1001;
+  background: #FAFAFA;
+}
+
+.drawer_title{
+  height:50px;
+  line-height:50px;
+  background:#ec5958;
+  color:#FFFFFF;
+}
+.drawer_title view{
+  display: inline-block;
+  line-height:50px;
+  margin:0 20rpx;
+}
+
+.drawer_content {
+  height: 360px;
+  overflow-y: scroll; /*超出父盒子高度可滚动*/
+}
+
+.btn_ok{
+  padding: 7px 0;
+  font: 20px "microsoft yahei";
+  text-align: center;
+  background:#ec5958;
+  color:#FFFFFF;
+  border-radius: 5px;
+  margin:5px 20rpx;
+}
+.conductor>view{
+  display: inline-block;
+  width:164.5rpx;
+  margin-left:20rpx;
+  height: 30px;
+  line-height:30px;
+  text-align: center;
+  background:#dcdcdc;
+  border-radius:5px;
+  margin-top:5px;
+  overflow: hidden;
+}
+
+.hot_Region_Title,.select_Area_Title{font-size:16px;margin:10px 0}
+.hot_Region_Title span{background:#ec5958;}
+.select_Area_Title span{background:#46b19d;}
+.hot_Region_Title span,.select_Area_Title span{
+  display: inline-block;
+  height:16px;
+  width:5px;
+  margin-left:10px;
+  margin-right:10px;
+  margin-bottom:-2px;
+
+}
+.conductor .is_checked{
+  color:#fff;
+  background:#ec5958;
+}
+.conductor .normal{
+  background: #dcdcdc;
+}
+
+/***** cp ******/
+/*.maT10{margin-top:10px;}*/
+/*.maT5{margin-top:5px;}*/
+/*.hide{display:none;}*/
+/*.f60{color:#FF6600;}*/
+/*.bgf60{background:#FF6600;}*/
+/*.bg8{background:#888;}*/
+/*.viewDialogCarPlatePad .carPlatePadValue {*/
+  /*width:650rpx;*/
+  /*margin:0 auto;*/
+  /*height: 33px;*/
+  /*display: flex;*/
+  /*flex-direction: row;*/
+  /*text-align: center;*/
+/*}*/
+/*.viewDialogCarPlatePad .carPlatePadValue view{*/
+  /*width:81.25rpx;*/
+  /*border: 1px solid #c0c0c0;*/
+  /*margin-right:-1px;*/
+  /*height: 33px;*/
+  /*line-height: 35px;*/
+  /*font-size:18px;*/
+/*}*/
+/*.viewDialogCarPlatePad .carPlatePadValue .selected {*/
+  /*background-color: #ff6600;*/
+  /*color: #ffffff;*/
+  /*z-index: 10;*/
+  /*border: 1px solid #ff6600;*/
+/*}*/
+
+/*.viewDialogCarPlatePad .carPlatePadKey {*/
+  /*margin:15px 0 0;*/
+  /*height: 280px;*/
+  /*overflow:auto;*/
+/*}*/
+
+/*.viewDialogCarPlatePad .carPlatePadKey>view {*/
+  /*text-align: left;*/
+/*}*/
+/*.viewDialogCarPlatePad .carPlatePadKey #btnDialogPadKeyOK.disable {*/
+  /*color: #ffffff;*/
+  /*background-color: #888888;*/
+/*}*/
+
+/*.divGZKDialogTitle div{*/
+  /*display: inline-block;*/
+  /*font-size:14px;*/
+/*}*/
+/*.divGZKDialog .divGZKDialogTitle a.disable{*/
+  /*width: 60px;*/
+  /*color: #303030!important;*/
+  /*background-color: #ebebeb;*/
+/*}*/
+/*!*******************!*/
+/*.gzkArea{*/
+  /*height:280px;*/
+  /*font-size: 16px;*/
+/*}*/
+/*.gzkArea .gzkDialogKeyLine{*/
+  /*height: 40px;*/
+  /*margin-top: 5px;*/
+/*}*/
+/*.keyInput:active{*/
+  /*background:#FF6600;*/
+  /*color: #fff;*/
+/*}*/
+
+/*.gzkArea .keyInput {*/
+  /*height: 40px;*/
+  /*line-height: 40px;*/
+/*}*/
+/*.gzkArea .keyInput {*/
+  /*float: left;*/
+  /*width: 113.33rpx;*/
+  /*margin-left:10rpx;*/
+  /*letter-spacing:0;*/
+/*}*/
+/*a.keyInput:active{*/
+  /*background:#FF6600;*/
+  /*color: #fff;*/
+/*}*/
+/*.gzkSwitch {*/
+  /*height: 60px;*/
+  /*text-align: center;*/
+  /*letter-spacing:-8px;*/
+/*}*/
+/*.gzkSwitchPrompt{*/
+  /*font-size: 12px;*/
+/*}*/
+/*.gzkSwitchPrompt p:first-child{*/
+  /*margin-top: 8px;*/
+/*}*/
+/*.gzkSwitch>view {*/
+  /*display: inline-block;*/
+  /*width: 30%;*/
+  /*height: 45px;*/
+  /*vertical-align: top;*/
+  /*margin-top: 10px;*/
+  /*letter-spacing:0;*/
+/*}*/
+/*.gzkSwitchAreaAQ {*/
+  /*color: #fff;*/
+  /*line-height: 45px;*/
+  /*margin: 0 2%;*/
+  /*border-radius: 5px;*/
+  /*cursor: pointer;*/
+/*}*/
+/*.gzkSwitchAreaRZ {*/
+  /*color:#fff;*/
+  /*line-height: 45px;*/
+  /*border-radius: 5px;*/
+  /*cursor: pointer;*/
+/*}*/
+/*.bg8{background:#888888}*/
+/*!* 数字 *!*/
+/*.carPlatePadKeyLetter .gzkEnglishKeyBoard,.carPlatePadKeyLetter .gzkNumberKeyBoard{*/
+  /*letter-spacing:-8px;*/
+/*}*/
+
+/*.gzkNumberKeyBoard .keyInput {*/
+  /*display: inline-block;*/
+  /*width: 30% !important;*/
+  /*line-height: 50px;*/
+  /*margin-left: 2.5%;*/
+  /*font-size: 16px;*/
+/*}*/
+/*.gzkSwitchEnglish {*/
+  /*width: 30%;*/
+  /*line-height: 50px;*/
+  /*margin-left: 2%;*/
+/*}*/
+/*!* 字母 *!*/
+/*.keyInput {*/
+  /*border-radius: 5px;*/
+  /*background:#fff;*/
+  /*letter-spacing:0;*/
+  /*-moz-box-shadow: 2px 2px 5px #d9d9d9;*/
+  /*-webkit-box-shadow: 2px 2px 5px #d9d9d9;*/
+  /*box-shadow: 2px 2px 5px #d9d9d9;*/
+  /*text-align:center;*/
+/*}*/
+/*.gzkEnglishKeyBoard .keyInput {*/
+  /*display: inline-block;*/
+  /*width: 113.33rpx;*/
+  /*line-height: 40px;*/
+  /*margin-left:10rpx;*/
+  /*font-size:16px;*/
+/*}*/
+/*.gzkSwitchEnglish,.gzkSwitchNumber{*/
+  /*display: inline-block;*/
+  /*background: #FF6600;*/
+  /*color: #fff;*/
+  /*border-radius: 5px;*/
+  /*letter-spacing:0;*/
+  /*text-align: center;*/
+/*}*/
+/*.gzkSwitchNumber {*/
+  /*width: 14% !important;*/
+  /*line-height: 40px;*/
+  /*margin-left: 2.5%;*/
+/*}*/

@@ -1,0 +1,51 @@
+/**index.wxss**/
+.insurance_Statement{
+  margin:0 20rpx;
+  text-align: center;
+}
+.insurance_Statement>view{
+  height:30px;
+  line-height:30px;
+}
+.insurance_Statement>view:first-child{
+  background:#ff6600;
+  color:#ffffff;
+}
+.insurance_Statement>view>view{
+  width:165rpx;
+  border-right:2rpx solid #d9d9d9;
+  border-bottom:2rpx solid #d9d9d9;
+}
+.insurance_Statement>view>view:first-child{
+  width:210rpx;
+  border-left:2rpx solid #d9d9d9;
+}
+
+.insurance_Statement>view:first-child>view{
+  border-right:2rpx solid #ffffff;
+  border-bottom:none;
+}
+.insurance_Statement>view:first-child>view:last-child{
+  border-right:2rpx solid #ff6600;
+}
+.insurance_Statement>view:first-child>view:first-child{
+  border-left:2rpx solid #ff6600;
+}
+.how_IMG{
+  width:207px;
+  height:368px;
+ /*width:521rpx;*/
+  /*height:1004rpx;*/
+  box-shadow: 0px 10px 5px #888888;
+}
+.vHow_Title{
+  margin-left:20rpx;
+}
+
+
+
+
+
+
+
+

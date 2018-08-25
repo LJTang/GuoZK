@@ -1,0 +1,143 @@
+<view class="container section">
+    <!--<scroll-view class="over-A" style="height:{{publishHeight}}px;">-->
+    <view>
+    <!--<view style="height:100%">-->
+
+        <view class="publish-Head">带 * 号均为必填项</view>
+        <view class="bgFFF w100P bor_B mat20">
+            <view class="gzkCommonStyle_h50 mal20R"bindtap="openLoginPannel" data-region="0">
+                <view class="gzk_ContentTitle line-h50"><span class="cRed mar5">*</span>发货地区</view>
+                <view class="gzk_Content"><input type="text" placeholder="点击选择" value="{{cityText}}" icid="{{cityTextID}}" disabled/></view>
+                <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+            </view>
+        </view>
+        <view class="bgFFF w100P bor_B">
+            <view class="gzkCommonStyle_h50 mal20R" bindtap="openLoginPannel" data-region="1">
+                <view class="gzk_ContentTitle line-h50"><span class="cRed mar5">*</span>收货地区</view>
+                <view class="gzk_Content"><input type="text" placeholder="点击选择" value="{{cityText2}}" icid="{{cityText2ID}}" disabled/></view>
+                <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+            </view>
+        </view>
+        <view class="bgFFF w100P">
+            <view class="gzkCommonStyle_h50 mal20R">
+                <view class="gzk_ContentTitle line-h50"><span class="mal15">中转地</span></view>
+                <view class="gzk_Content"><input type="text" placeholder="点击输入" data-name="transitPoint" bindinput="getInputValue" value="{{transitPoint}}" maxlength="10"/></view>
+                <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+            </view>
+        </view>
+
+        <view class="bgFFF w100P bor_B mat10">
+            <view class="gzkCommonStyle_h50 mal20R">
+                <view class="gzk_ContentTitle line-h50"><span class="mal15">货物名称</span></view>
+                <view class="gzk_Content"><input type="text" placeholder="点击输入" data-name="nameGoods" bindinput="getInputValue" value="{{nameGoods}}" maxlength="10"/></view>
+                <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+            </view>
+        </view>
+        <view class="bgFFF w100P bor_B">
+            <view class="gzkCommonStyle_h50 mal20R">
+                <view class="gzk_ContentTitle line-h50"><span class="mal15">货物重量<span class="f26R">(吨)</span></span></view>
+                <view class="gzk_Content"><input type="number" placeholder="点击输入" data-name="goodsWeight" bindinput="getInputValue" value="{{goodsWeight}}" maxlength="3"/></view>
+                <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+            </view>
+        </view>
+        <view class="bgFFF w100P">
+            <view class="gzkCommonStyle_h50 mal20R">
+                <view class="gzk_ContentTitle line-h50"><span class="mal15">货物体积<span class="f26R">(立方米)</span></span></view>
+                <view class="gzk_Content"><input type="number" placeholder="点击输入" data-name="volumeGoods" bindinput="getInputValue" value="{{volumeGoods}}" maxlength="3"/></view>
+                <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+            </view>
+        </view>
+
+        <view class="bgFFF w100P bor_B mat10">
+            <view class="gzkCommonStyle_h50 mal20R">
+                <view class="gzk_ContentTitle line-h50"><span class="cRed mar5">*</span>装货日期</view>
+                <view class="gzk_Content"><picker mode="date" value="{{dateValue}}" start="{{startDate}}" end="2020-12-31" bindchange="datePickerBindchange">
+                  {{dateValue}}
+                </picker>
+                </view>
+                <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+            </view>
+        </view>
+        <view class="bgFFF bor_B mat10 w100P">
+            <view class="gzkCommonStyle_h50 mal20R" bindtap="powerDrawer2" data-statu="open">
+            <!--<view class="gzkCommonStyle_h50 mal20R" bindtap="powerDrawer" data-statu="open">-->
+                <view class="gzk_ContentTitle line-h50"><span class="cRed mar5">*</span>所需车型</view>
+                <view class="gzk_Content"><input type="text" placeholder="点击选择" value="{{vehicle_Parameters}}"  disabled/></view>
+                <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+            </view>
+        </view>
+        <view class="bgFFF mat10 w100P">
+            <view class="gzkCommonStyle_h50 mal20R">
+                <view class="gzk_ContentTitle line-h50"><span class="cRed mar5"></span>运价</view>
+                <view class="gzk_Content" style="width:385rpx;"><input type="number" placeholder="点击输入" data-name="freight" bindinput="getInputValue" value="{{publish_Freight}}" maxlength="10"/></view>
+                <view class="sRight_Arrow">元</view>
+            </view>
+        </view>
+
+        <view class="bgFFF w100P bor_B mat10">
+            <view class="gzkCommonStyle_h50 mal20R">
+                <view class="gzk_ContentTitle line-h50"><span class="cRed mar5">*</span>联系人</view>
+                <view class="gzk_Content"><input type="text" placeholder="点击输入" data-name="contact" bindinput="getInputValue" value="{{contact}}" maxlength="10"/></view>
+                <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+            </view>
+        </view>
+        <view class="bgFFF w100P bor_B">
+            <view class="gzkCommonStyle_h50 mal20R">
+                <view class="gzk_ContentTitle line-h50"><span class="cRed mar5">*</span>联系电话</view>
+                <view class="gzk_Content"><input type="number" placeholder="点击输入" data-name="contactPhoneNumber" value="{{contactPhoneNumber}}" bindinput="getInputValue"/></view>
+                <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+            </view>
+        </view>
+        <view class="bgFFF w100P bor_B">
+            <view class="gzkCommonStyle_h50 mal20R">
+                <view class="gzk_ContentTitle line-h50"><span class="mal15">公司名称</span></view>
+                <view class="gzk_Content"><input type="text" placeholder="点击输入" data-name="nameCompany" bindinput="getInputValue" value="{{nameCompany}}" maxlength="10"/></view>
+                <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+            </view>
+        </view>
+        <view class="bgFFF w100P mab80">
+            <view class="gzkCommonStyle_h50 mal20R">
+                <view class="gzk_ContentTitle line-h50"><span class="mal15">备注</span></view>
+                <view class="gzk_Content"><input type="text" placeholder="点击输入" data-name="note" bindinput="getInputValue" value="{{note}}" maxlength="100"/></view>
+                <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+            </view>
+        </view>
+        <!--
+        <view class="bgFFF w100P mab20">
+            <view class="highlyFree mal20R marl20">
+                <view class="gzk_ContentTitle"><span class="mal15">备注</span></view>
+                <view class="gzk_Content"><textarea type="text" auto-height placeholder="点击输入" data-name="note" bindinput="getInputValue" value="{{note}}"  maxlength="100" hidden="{{remark_Hide}}"></textarea></view>
+                <view class="gzk_Content"><input type="text" placeholder="点击输入" data-name="note" value="{{note}}" maxlength="100"/></view>
+                <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+            </view>
+        </view>
+-->
+        <view class="footer_Btn publish-Btn display-B">
+            <button class="display-B" bindtap="publishGoods">发布</button>
+        </view>
+    </view>
+</view>
+<view class="drawer_screen" data-statu="close" wx:if="{{vehicleParameters}}" catchtouchmove="disMove"></view>
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{vehicleParameters}}">
+    <view class="drawer_title"><view class="">车辆参数</view><view class="fR" data-statu="close" wx:if="{{vehicleParameters}}" bindtap="powerDrawer2">完成</view></view>
+
+    <view class="drawer_content" style="height:{{bounced_Height-50}}px;">
+        <view class="hot_Region_Title"><span></span>车长</view>
+
+        <view class="conductor">
+            <view wx:for-items="{{conductors}}" data-id="{{index}}" class="{{index==id?'is_checked':'normal'}}" bindtap="select_ChooseConductor" wx:key="{{index}}">{{item.text}}</view>
+        </view>
+
+        <view class="select_Area_Title"><span></span>车型</view>
+        <view class="conductor">
+            <view wx:for-items="{{models}}" data-id="{{index}}" class="{{index==mID?'is_checked':'normal'}}" bindtap="select_Models" wx:key="{{index}}">{{item.text}}</view>
+        </view>
+    </view>
+
+    <!--<view class="btn_ok" bindtap="powerDrawer2" data-statu="close">确定</view>-->
+</view>
+
+<import src="../../components/gzk_dialog_city/city.wxml"/>
+<template is="city" data="{{...city}}"/>
+
+

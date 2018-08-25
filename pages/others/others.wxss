@@ -1,0 +1,19 @@
+page{height: 100%}
+.container {background:#ede8ef;}
+@import "../../style/my_publish.wxss";
+.sRight_Arrow view:last-child {
+    height: 95px;
+}
+.btn_ShareInformation{
+    background:#ec5958;
+    color:#fff;
+    margin:0 10px;
+    height:40px;
+    line-height:40px;
+    border-radius:5px;
+    text-align: center;
+}
+.twoBtn button{
+    width:490rpx;
+}
+/*my_publish.wxss*/

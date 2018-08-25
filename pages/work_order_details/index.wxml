@@ -1,0 +1,196 @@
+<view class="container">
+    <view hidden="{{page_Bool}}">
+        <view class="">
+            <!--  -->
+            <!--<view class="bartender over-A" style="height:{{page_Height}}px;">-->
+            <view class="bartender {{intStatus==30?'':'mab60'}}">
+                <view class="bgFFF bor_B">
+                    <view class="vehicle-Information display-F">
+                        <view class="information-Title">客户类型</view>
+                        <view class="information-Center">{{intUserType==0?'货主':'客服'}}</view>
+                    </view>
+                </view>
+                <view class="bgFFF bor_B">
+                    <view class="vehicle-Information display-F">
+                        <view class="information-Title">申请人</view>
+                        <view class="information-Center">
+                           <text>{{strApplicantName}}</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="bgFFF bor_B">
+                    <view class="vehicle-Information display-F">
+                        <view class="information-Title">申请人电话</view>
+                        <view class="information-Center"><text>{{strApplicantTel}}</text></view>
+                    </view>
+                </view>
+                <view class="bgFFF bor_B">
+                    <view class="vehicle-Information display-F">
+                        <view class="information-Title">装货人</view>
+                        <view class="information-Center">{{strLoaderName}}</view>
+                    </view>
+                </view>
+                <view class="bgFFF bor_B">
+                    <view class="vehicle-Information display-F">
+                        <view class="information-Title">装货人电话</view>
+                        <view class="information-Center">{{strLoaderTel}}</view>
+                    </view>
+                </view>
+
+                <view class="bgFFF">
+                    <view class="mPrompt_Title pat5 pab5" hidden="{{similar_Hide}}"><span></span>客服备注</view>
+                    <view class="vehicle-Information" wx:for-items="{{arrayRemarkList}}" wx:key="{{index}}" data-statu="{{item.strInfoSysID}}" data-type="{{item.intInfoType}}">
+                        <view class="text-ellipsis"><text>{{index+1}} </text><text>{{item.strCustomerName}} </text><text>{{item.strDateDesc}} </text><text>{{item.strCustomerRemark}}</text></view>
+                    </view>
+                </view>
+
+                <view class="bgFFF">
+                    <view class="mPrompt_Title pat5 pab5" hidden="{{similar_Hide}}" bindtap="doRotateIMG" data-statu="1"><span></span>线路信息<image class="fR mat5 mar20R {{isRotate}}" style="width:10px;height:10px;" mode="aspectFit" src="/images/arrow.png"></image></view>
+                    <view hidden="{{circuit_Hide}}">
+                        <view class="vehicle-Information display-F bor_B">
+                            <view class="information-Title">起运地</view>
+                            <view class="information-Center">{{strFromAddress}}</view>
+                        </view>
+                        <view class="vehicle-Information display-F bor_B">
+                            <view class="information-Title">目的地</view>
+                            <view class="information-Center">{{strToAddress}}</view>
+                        </view>
+                        <view class="vehicle-Information display-F bor_B">
+                            <view class="information-Title">中转地</view>
+                            <view class="information-Center">{{strTransfer}}</view>
+                        </view>
+                        <view class="vehicle-Information display-F">
+                            <view class="information-Title">装货日期</view>
+                            <view class="information-Center">{{strDateLoading}}</view>
+                        </view>
+                    </view>
+                </view>
+
+                <view class="bgFFF">
+                    <view class="mPrompt_Title pat5 pab5" bindtap="doRotateIMG_2" data-statu="2"><span></span>货物信息<image class="fR mat5 mar20R {{isRotate_2}}" style="width:10px;height:10px;" mode="aspectFit" src="/images/arrow.png"></image></view>
+                    <view hidden="{{circuit_Hide_2}}">
+                        <view class="vehicle-Information display-F bor_B">
+                            <view class="information-Title">货物名称</view>
+                            <view class="information-Center">{{strGoodName}}</view>
+                        </view>
+                        <view class="vehicle-Information display-F bor_B">
+                            <view class="information-Title">货物重量<text class="f12">(吨)</text></view>
+                            <view class="information-Center">{{intWeight}}</view>
+                        </view>
+                        <view class="vehicle-Information display-F bor_B">
+                            <view class="information-Title">货物体积<text class="f12">(立方米)</text></view>
+                            <view class="information-Center">{{intVolume}}</view>
+                        </view>
+                        <view class="vehicle-Information display-F">
+                            <view class="information-Title">参考运价<text class="f12">(元)</text></view>
+                            <view class="information-Center">{{intFreightRate}}</view>
+                        </view>
+                    </view>
+                </view>
+
+                <view class="bgFFF">
+                    <view class="mPrompt_Title pat5 pab5" hidden="{{similar_Hide_3}}" bindtap="doRotateIMG_3" data-statu="3"><span></span>运输要求<image class="fR mat5 mar20R {{isRotate_3}}" style="width:10px;height:10px;" mode="aspectFit" src="/images/arrow.png"></image></view>
+                    <view hidden="{{circuit_Hide_3}}">
+                        <view class="vehicle-Information display-F bor_B">
+                            <view class="information-Title">所需车型</view>
+                            <view class="information-Center">{{strFloatCarLength}}/{{strCarType}}</view>
+                        </view>
+                        <view class="vehicle-Information display-F bor_B">
+                            <view class="information-Title">卖货/卸货</view>
+                            <view class="information-Center">{{intSaleType==0?'卖货':'卸货'}}</view>
+                        </view>
+                        <view class="vehicle-Information display-F">
+                            <view class="information-Title">运输备注</view>
+                            <view class="information-Center">{{strTransportRemarks}}</view>
+                        </view>
+                    </view>
+                </view>
+
+                <view class="bgFFF">
+                    <view class="mPrompt_Title pat5 pab5" hidden="{{similar_Hide_4}}" bindtap="doRotateIMG_4" data-statu="4"><span></span>付款信息<image class="fR mat5 mar20R {{isRotate_4}}" style="width:10px;height:10px;" mode="aspectFit" src="/images/arrow.png"></image></view>
+                    <view hidden="{{circuit_Hide_4}}">
+                        <view class="vehicle-Information display-F bor_B">
+                            <view class="information-Title">人工匹配费<text class="f12">(元)</text></view>
+                            <view class="information-Center">{{intMatchingCost}}</view>
+                        </view>
+                        <view class="vehicle-Information display-F bor_B">
+                            <view class="information-Title">装卸押金<text class="f12">(元)</text></view>
+                            <view class="information-Center">{{intLoadingCost}}</view>
+                        </view>
+                        <view class="vehicle-Information display-F bor_B">
+                            <view class="information-Title">付款备注</view>
+                            <view class="information-Center">{{strPayRemarks}}</view>
+                        </view>
+                        <view class="vehicle-Information display-F">
+                            <view class="information-Title">保险费<text class="f12">(元)</text></view>
+                            <view class="information-Center">{{intPolicyCost}}</view>
+                        </view>
+                        <view class="vehicle-Information display-F" wx:for-items="{{arrayPayItemList}}" wx:key="{{index}}" data-statu="{{item.strPayItemSysID}}">
+                            <view class="information-Title">{{item.strPayTitle}}<text class="f12">(元)</text></view>
+                            <view class="information-Center">{{item.intPrice}}</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="bgFFF" style="margin-bottom:70px;">
+                    <view class="mPrompt_Title pat5 pab5" hidden="{{similar_Hide_5}}" bindtap="doRotateIMG_5" data-statu="5"><span></span>匹配车主信息<image class="fR mat5 mar20R {{isRotate_5}}" style="width:10px;height:10px;" mode="aspectFit" src="/images/arrow.png"></image></view>
+                    <view hidden="{{circuit_Hide_5}}">
+                        <view class="vehicle-Information display-F bor_B">
+                            <view class="information-Title">驾驶员姓名</view>
+                            <view class="information-Center">{{strDriverName}}</view>
+                        </view>
+                        <view class="vehicle-Information display-F bor_B">
+                            <view class="information-Title">联系电话</view>
+                            <view class="information-Center">{{strDriverTel}}</view>
+                        </view>
+                        <view class="vehicle-Information display-F bor_B">
+                            <view class="information-Title">紧急电话</view>
+                            <view class="information-Center">{{strUrgentTel}}</view>
+                        </view>
+                        <view class="vehicle-Information display-F bor_B">
+                            <view class="information-Title">车长车型</view>
+                            <view class="information-Center">{{carFloatCarLengthText}} {{CarTypeText}}</view>
+                        </view>
+                        <view class="vehicle-Information display-F bor_B">
+                            <view class="information-Title">板机/挂机</view>
+                            <view class="information-Center">{{intMachineType==0?'扳机':'挂机'}}</view>
+                        </view>
+                        <view class="vehicle-Information display-F bor_B">
+                            <view class="information-Title">车牌</view>
+                            <view class="information-Center">{{strPlate}}</view>
+                        </view>
+                        <view class="vehicle-Information display-F bor_B">
+                            <view class="information-Title">挂车牌</view>
+                            <view class="information-Center">{{strTrailerPlate}}</view>
+                        </view>
+                        <view class="vehicle-Information display-F bor_B">
+                            <view class="information-Title">证件号</view>
+                            <view class="information-Center">{{strIDNumber}}</view>
+                        </view>
+                        <view class="vehicle-Information display-F bor_B">
+                            <view class="information-Title">运费<text class="f12">(元)</text></view>
+                            <view class="information-Center">{{intFreight}}</view>
+                        </view>
+                        <view class="vehicle-Information display-F">
+                            <view class="information-Title">到车价<text class="f12">(元)</text></view>
+                            <view class="information-Center">{{intCarPrice}}</view>
+                        </view>
+                    </view>
+                </view>
+
+            </view>
+
+        </view>
+        <view class="footer_Btn" hidden="{{intStatus==30?true:false}}">
+            <!-- 草稿 -->
+            <view class="wBtnOne" wx:if="{{intUserType==0}}">
+                <!--<view bindtap="toPayFor">马上提交</view>-->
+                <!--<view bindtap="onSaveDrafts">保存草稿</view>-->
+                <!--<view bindtap="doDelete_Draft">删除草稿</view>-->
+                <view class="mal20R mar20R" bindtap="toPayFor">支付</view>
+            </view>
+            <view class="wBtnOne" wx:else>
+                <view class="mal20R mar20R" bindtap="onShareAppMessage">分享</view>
+            </view>
+        </view>
+    </view>
+</view>

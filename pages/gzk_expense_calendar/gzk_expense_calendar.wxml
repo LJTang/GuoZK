@@ -1,0 +1,33 @@
+<view class="container">
+    <view>
+        <picker mode="date" value="{{dateValue}}" start="2018-01" end="2019-01" fields="month" bindchange="bindDateChange">
+            <view class="picker line-h50">
+                <text class="mal20R">{{strDateValue}}</text><text class="fR mar20R">点击选择时间</text>
+            </view>
+        </picker>
+
+    </view>
+    <scroll-view scroll-y style="height:{{height}}px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-top="{{scrollTop}}">
+        <block wx:for-items="{{listArray}}" wx:key="{{index}}">
+            <view class="list_Information bgFFF" bindtap="onWorkOrder_Details" data-statu="{{item.strOrderSysID}}">
+                <view class="bor_B matchingSingle_Box mal20R mar20R display-F" style="height:75px;">
+                    <view style="width:630rpx;">
+                        <view class="line-h30 f16">{{item.strPayTitle}} <text class="f12">({{item.strTypeDesc}})</text></view>
+                        <view class="line-h20 f14">{{item.strPayDesc}}</view>
+                        <view class="line-h20 mab5 f14">{{item.strDateDesc}}</view>
+                    </view>
+                    <view class="text-R" style="width:80rpx;">
+                        <view class="vMatchingText f16 {{item.intType==0?'':'green'}}" style="line-height:75px;">{{item.strMoneyDesc}}</view>
+                    </view>
+                </view>
+            </view>
+        </block>
+
+        <view class="pab20" style="height:40px">
+            <view class="noMoreData" hidden="{{noMoreHidden}}">没有更多了</view>
+            <view class="inLoad pat20 pab20" hidden="{{inLoadHidden}}"><image src="/images/loading.gif"></image><span>加载中...</span></view>
+            <view class="toLoadMore" hidden="{{loadMoreHidden}}" bindtap="onGetConnect">加载更多</view>
+        </view>
+
+    </scroll-view>
+</view>

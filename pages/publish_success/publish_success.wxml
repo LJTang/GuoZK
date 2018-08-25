@@ -1,0 +1,34 @@
+<view class="container">
+    <view class="publish-Head">您的{{carOrGoods}}信息已发布成功</view>
+    <view hidden="{{hide}}">
+        <view class="mPrompt_Title"><span></span>我的有效信息</view>
+
+        <scroll-view class="mat10" scroll-y style="height:{{height}}px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-top="{{scrollTop}}">
+            <view class="list_Information cross-T bgFFF bor_B" wx:for-items="{{myList}}" wx:key="{{index}}" bindtap="findInformation" data-statu="{{item.strInfoSysID}}" data-type="{{item.intInfoType}}">
+                <view class="display-In v-align_T" style="width:700rpx;">
+                    <view class="vertical-Block text-ellipsis">
+                        <span class="dots area_From mal10R mar20R"></span><span class="area-Of-Shipment">{{item.strFromAreaDesc}}</span><image class="to" src="/images/small_to.png"></image><span class="dots area_To mar20R"></span><span class="area-Of-Shipment">{{item.strToAreaDesc}}</span>
+                    </view>
+                    <view class="horizontal-Piece display-F">
+                        <view class="describe f32R text-ellipsis">{{item.strListDesc}}</view>
+                    </view>
+                </view>
+
+                <view class="sRight_Arrow display-In mal10R" ><image src="/images/img_s_right.png"></image></view>
+            </view>
+
+            <view class="" style="height:40px">
+                <view class="noMoreData" hidden="{{noMoreHidden}}">没有更多了</view>
+                <view class="inLoad pat20 pab20" hidden="{{inLoadHidden}}"><image src="/images/loading.gif"></image><span>加载中...</span></view>
+                <view class="toLoadMore" hidden="{{loadMoreHidden}}" bindtap="onGetConnect">加载更多</view>
+            </view>
+        </scroll-view>
+
+        <view class="find_Information_Btn three_Btn">
+            <view bindtap="previousPage">再发一条</view>
+            <view><button class="display-B" bindtap="onShareAppMessage" open-type="share">分享{{carOrGoods}}</button></view>
+            <view bindtap="onHome">返回首页</view>
+        </view>
+    </view>
+</view>
+

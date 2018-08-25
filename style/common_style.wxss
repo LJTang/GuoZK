@@ -1,0 +1,105 @@
+/** 找货 **/
+.view-Head-Search{padding:5px 0;}
+.input_Search{
+  width:550rpx;
+  height:40px;
+  line-height:40px;
+  background:#FFFFFF;
+  border-radius:5px;
+  margin-left:15rpx;
+}
+.find_Query_IMG{
+  width:26px;
+  height:26px;
+  margin-bottom:7px;
+  margin-left:10rpx;
+}
+.view-Head-Search input{
+  width:400rpx;
+  line-height:40px;
+  display: inline-block;
+  height:40px;
+}
+.find_SearchBtn{
+  width:150rpx;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 5px;
+  background: #FFFFFF;
+  margin-left:15rpx;
+}
+.area-Find{
+  height:50px;
+  line-height:50px;
+}
+.find-Area{width:300rpx;}
+.find-AreaImg{width:150rpx;}
+.find-AreaTo{width:300rpx;}
+.find-Area image,.find-AreaTo image{
+  width:8px;
+  height:8px;
+  margin-left:8px;
+}
+.find-AreaImg image{
+  width:26px;
+  height:16px;
+  margin-top:17px;
+}
+.cross-T{height:70px;}
+.vertical-Block{
+  height:40px;
+  line-height:40px;
+  margin-left:15rpx;
+}
+.to{
+  width:50rpx;
+  height:10px;
+  vertical-align: top;
+  margin-top:15px;
+  margin-left:30rpx;
+  margin-right:30rpx;
+}
+.hot{
+  width:25px;
+  height:25px;
+  margin-top:5px;
+  margin-left:20rpx;
+  margin-right:0rpx;
+  vertical-align: top;
+}
+.dots{
+  display: inline-block;
+  width:20rpx;
+  height:20rpx;
+  border-radius:50%;
+  margin-top:15px;
+  vertical-align:top;
+}
+.area_From{background:#32b16c;}
+.area_To{background:#f53856;}
+.area-Of-Shipment{
+  display: inline-block;
+  max-width:215rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+
+}
+.vertical-Block .fR{
+  width:150rpx;
+  font-size:26rpx;
+}
+.strCenter{
+  width:640rpx;
+  margin-left:60rpx;
+}
+.list_Information .sRight_Arrow{
+  width:30rpx;
+  height:70px;
+  line-height:70px;
+}
+.list_Information .sRight_Arrow image {
+  width: 12px;
+  height: 20px;
+  vertical-align: middle;
+}

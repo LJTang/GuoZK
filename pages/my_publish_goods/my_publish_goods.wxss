@@ -1,0 +1,6 @@
+page{height: 100%}
+.container {background:#ede8ef;}
+@import "../../style/my_publish.wxss";
+
+
+/*my_publish.wxss*/

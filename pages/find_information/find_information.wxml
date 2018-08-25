@@ -1,0 +1,144 @@
+<view class="container">
+    <view hidden="{{hide}}">
+    <!--<view>-->
+        <view class="location-Information bgFFF bor_B pat5 pab5">
+            <view class="vertical-Block">
+                <span class="dots area_From mal10R mar30R"></span><span class="area-Of-Shipment">{{strFromAreaDesc}}</span><image src="/images/small_to.png"></image><span class="dots area_To mal10R mar30R"></span><span class="area-Of-Shipment">{{strToAreaDesc}}</span>
+            </view>
+        </view>
+
+        <view class="bgFFF" wx:if="{{goodsHide}}" hidden="{{otherToArea_Hide}}">
+            <view class="vehicle-Information display-F">
+                <view class="find-Information-IMG"><image src="/images/transit_point.png"></image></view>
+                <view class="information-Title">中转地</view>
+                <view class="information-Center">{{find_strOtherToAreaDesc}}</view>
+            </view>
+        </view>
+        <view class="bgFFF bor_B mat5" wx:if="{{goodsHide}}" hidden="{{goodsDesc_Hide}}">
+            <view class="vehicle-Information display-F">
+                <view class="find-Information-IMG"><image src="/images/goods_desc.png"></image></view>
+                <view class="information-Title">货物资料</view>
+                <view class="information-Center text-ellipsis">{{find_strGoodsDesc}}</view>
+            </view>
+        </view>
+        <!--<view class="bgFFF bor_B" wx:if="{{goodsHide}}" hidden="{{timeDesc_Hide}}">-->
+        <view class="bgFFF bor_B">
+            <view class="vehicle-Information display-F">
+                <view class="find-Information-IMG"><image src="/images/find_timer.png"></image></view>
+                <view class="information-Title">{{timeText}}</view>
+                <view class="information-Center">{{strTimeDesc}}</view>
+            </view>
+        </view>
+        <view class="bgFFF bor_B">
+            <view class="vehicle-Information display-F">
+                <view class="find-Information-IMG"><image src="/images/find_car_type.png"></image></view>
+                <view class="information-Title">{{carText}}</view>
+                <view class="information-Center">{{find_strCarDesc}}</view>
+            </view>
+        </view>
+        <view class="bgFFF" wx:if="{{goodsHide}}" hidden="{{freight_Hide}}">
+            <view class="vehicle-Information display-F">
+                <view class="find-Information-IMG"><image src="/images/find_car_type.png"></image></view>
+                <view class="information-Title">运价</view>
+                <view class="information-Center">{{binding=='0'?'*****':find_FreightPrice}}元</view>
+            </view>
+        </view>
+        <view class="bgFFF bor_B mat5">
+            <view class="vehicle-Information display-F">
+                <view class="find-Information-IMG"><image src="/images/find_user.png"></image></view>
+                <view class="information-Title">联系人</view>
+                <view class="information-Center">{{binding=='0'?'*****':find_strUserName}}</view>
+            </view>
+        </view>
+        <view class="bgFFF bor_B" bindtap="onMakePhoneCall">
+            <view class="vehicle-Information display-F">
+                <view class="find-Information-IMG"><image src="/images/find_phone.png"></image></view>
+                <view class="information-Title">联系电话</view>
+                <!--<view class="information-Center"><view class="display-In" style="width:270rpx;">{{find_strContactPhone}} <span>（点击拨打）</span></view> <view class="makePhoneCall fR mar20R" hidden="{{share==0?true:oneself_Hide}}">-->
+                <view class="information-Center">{{find_strContactPhone}} <span class="f28R" style="color:#ec5958;font-weight: bold;">{{binding=='0'?'（绑定可见）':'（点击拨打）'}}</span></view>
+            </view>
+        </view>
+        <view class="bgFFF" wx:if="{{goodsHide}}" hidden="{{companyName_Hide}}">
+            <view class="vehicle-Information display-F">
+                <view class="find-Information-IMG"><image src="/images/find_company_name.png"></image></view>
+                <view class="information-Title">公司名称</view>
+                <view class="information-Center">{{find_strCompanyName}}</view>
+            </view>
+        </view>
+        <view class="bgFFF mat5" hidden="{{remark_Hide}}">
+            <view class="highlyFree display-F">
+                <view class="find-Information-IMG mal20R mar20R"><image src="/images/remark.png"></image></view>
+                <view class="information-Title">备注</view>
+                <view class="information-Remark">{{find_strRemark==''?'--':find_strRemark}}</view>
+            </view>
+        </view>
+        <view class="bgFFF mat5 bor_B">
+            <view class="vehicle-Information display-F">
+                <view class="find-Information-IMG"><image src="/images/read_desc.png"></image></view>
+                <view class="information-Title">查看人数</view>
+                <view class="information-Center">{{strReadDesc}}</view>
+            </view>
+        </view>
+        <view class="bgFFF">
+            <view class="vehicle-Information display-F">
+                <view class="find-Information-IMG"><image src="/images/contact.png"></image></view>
+                <view class="information-Title">联系次数</view>
+                <view class="information-Center">{{strCallDesc}}</view>
+            </view>
+        </view>
+
+        <view class="bgFFF mat5 mab80">
+            <!--<view class="list_Information cross-T bgFFF mab5" wx:for-items="{{myList}}" wx:key="{{index}}" bindtap="findInformation" data-statu="{{item.strInfoSysID}}" data-type="{{item.intInfoType}}">-->
+            <view class="mPrompt_Title pat5 pab5" hidden="{{similar_Hide}}"><span></span>相似{{goodsORCar}}</view>
+            <view class="list_Information cross-T bor_B" wx:for-items="{{list}}" wx:key="{{index}}" bindtap="findInformation" data-statu="{{item.strInfoSysID}}" data-type="{{item.intInfoType}}">
+                <view class="display-In v-align_T" style="width:700rpx;">
+                    <view class="vertical-Block text-ellipsis">
+                        <span class="dots area_From mal10R mar20R"></span><span class="area-Of-Shipment">{{item.strFromAreaDesc}}</span><image class="to" src="/images/small_to.png"></image><span class="dots area_To mar20R"></span><span class="area-Of-Shipment">{{item.strToAreaDesc}}</span>
+                    </view>
+
+                    <view class="horizontal-Piece display-F pab5">
+                        <view class="describe text-ellipsis f32R">{{item.strListDesc}}</view>
+                    </view>
+                </view>
+
+                <view class="sRight_Arrow display-In mal10R" ><image src="/images/img_s_right.png"></image></view>
+            </view>
+        </view>
+
+        <view wx:if="{{oneself_Hide}}">
+            <view class="find_Information_Btn find_Information_Oneself wBtnThree display-F" hidden="{{share==0?false:true}}">
+                <view class="fL" bindtap="onShareInformation" wx:if="{{binding==0?true:false}}">分享{{goodsORCar}}</view>
+                <view wx:if="{{binding==1?true:false}}"><button class="display-B" bindtap="onShareAppMessage" open-type="share">分享{{goodsORCar}}</button></view>
+                <view bindtap="resend_Goods">{{resendText}}</view>
+                <view bindtap="shelves_Goods">{{shelvesText}}</view>
+            </view>
+            <view class="twoLine_TwoBtn find_Information_Oneself wBtnFour display-F" hidden="{{share==0?true:falser}}">
+                <!--<view class="fL"><button class="display-B" bindtap="onShareAppMessage" open-type="share">分享{{goodsORCar}}</button></view>-->
+                <view class="fL" bindtap="onHome">更多功能</view>
+                <view class="fL" bindtap="onShareInformation" wx:if="{{binding==0?true:false}}">分享</view>
+                <view class="fL" wx:if="{{binding==1?true:false}}">
+                    <button class="display-B" bindtap="onShareAppMessage" open-type="share">分享</button>
+                </view>
+                <view class="fL" bindtap="resend_Goods">重发</view>
+                <view class="fL" bindtap="shelves_Goods">下架</view>
+            </view>
+        </view>
+
+        <view class="find_Information_Btn find_Information_Other wBtnThree display-F" wx:if="{{other_Hide}}">
+            <view bindtap="onHome" hidden="{{share==0?true:false}}">更多功能</view>
+            <view bindtap="onShareInformation" wx:if="{{binding==0?true:false}}">分享{{goodsORCar}}</view>
+            <view wx:if="{{binding==1?true:false}}"><button class="display-B" bindtap="onShareAppMessage" open-type="share">分享{{goodsORCar}}</button></view>
+            <view bindtap="onMakePhoneCall" hidden="{{share==0?false:true}}">{{strBtnText}}</view>
+            <view bindtap="onOthers">他的{{goodsORCar}}</view>
+        </view>
+
+        <view class="find_Information_Btn" wx:if="{{repeat_Hide}}">
+            <view class="resend_Goods" bindtap="resend_Goods" hidden="{{share==0?false:true}}">{{resendText}}</view>
+            <view class="twoBtn display-F" hidden="{{share==0?true:false}}">
+                <view class="mat10" bindtap="onHome">更多功能</view>
+                <view class="mat10" bindtap="resend_Goods">{{resendText}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+

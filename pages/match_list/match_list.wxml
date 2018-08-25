@@ -1,0 +1,68 @@
+<view class="container">
+    <!--<view><image class="matching_Process-IMG" style="height:{{height}}px;" src="{{imageURL}}/rg_tree.png"></image></view>-->
+    <!--<view class="footer_Btn" bindtap="onCall">-->
+        <!--<view class="display-B" bindtap="">申请人工车货匹配服务</view>-->
+    <!--</view>-->
+
+    <view class="view-Search">
+        <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box display-F">
+                   <view class="selectionState" bindtap="workOrder_Select">
+                       <picker bindchange="bindPickerChange" bindcancel="closePickerChange" value="{{i}}" range="{{workOrder_Array}}">
+                           <text class="picker">{{workOrder_Array[i]}}</text><image class="mal10R {{isXZ}}" style="width:10px;height:10px;" src="/images/triangle.png"></image>
+                       </picker>
+                   </view>
+                    <!--<icon class="weui-icon-search_in-box" type="search" size="14"></icon>-->
+                    <view class="search_Input">
+                        <input type="search" class="weui-search-bar__input" confirm-type="search" placeholder="输入关键字可快速查找" value="{{input_SearchVal}}" bindinput="inputTyping" bindconfirm="searchBtn"/>
+                        <view class="weui-icon-clear" wx:if="{{input_SearchVal.length > 0}}" bindtap="clearInput">
+                            <icon type="clear" size="14"></icon>
+                        </view>
+                    </view>
+                    <view class="searchBtn" bindtap="onSearch">
+                        <span></span>
+                        <text>查找</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+    </view>
+
+    <scroll-view class="mat10" scroll-y style="height:{{height}}px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-top="{{scrollTop}}">
+        <block wx:for-items="{{listArray}}" wx:key="{{index}}" data-statu="{{item.strInfoSysID}}">
+            <!--<view class="list_Information cross-T bgFFF bor_B" wx:for-items="{{cars}}" wx:key="{{index}}" bindtap="findInformation" data-statu="{{item.strOrderSysID}}">-->
+            <view class="list_Information bgFFF" bindtap="onWorkOrder_Details" data-statu="{{item.strOrderSysID}}">
+                <view class="matchingSingle_Box mal20R mar20R">
+                    <view class="matchingState">
+                        <view class="fL"><span class="span_MatchingState {{item.intStatus==20?'bg22ad38':'bgF5a604'}}">{{item.intStatus==20?'已匹配':'待装货'}}</span></view>
+                        <view class="fR">{{item.strDate}}</view>
+                    </view>
+                    <view class="matchingSingle_Information mat5 display-F">
+                        <view class="mal20R">线路信息</view>
+                        <view class="vMatchingText">{{item.strLineInfo}}</view>
+                    </view>
+                    <view class="matchingSingle_Information display-F">
+                        <view class="mal20R">货物信息</view>
+                        <view class="vMatchingText">{{item.strGoodInfo}}</view>
+                    </view>
+                    <view class="matchingSingle_Information display-F">
+                        <view class="mal20R">所需车型</view>
+                        <view class="vMatchingText">{{item.strCarDesc}}</view>
+                    </view>
+                    <view class="matchingSingle_Information pab10 mab10 display-F">
+                        <view class="mal20R">客服备注</view>
+                        <view class="vMatchingText">{{item.strCustomerRemark}}</view>
+                    </view>
+                </view>
+            </view>
+        </block>
+
+        <view class="pab20" style="height:40px">
+            <view class="noMoreData" hidden="{{noMoreHidden}}">没有更多了</view>
+            <view class="inLoad pat20 pab20" hidden="{{inLoadHidden}}"><image src="/images/loading.gif"></image><span>加载中...</span></view>
+            <view class="toLoadMore" hidden="{{loadMoreHidden}}" bindtap="onGetConnect">加载更多</view>
+        </view>
+    </scroll-view>
+</view>

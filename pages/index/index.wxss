@@ -1,0 +1,134 @@
+/**index.wxss**/
+.applet-IMG{
+  width:100%;
+}
+.section{z-index:1;}
+.view-Head{
+  height:360rpx;
+  margin-top:-60px;
+  border-bottom:2px solid #353535;
+}
+.view-Head>view{
+  margin:0 20rpx;
+}
+.view-Head>view>image{
+   width:710rpx;
+   height:360rpx;
+ }
+.home-Open-Page-Btn{
+  /*font-weight:bold;*/
+}
+/**********************/
+.home-Dashed image{
+  height:40px;
+  width:40px;
+}
+.home-Dashed view{
+  vertical-align:top;
+  margin-top:5px;
+}
+/********************************/
+.gzk_Shipper,.gzk_Owner,.gzk_More{
+  display: flex;
+  flex-direction: row;
+  height:80px;
+  text-align: center;
+  border-bottom:1px solid #999999;
+  background:#fff;
+  padding-top:5px;
+  padding-bottom:5px;
+}
+.gzk_Shipper>view,.gzk_Owner>view,.gzk_More>view{
+  width:223.33rpx;
+}
+.gzk_More_To{
+  display: flex;
+  flex-direction: row;
+  height:80px;
+  text-align: center;
+  margin-top:20px;
+  background:#fff;
+}
+.gzk_More_To>view{
+  width:345rpx;
+}
+/***********************************/
+
+/** 手机号码输入框 **/
+.indexInputPhone{
+  background:#FFFFFF;
+  margin-top:40%;
+  margin-left:100rpx;
+  width:550rpx;
+  height:40%;
+  border-radius:5px;
+}
+.indexInputPhone-Title{
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+.indexInputPhone-Center{
+  width:500rpx;
+  height: 40px;
+  line-height: 40px;
+  border:1px solid #d9d9d9;
+  border-radius:5px;
+  margin-top:20px;
+  margin-left:25rpx;
+}
+.indexInputPhone-Center input{
+  width: 492rpx;
+  height: 40px;
+  line-height: 40px;
+  border-radius:5px;
+  padding-left:8rpx;
+  font-size:32rpx;
+}
+.indexInputPhone-Btn{
+  width:500rpx;
+  height: 40px;
+  line-height: 40px;
+  border-radius:5px;
+  margin-top:30px;
+  margin-left:25rpx;
+  background:#ff6600;
+  color:#FFFFFF;
+  text-align: center;
+}
+
+.view-Footer image{
+  width:750rpx;
+  height:40px;
+  position:fixed;
+  bottom:0;
+
+}
+/********************************************/
+.homePrompt_Title{font-size:16px;margin:10px 0;}
+.homePrompt_Title span{background:#ec5958;}
+.homePrompt_Title span,.homePrompt_Title span{
+  display: inline-block;
+  height:16px;
+  width:5px;
+  margin-left:10px;
+  margin-right:10px;
+  margin-bottom:-2px;
+}
+/******************************************/
+.homeShare_Btn{
+  margin:0;
+  padding:0;
+  border: none;
+  line-height: inherit;
+  background:#FFFFFF;
+  font-size: inherit;
+  display: inline;
+}
+
+
+
+
+
+
+

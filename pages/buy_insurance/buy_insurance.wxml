@@ -1,0 +1,454 @@
+<view class="insurance">
+    <view class="over-A" style="height:{{page_Height}}px;">
+        <view class="fillInThe_Prompt">带 * 号均为必填项</view>
+        <view class="bgFFF bor_B">
+            <view class="gzkCommonStyle_h50 mal20R">
+                <view class="gzk_ContentTitle line-h50" style="width:180rpx;">承保公司</view>
+                <view class="gzk_Content text-R" style="width:530rpx;">{{strInsurance_Company}}</view>
+            </view>
+
+        </view>
+        <view class="bgFFF">
+            <view class="gzkCommonStyle_h50 mal20R">
+                <view class="gzk_ContentTitle line-h50">投保产品
+                    <!--<image class="img_QuestionMark" mode="aspectFit" src="/images/question_mark.png"></image>-->
+                </view>
+                <view class="gzk_Content">{{strInsurance_Products}}</view>
+            </view>
+        </view>
+
+        <view class="bgFFF bor_B mat10">
+            <view class="gzk_UnalignedDisplay mal20R pat10 pab10">
+                <view class="gzk_UnalignedDisplayTitle"><p class="display-B line-h30"><span class="cRed">*</span>货物名称</p></view>
+                <view class="gzk_UnalignedDisplayContent">
+                    <view class="goodsName"><input placeholder="点击输入" type="text" data-name="goodsName" value="{{itemName}}" bindinput="getInputValue" maxlength="10"/></view>
+                    <view class="f12 display-F mat5">
+                        <view class="icon-Note"><image class="img_Note" mode="aspectFit" src="/images/gzk_insurance_note.png"></image></view>
+                        <!--<view class="icon-Note" style="line-height:{{img_LineH}}px"><image class="img_Note" mode="aspectFit" src="/images/gzk_insurance_note.png"></image></view>-->
+                        <view id="mh">请如实逐一填写货物品名，不好列明情况下,统一写：普通货物（若承载货物不属于普通货物范围,保险人不承担保险责任。）</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+        <view class="bgFFF bor_B">
+            <view class="gzkCommonStyle_h50 mal20R" bindtap="powerDrawer_PackingWay" data-statu="open" data-number="0">
+                <view class="gzk_ContentTitle">
+                    <p class="display-B line-h50"><span class="cRed">*</span>货物类型</p>
+                    <!--<p class="display-B h20 cF60 f12">(必填)</p>-->
+                    </view>
+                <view class="gzk_Content"><input type="text" placeholder="点击选择" value="{{itemType}}" disabled/></view>
+                <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+            </view>
+        </view>
+
+        <view class="bgFFF bor_B">
+            <view class="gzkCommonStyle_h50 mal20R" bindtap="powerDrawer_PackingWay" data-statu="open" data-number="1">
+                <view class="gzk_ContentTitle">
+                    <p class="display-B line-h50"><span class="cRed">*</span>包装方式</p>
+                </view>
+                <view class="gzk_Content"><input type="text" placeholder="点击选择" value="{{packType}}" disabled/></view>
+                <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+            </view>
+        </view>
+
+        <view class="bgFFF bor_B">
+            <view class="gzkCommonStyle_h50 mal20R">
+                <view class="gzk_ContentTitle">
+                    <p class="display-B line-h50"><span class="cRed">*</span>货物重量</p>
+                    <!--<p class="display-B h20 cF60 f12">(必填)</p>-->
+                </view>
+                <view class="gzk_Content"><input type="number" placeholder="请输入整数" data-name="goodsWeight" value="{{weight}}" bindinput="getInputValue" maxlength="3"/></view>
+                <view class="sRight_Arrow">吨</view>
+            </view>
+        </view>
+        <view class="bgFFF bor_B">
+            <view class="gzkCommonStyle_h50 mal20R">
+                <view class="gzk_ContentTitle">
+                    <p class="display-B line-h50"><span class="cRed"></span>货物件数</p>
+                </view>
+                <view class="gzk_Content"><input type="number" placeholder="请输入整数" data-name="quantity" value="{{quantity}}" bindinput="getInputValue" maxlength="5"/></view>
+                <view class="sRight_Arrow">件</view>
+            </view>
+        </view>
+
+        <view class="bgFFF bor_B">
+            <view class="gzkCommonStyle_h50 mal20R">
+                <view class="gzk_ContentTitle">
+                    <p class="display-B line-h50"><span class="cRed">*</span>货物价值</p>
+                    <!--<p class="display-B h20 cF60 f12">(必填)</p>-->
+                </view>
+                <view class="gzk_Content" style="width:350rpx;"><input type="number" placeholder="点击输入" data-name="itemValue" value="{{itemValue}}" bindinput="getInputValue" maxlength="3"/></view>
+                <view class="sRight_Arrow" style="width:80rpx;">万元</view>
+            </view>
+        </view>
+
+        <view class="bgFFF bor_B">
+            <view class="gzkCommonStyle_h50 mal20R">
+                <view class="gzk_ContentTitle line-h50"><span class="cRed"></span>保费</view>
+                <view class="gzk_Content">{{premium}}</view>
+                <view class="sRight_Arrow">元</view>
+            </view>
+        </view>
+        <view class="bgFFF bor_B mat10">
+            <view class="gzkCommonStyle_h50 mal20R" bindtap="openLoginPannel" data-region="0">
+                <view class="gzk_ContentTitle">
+                    <p class="display-B line-h50"><span class="cRed">*</span>起运地</p>
+                    <!--<p class="display-B h20 cF60 f12">(必填)</p>-->
+                </view>
+                <view class="gzk_Content"><input type="text" placeholder="点击选择" value="{{cityText}}" disabled/></view>
+                <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+            </view>
+        </view>
+        <view class="bgFFF bor_B">
+            <view class="gzkCommonStyle_h50 mal20R" bindtap="openLoginPannel" data-region="1">
+                <view class="gzk_ContentTitle">
+                    <p class="display-B line-h50"><span class="cRed">*</span>目的地</p>
+                </view>
+                <view class="gzk_Content"><input type="text" placeholder="点击选择" value="{{cityText2}}" disabled/></view>
+                <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+            </view>
+        </view>
+        <view class="bgFFF bor_B">
+            <view class="gzkCommonStyle_h50 mal20R">
+                <view class="gzk_ContentTitle">
+                    <p class="display-B line-h50"><span class="cRed"></span>中转地</p>
+                </view>
+                <view class="gzk_Content"><input type="text" placeholder="点击选择" data-name="transitAddress" value="{{transitAddress}}" bindinput="getInputValue" maxlength="15"/></view>
+                <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+            </view>
+        </view>
+        <view class="bgFFF bor_B tui-picker-content">
+            <view class="gzkCommonStyle_h50 mal20R">
+                <view class="gzk_ContentTitle">
+                    <p class="display-B line-h50"><span class="cRed">*</span>起运时间</p>
+                </view>
+                <view class="gzk_Content tui-picker-content"><picker mode="multiSelector" value="{{dateTime}}" bindchange="datePickerBindchange" bindcolumnchange="changeDateTimeColumn" bindcancel="defaultTime" range="{{dateTimeArray}}">
+                    <view class="tui-picker-detail">
+                        {{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{dateTimeArray[2][dateTime[2]]}} {{dateTimeArray[3][dateTime[3]]}}:{{dateTimeArray[4][dateTime[4]]}}</view>
+                </picker></view>
+                <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+            </view>
+        </view>
+
+        <view class="bgFFF bor_B">
+            <view class="gzkCommonStyle_h50 mal20R">
+                <view class="gzk_ContentTitle">
+                    <p class="display-B line-h50"><span class="cRed"></span>运费</p>
+                </view>
+                <view class="gzk_Content"><input type="number" placeholder="点击输入" data-name="floattTransporMonery" value="{{floattTransporMonery}}" bindinput="getInputValue" maxlength="5"/></view>
+                <view class="sRight_Arrow">元</view>
+            </view>
+        </view>
+        <view class="bgFFF bor_B mat10">
+            <view class="gzkCommonStyle_h50 mal20R" bindtap="powerDrawer_PackingWay" data-statu="open" data-number="2">
+                <view class="gzk_ContentTitle">
+                    <p class="display-B line-h50"><span class="cRed">*</span>被保人类型</p>
+                </view>
+                <view class="gzk_Content"><input type="text" placeholder="点击选择" value="{{insurantTypeDes}}" disabled/></view>
+                <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+            </view>
+        </view>
+        <view hidden="{{insurant2_Bool}}">
+            <view class="bgFFF bor_B ">
+                <view class="gzkCommonStyle_h50 mal20R">
+                    <view class="gzk_ContentTitle">
+                        <p class="display-B line-h50"><span class="cRed">*</span>公司全称</p>
+                    </view>
+                    <view class="gzk_Content" style="line-height:0;">
+                        <view class="line-h50 bor_B"><input type="text" placeholder="点击输入" data-name="insurantName" value="{{insurantName}}" bindinput="getInputValue" maxlength="20"/></view>
+
+                    </view>
+                    <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+                </view>
+            </view>
+            <view class="bgFFF bor_B">
+                <view class="gzkCommonStyle_h50 mal20R">
+                    <view class="gzk_ContentTitle">
+                        <p class="display-B line-h50"><span class="cRed">*</span>营业执照编号</p>
+                    </view>
+                    <view class="gzk_Content"><input type="text" placeholder="点击输入身份证号码" data-name="insurantCertNo" value="{{insurantCertNo}}" bindinput="getInputValue" maxlength="50"/></view>
+                    <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+                </view>
+            </view>
+            <view class="bgFFF bor_B">
+                <view class="gzkCommonStyle_h50 mal20R">
+                    <view class="gzk_ContentTitle">
+                        <p class="display-B line-h50"><span class="cRed">*</span>联系人电话</p>
+                    </view>
+                    <view class="gzk_Content"><input type="number" placeholder="点击输入" data-name="insurantPhone" value="{{insurantPhone}}" bindinput="getInputValue" maxlength="11"/></view>
+                    <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+                </view>
+            </view>
+        </view>
+        <view hidden="{{insurant1_Bool}}">
+            <view class="bgFFF bor_B">
+                <view class="gzkCommonStyle_h50 mal20R">
+                    <view class="gzk_ContentTitle">
+                        <p class="display-B line-h50"><span class="cRed">*</span>被保人电话</p>
+                    </view>
+                    <view class="gzk_Content"><input type="number" placeholder="点击输入" data-name="insurantPhone" value="{{insurantPhone}}" bindinput="getInputValue" maxlength="11"/></view>
+                    <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+                </view>
+            </view>
+            <view class="bgFFF bor_B ">
+                <view class="gzkCommonStyle_h50 mal20R">
+                    <view class="gzk_ContentTitle">
+                        <p class="display-B line-h50"><span class="cRed">*</span>被保人姓名</p>
+                    </view>
+                    <view class="gzk_Content" style="line-height:0;">
+                        <view class="line-h50 bor_B"><input type="text" placeholder="点击输入" data-name="insurantName" value="{{insurantName}}" bindinput="getInputValue" maxlength="10"/></view>
+                        <!--<view class="line-h30 bor_B"><input type="text" placeholder="点击输入" style="height:30px;" data-name="insurantName" value="{{insurantName}}" bindinput="getInputValue" maxlength="10"/></view>-->
+                        <!--<view class="line-h20 f12"><image class="img_Note" mode="aspectFit" src="/images/gzk_insurance_note.png"></image>请务必如实填写被保人真实姓名</view>-->
+                    </view>
+                    <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+                </view>
+            </view>
+            <view class="bgFFF bor_B">
+                <view class="gzkCommonStyle_h50 mal20R">
+                    <view class="gzk_ContentTitle">
+                        <p class="display-B line-h50"><span class="cRed">*</span>被保人证件</p>
+                    </view>
+                    <view class="gzk_Content"><input type="idcard" placeholder="点击输入身份证号码" data-name="insurantCertNo" value="{{insurantCertNo}}" bindinput="getInputValue" maxlength="18"/></view>
+                    <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+                </view>
+            </view>
+        </view>
+        <view class="bgFFF bor_B mat10">
+            <view class="gzkCommonStyle_h50 mal20R">
+                <view class="gzk_ContentTitle">
+                    <p class="display-B line-h50"><span class="cRed">*</span>司机电话</p>
+                </view>
+                <view class="gzk_Content"><input type="number" placeholder="点击输入" data-name="driverPhone" value="{{driverPhone}}" bindinput="getInputValue" bindblur="input_Bindblur" maxlength="11"/></view>
+                <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+            </view>
+        </view>
+        <view class="bgFFF bor_B">
+            <view class="gzkCommonStyle_h50 mal20R">
+                <view class="gzk_ContentTitle">
+                    <p class="display-B line-h50"><span class="cRed"></span>司机姓名</p>
+                </view>
+                <view class="gzk_Content"><input type="text" placeholder="点击输入" maxlength="10" data-name="driverName" value="{{driverName}}" bindinput="getInputValue"/></view>
+                <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+            </view>
+        </view>
+        <view class="bgFFF bor_B">
+            <view class="gzkCommonStyle_h50 mal20R" bindtap="powerDrawer_CarPlateNumber" data-statu="open" data-number="1">
+                <view class="gzk_ContentTitle">
+                    <p class="display-B line-h50"><span class="cRed">*</span>车牌号码</p>
+                </view>
+                <view class="gzk_Content"><input type="text" placeholder="点击选择" value="{{strCarPlateNumber}}" disabled/></view>
+                <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+            </view>
+        </view>
+        <view class="bgFFF bor_B">
+            <view class="gzkCommonStyle_h50 mal20R" bindtap="powerDrawer_HangingPlate" data-statu="open" data-number="0" style="height:inherit;">
+                <view class="gzk_ContentTitle">
+                    <p class="display-B" style="line-height:40px;"><span class="cRed"></span>挂车牌</p>
+                    <!--<p class="display-B h20 cBA f12">(选填)</p>-->
+
+                </view>
+                <view class="gzk_Content" style="line-height:0;width:430rpx;height:inherit;">
+                    <view class="line-h30 bor_B"><input type="text" placeholder="点击选择" style="height:40px;" value="{{strHangingPlate}}" disabled/></view>
+                    <view class="line-h20 f12 pat5 pab5"><image class="img_Note" mode="aspectFit" src="/images/gzk_insurance_note.png"></image>若有挂车牌请务必如实填写</view>
+                </view>
+            </view>
+        </view>
+        <view class="bgFFF bor_B mat10">
+            <view class="gzkCommonStyle_h50 mal20R">
+                <view class="gzk_ContentTitle">
+                    <p class="display-B line-h50"><span class="cRed"></span>投保人电话</p>
+                </view>
+                <view class="gzk_Content"><input type="number" placeholder="点击输入" maxlength="11" data-name="strHolderLinkTel" value="{{strHolderLinkTel}}" bindinput="getInputValue"/></view>
+                <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+            </view>
+        </view>
+        <view class="bgFFF bor_B">
+            <view class="gzkCommonStyle_h50 mal20R">
+                <view class="gzk_ContentTitle">
+                    <p class="display-B line-h50"><span class="cRed"></span>装货人电话</p>
+                </view>
+                <view class="gzk_Content"><input type="number" placeholder="点击输入" data-name="strLoaderTel" value="{{strLoaderTel}}" maxlength="11" bindinput="getInputValue"/></view>
+                <view class="sRight_Arrow"><image mode="aspectFit" src="/images/img_s_right.png"></image></view>
+            </view>
+        </view>
+
+        <view class="f14 mal20R mat5 mab5"><image class="img_Note v-align_T mal10" mode="aspectFit" src="/images/gzk_insurance_note.png"></image><span class="mal5">出保成功后，系统将发送短信通知各联系人</span></view>
+    </view>
+    <view class="footer-btn bgFFF">
+        <view class="vTwo_Btn">
+            <!--<view bindtap="toPayFor">马上支付</view><view bindtap="onSaveDrafts">保存草稿</view>-->
+            <view bindtap="toPayFor">马上支付</view><view bindtap="{{btnClick}}">保存草稿</view>
+        </view>
+    </view>
+
+
+    <!-- 地区 -->
+    <import src="../../components/gzk_dialog_city/city.wxml"/>
+    <template is="city" data="{{...city}}"/>
+    <!-- 货物类型 包装方式 -->
+    <view class="drawer_screen" data-statu="close" wx:if="{{packingWay_Bool}}"></view>
+    <view animation="{{animationData}}" class="drawer_box" wx:if="{{packingWay_Bool}}">
+        <view class="drawer_title"><view class="">{{strTypeWay}}</view><view class="fR" data-statu="close" bindtap="powerDrawerClose_PackingWay">关闭</view></view>
+
+        <view class="drawer_content packingWayBox" style="height:{{bounced_Height-50}}px;">
+            <view wx:for-items="{{typeWay_ArrayClass}}" data-text="{{item.sd}}" data-statu="{{item.sc}}" wx:key="{{index}}" bindtap="packingWay_Select">
+                <view class="chooseStyle">{{item.sd}}</view>
+            </view>
+        </view>
+    </view>
+    <!-- 优惠卷 -->
+    <view class="drawer_screen" data-statu="close" wx:if="{{gzkCoupons_Bool}}"></view>
+    <view animation="{{animationData}}" class="drawer_box" wx:if="{{gzkCoupons_Bool}}">
+        <view class="drawer_title"><view class="">优惠卷</view><view class="fR" data-statu="close" bindtap="powerDrawer_Coupons">关闭</view></view>
+
+        <view class="drawer_content" style="height:{{bounced_Height-50}}px;">
+            <!--<view wx:for-items="{{typeWay_ArrayClass}}" data-text="{{item.sd}}" data-statu="{{item.sc}}" wx:key="{{index}}" bindtap="packingWay_Select">-->
+            <view bindtap="_Select">
+                <view class="gzk_Coupons display-F">
+                    <view class="offerDescription display-F">
+                        <view class="gzk_DiscountAmount"><span>20</span></view>
+                        <view class="usedToDescribe">
+                            <view>满50元减20元</view>
+                            <view>元优惠卷</view>
+                        </view>
+                    </view>
+                    <view class="gzk_CouponsBtn">
+                        <view>点</view>
+                        <view>击</view>
+                        <view>使</view>
+                        <view>用</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <!-- 车牌 -->
+    <view class="drawer_screen" data-statu="close" wx:if="{{carPlateNumber_Bool}}"></view>
+    <view animation="{{animationData}}" class="drawer_box" wx:if="{{carPlateNumber_Bool}}">
+        <view class="drawer_title"><view class="">车牌号码</view><view class="fR" data-statu="close" bindtap="powerDrawerClose_CarPlateNumber">完成</view></view>
+
+        <view class="drawer_content" style="height:{{bounced_Height-50}}px;">
+            <view class="viewDialogCarPlatePad mat20">
+                <view class="carPlatePadValue">
+                    <view class="{{select_ID==0?'selected':''}}" bindtap="onSwitch" data-statu="0">{{text1}}</view>
+                    <view class="{{select_ID==1?'selected':''}}" bindtap="onSwitch" data-statu="1">{{text2}}</view>
+                    <view><span class="carDot">•</span></view>
+                    <view class="{{select_ID==2?'selected':''}}" bindtap="onSwitch" data-statu="2">{{text3}}</view>
+                    <view class="{{select_ID==3?'selected':''}}" bindtap="onSwitch" data-statu="3">{{text4}}</view>
+                    <view class="{{select_ID==4?'selected':''}}" bindtap="onSwitch" data-statu="4">{{text5}}</view>
+                    <view class="{{select_ID==5?'selected':''}}" bindtap="onSwitch" data-statu="5">{{text6}}</view>
+                    <view class="{{select_ID==6?'selected':''}}" bindtap="onSwitch" data-statu="6">{{text7}}</view>
+                </view>
+
+                <view class="carPlatePadKey" style="height:{{bounced_Height-118}}px;">
+                    <view class="carPlatePadKeyArea" wx:if="{{shorthand_Bool}}">
+                        <view class='gzkArea'>
+                            <view class="gzkDialogKeyLine">
+                                <view class="keyInput" bindtap="onClickValue" data-text="川">川</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="鄂">鄂</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="赣">赣</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="甘">甘</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="贵">贵</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="桂">桂</view>
+                            </view>
+                            <view class="gzkDialogKeyLine">
+                                <view class="keyInput" bindtap="onClickValue" data-text="沪">沪</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="黑">黑</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="吉">吉</view>
+                                <vieview class="keyInput" bindtap="onClickValue" data-text="冀">冀</vieview>
+                                <view class="keyInput" bindtap="onClickValue" data-text="晋">晋</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="京">京</view>
+                            </view>
+                            <view class="gzkDialogKeyLine">
+                                <view class="keyInput" bindtap="onClickValue" data-text="津">津</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="鲁">鲁</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="辽">辽</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="蒙">蒙</view>
+                                <vieview class="keyInput" bindtap="onClickValue" data-text="闽">闽</vieview>
+                                <view class="keyInput" bindtap="onClickValue" data-text="宁">宁</view>
+                            </view>
+                            <view class="gzkDialogKeyLine">
+                                <view class="keyInput" bindtap="onClickValue" data-text="琼">琼</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="青">青</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="苏">苏</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="陕">陕</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="皖">皖</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="湘">湘</view>
+                            </view>
+                            <view class="gzkDialogKeyLine">
+                                <view class="keyInput" bindtap="onClickValue" data-text="新">新</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="粤">粤</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="豫">豫</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="渝">渝</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="云">云</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="浙">浙</view>
+                            </view>
+                            <view class="gzkDialogKeyLine">
+                                <view class="keyInput" bindtap="onClickValue" data-text="藏">藏</view>
+                            </view>
+                        </view>
+                    </view>
+
+                    <view class="carPlatePadKeyLetter" wx:if="{{letter_Bool}}">
+                        <view class="gzkEnglishKeyBoard">
+                            <view class="gzkDialogKeyLine">
+                                <view class="keyInput" bindtap="onClickValue" data-text="A">A</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="B">B</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="C">C</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="D">D</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="E">E</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="F">F</view>
+                            </view>
+                            <view class="mat10">
+                                <view class="keyInput" bindtap="onClickValue" data-text="G">G</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="H">H</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="I">I</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="J">J</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="K">K</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="L">L</view>
+                            </view>
+                            <view class="mat10">
+                                <view class="keyInput" bindtap="onClickValue" data-text="M">M</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="N">N</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="O">O</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="P">P</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="Q">Q</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="R">R</view>
+                            </view>
+                            <view class="mat10">
+                                <view class="keyInput" bindtap="onClickValue" data-text="S">S</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="T">T</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="U">U</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="V">V</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="W">W</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="X">X</view>
+                            </view>
+                            <view class="mat10">
+                                <view class="keyInput" bindtap="onClickValue" data-text="Y">Y</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="Z">Z</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="1">1</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="2">2</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="3">3</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="4">4</view>
+                            </view>
+                            <view class="mat10">
+                                <view class="keyInput" bindtap="onClickValue" data-text="5">5</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="6">6</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="7">7</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="8">8</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="9">9</view>
+                                <view class="keyInput" bindtap="onClickValue" data-text="0">0</view>
+                            </view>
+                            <view class="mat10 pab10">
+                                <view class="keyInput gzk_HangingPlate" bindtap="onClickValue" data-text="挂">挂</view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+

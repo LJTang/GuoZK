@@ -1,0 +1,70 @@
+<template name="city">
+    <view animation="{{animationData}}" class="region_box" wx:if="{{showModalStatus}}">
+        <!--<view class="region_screen" bindtap="powerDrawer" data-statu="close"></view>-->
+        <view class="region_screen"></view>
+        <view class="cityBox" style="height:{{publishHeight}}px">
+            <view class="region_Title"><text class="">地区选择</text><text class="fR" bindtap="powerDrawer">关闭</text></view>
+            <view>
+                <view class="weui-search-bar">
+                    <view class="weui-search-bar__form">
+                        <view class="weui-search-bar__box">
+                            <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                            <input type="search" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal_City}}" bindinput="inputTyping_City" />
+                            <view class="weui-icon-clear" wx:if="{{inputVal_City.length > 0}}" bindtap="clearInput_City">
+                                <icon type="clear" size="14"></icon>
+                            </view>
+                        </view>
+                        <label class="weui-search-bar__label" hidden="{{inputShowed_City}}" bindtap="showInput_City">
+                            <icon class="weui-icon-search" type="search" size="14"></icon>
+                            <view class="weui-search-bar__text">搜索</view>
+                        </label>
+                    </view>
+                    <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed_City}}" bindtap="showInput_City">搜索</view>
+                </view>
+                <view class="h20 f14 pal15 mat5" wx:if="{{inputVal_City.length > 0}}">{{areaLength=='0'?'未找到搜索地区':'已为你搜索到 '+areaLength+' 个相似地区'}}</view>
+                <view class="weui-cells searchbar-result" wx:if="{{inputVal_City.length > 0}}" style="height:{{publishHeight-135}}px">
+                    <view class="weui-cell" wx:for-items="{{search_Arr}}" wx:key="{{index}}" data-statu="{{item.s}}" data-icid="{{item.c}}" bindtap="selectedSearch">
+                        <view class="weui-cell__bd">
+                            <view>{{item.s}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+
+            <view class="select_Area over-A" wx:if="{{searchHide}}" style="height:{{publishHeight-110}}px">
+                <view class="hot_Region">
+                    <view class="hot_Region_Title"><span></span>热门地区</view>
+
+                    <view class="regionList f16">
+                        <view class="hot_Region_Area region-PCD" wx:for-items="{{arrayHotRegion}}" wx:key="id" data-text="{{item.strAreaDesc}}" hidden="{{hotRegionH}}" bindtap="selectedHotRegion" data-icid="{{item.intAreaID}}">
+                            <view>{{item.strAreaDesc}}</view>
+                        </view>
+
+                    </view>
+                </view>
+
+                <view class="pat10 pab10 f16">
+                    <view class="select_Area_Title"><span></span>当前选择地区: {{currentlySelected}}</view>
+                    <!--<view class="select_Area_Title"><span>{{currentlySelected}}</span><span class="fR" wx:if="{{returnLevel}}" bindtap="nextHigherLevel">返回上一级</span></view>-->
+                </view>
+
+                <view class="regionList f16">
+                    <view class="provinces region-PCD" bindtap="nextHigherLevel" wx:if="{{returnLevel}}">
+                        <view class="bg4395e1">上一层</view>
+                    </view>
+<view class="provinces region-PCD" wx:for-items="{{arrayProvince}}" wx:key="id" data-text="{{item.name}}" hidden="{{provincesH}}" bindtap="selectedProvince" id="{{item.icid}}">
+                        <view>{{item.name}}</view>
+                    </view>
+
+                    <view class="city region-PCD" wx:for-items="{{arrayCity}}" wx:key="id" data-text="{{item.name}}" data-index="{{index}}" hidden="{{cityH}}" bindtap="selectedCity" id="{{item.icid}}">
+                        <view>{{item.name}}</view>
+                    </view>
+
+                    <view class="district region-PCD" wx:for-items="{{arrayDistrict}}" wx:key="id" data-text="{{item.name}}" data-index="{{index}}" hidden="{{districtH}}" id="{{item.icid}}" bindtap="selectedDistrict" style="">
+                        <view>{{item.name}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

@@ -1,0 +1,39 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/gzk_login/gzk_login",
+    "pages/find_car/find_car",
+    "pages/find_goods/find_goods",
+    "pages/find_information/find_information",
+    "pages/publish_car/publish_car",
+    "pages/publish_goods/publish_goods",
+    "pages/publish_success/publish_success",
+    "pages/artificial_matching/artificial_matching",
+    "pages/my_publish/my_publish",
+    "pages/my_publish_goods/my_publish_goods",
+    "pages/my_publish_car/my_publish_car",
+    "pages/gzk_personal_center/gzk_personal_center",
+    "pages/gzk_intelligent_distribution/gzk_intelligent_distribution",
+    "pages/history_freight/history_freight",
+    "pages/others/others",
+    "pages/kefu/kefu",
+    "pages/insurance/index",
+    "pages/buy_insurance/buy_insurance",
+    "pages/my_policy/policy",
+    "pages/how_insurance/how_insurance",
+    "pages/policy_details/policy_details",
+    "pages/insurance_amendment/insurance_amendment",
+    "pages/work_order_details/index",
+    "pages/match_list/match_list",
+    "pages/gzk_expense_calendar/gzk_expense_calendar",
+    "pages/payment/payment"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor":"#ec5958",
+    "navigationBarTitleText": "果真快-信息通",
+    "navigationBarTextStyle":"#fff"
+  }
+}
+
+

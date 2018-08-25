@@ -1,0 +1,33 @@
+<!--logs.wxml-->
+<view class="container">
+  <view class="loin-Head">绑定号码后可进行更多操作</view>
+  <view class="log_Phone pat10 pab10">
+    <image src="/images/log_phone.png"></image>
+    <input type="number" placeholder="请输入您的手机号码" maxlength="11" bindinput="onPhoneNumber"/>
+  </view>
+  <view class="log_Verification_Code">
+    <view class="verification_Code_Input"><image src="/images/log_code.png"></image><input type="number" placeholder="请输入收到的验证码" maxlength="4" bindinput="onCodeNumber"/></view>
+    <view class="verification_Code_Btn {{codeClick==false?'doNotOperate':'operational'}}" bindtap="gzkLog_SendCode"><span>{{codeText}}</span></view>
+  </view>
+  <!--<view class="log_Prompt mat5 f32R"><span class="cRed mar5">*</span>未注册过的手机号码将自动创建为果真快用户</view>-->
+  <view class="log_Btn" bindtap="gzkLog_OK">确定</view>
+</view>
+
+<view animation="{{animationData}}" class="pup-up-Box" wx:if="{{pupUPBoolean}}">
+  <view class="pup-up-shadow"></view>
+  <view class="pup-up-layer">
+    <view class="gzk_UserType">
+      <view class="pup-up-Clear" bindtap="onPupUp_Hide"><icon type="clear" size="20"></icon></view>
+      <view class="gzk_UserType-Title">选择您的身份</view>
+      <view class="gzk_UserType-Prompt">
+        <view>系统将为您自动创建果真快账号</view>
+        <view>注册成为果真快用户后可进行更多操作</view>
+      </view>
+      <view class="gzk_UserType-Select">
+        <view bindtap="onGZK_UserType" data-statu="1">货主</view>
+        <view bindtap="onGZK_UserType" data-statu="2">车主</view>
+        <view bindtap="onGZK_UserType" data-statu="3">物流公司</view>
+      </view>
+    </view>
+  </view>
+</view>

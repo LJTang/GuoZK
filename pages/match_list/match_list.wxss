@@ -1,0 +1,75 @@
+.container{background:#e8e8e8}
+.matching_Process-IMG{
+  width:750rpx;
+  height:100%;
+}
+.footer_Btn{
+  height:50px;
+  margin:0;
+  position: fixed;
+  bottom:0;
+  left:0;
+}
+.footer_Btn view{
+  width:750rpx;
+  height:50px;
+  line-height:50px;
+  text-align: center;
+  background:#EC5958;
+  color:#FFFFFF;
+}
+
+@import "../../style/common_style.wxss";
+.weui-search-bar{padding:10px 20rpx;}
+.weui-search-bar__box{padding:0 20rpx;}
+.weui-search-bar__form{
+  height:40px;
+  line-height:40px;
+  border-radius:50px;
+}
+.weui-search-bar__input{
+  /*width:300rpx;*/
+}
+.selectionState{
+  width:200rpx;
+  height:40px;
+}
+.search_Input{
+  width:380rpx;
+}
+.searchBtn{
+  width:100rpx;
+  text-align: center;
+}
+.searchBtn span{
+  border-left:2rpx solid #d9d9d9;
+  margin-right: 10rpx;
+}
+/* 列表 */
+.matchingState{
+  height:40px;
+  line-height:40px;
+  border-bottom:1px solid #d9d9d9;
+}
+.matchingState .span_MatchingState{
+  padding:3px 10px;
+  border-radius: 50px;
+  color:#fff;
+}
+.bg22ad38{background:#22ad38;}
+.bgF5a604{background:#f5a604}
+.matchingSingle_Information{
+  height:30px;
+  line-height:30px;
+}
+.matchingSingle_Information>view:first-child{
+  width:200rpx;
+}
+.vMatchingText{
+  width:490rpx;
+  height:30px;
+  line-height:30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

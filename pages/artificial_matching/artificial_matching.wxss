@@ -1,0 +1,70 @@
+.container{background:#e8e8e8}
+.matching_Process-IMG{
+  width:750rpx;
+  height:100%;
+}
+.btn_Information_Effective{
+  /*position: fixed;*/
+  /*top:0;*/
+  /*left:0;*/
+}
+.gzk_ShuntTitle{
+  text-align: center;
+  padding:5px 10px;
+  background:#EC5958;
+  color: #ffffff;
+}
+.footer_Btn{
+  height:50px;
+  margin:0;
+  position: fixed;
+  bottom:0;
+  left:0;
+}
+.footer_Btn view{
+  width:750rpx;
+  height:50px;
+  line-height:50px;
+  text-align: center;
+  background:#EC5958;
+  color:#FFFFFF;
+}
+.mal40R{margin-left:40rpx;}
+.mar40R{margin-right:40rpx;}
+.mat52{margin-top:52px;}
+.mab60{margin-top:60px;}
+
+
+.table1{
+  text-align: center;
+  background:#c38b40;
+  color:#fff;
+}
+.table2{
+  text-align: center;
+  line-height:30px;
+}
+.tab_V1{
+
+}
+.tab_V1 view{
+  width:176.5rpx;
+  height:60px;
+  line-height:60px;
+}
+
+.td_V1{width:178.5rpx;}
+.td_V2,.td_V3{
+  border-left:2rpx solid #ffffff;
+  width:176.5rpx;
+}
+
+.td2_V1,.td2_V2,.td2_V3,.td2_V4{
+  width:176.5rpx;
+}
+.bor_L2{border-left:2rpx solid #c38b40;}
+.bor_R2{border-right:2rpx solid #c38b40;}
+.bor_B2{border-bottom:2rpx solid #c38b40;}
+.bgC38b40{background:#c38b40;}
+@import "../../style/common_style.wxss";
+@import "../../style/my_publish.wxss";

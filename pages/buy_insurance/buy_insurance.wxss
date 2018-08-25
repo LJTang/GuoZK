@@ -1,0 +1,10 @@
+/**buyInsurance.wxss**/
+.insurance{background:#ede8ef;}
+@import "../../style/insurance.wxss";
+.gzk_Coupons .gzk_CouponsBtn>view:first-child{margin-top:7px;}
+input{font-size:16px;}
+.cRed{margin-right:5px;}
+
+
+
+
